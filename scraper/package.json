@@ -1,0 +1,19 @@
+{
+  "name": "rc-tracks-scraper",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "crawl": "tsx src/crawl.ts",
+    "geocode": "tsx src/geocode.ts",
+    "test-sample": "tsx src/crawl.ts --sample"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
