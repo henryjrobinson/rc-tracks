@@ -6,7 +6,7 @@ import { fetchJson, sleep } from './http.js';
 import type { Track, GeocodedTrack } from './types.js';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
-const DATA_DIR = resolve(HERE, '../../data');
+const DATA_DIR = resolve(HERE, '../../site/data');
 const IN = resolve(DATA_DIR, 'tracks.json');
 const OUT = resolve(DATA_DIR, 'tracks.geocoded.json');
 const CACHE = resolve(DATA_DIR, 'geocode-cache.json');

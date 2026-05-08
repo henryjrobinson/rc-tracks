@@ -7,7 +7,7 @@ import { parseTrack } from './parseTrack.js';
 import type { Track } from './types.js';
 
 const HERE = dirname(fileURLToPath(import.meta.url));
-const DATA_DIR = resolve(HERE, '../../data');
+const DATA_DIR = resolve(HERE, '../../site/data');
 const OUT = resolve(DATA_DIR, 'tracks.json');
 const INDEX_URL = 'https://live.liverc.com/';
 

@@ -24,7 +24,7 @@ export type Track = {
   geocodeError?: string;
 };
 
-const CANDIDATES = ['../data/tracks.geocoded.json', '../data/tracks.json'];
+const CANDIDATES = ['data/tracks.geocoded.json', 'data/tracks.json'];
 
 export async function loadTracks(): Promise<Track[]> {
   for (const rel of CANDIDATES) {
