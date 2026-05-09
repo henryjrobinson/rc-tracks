@@ -21,7 +21,7 @@
       "id": "TRIP-3",
       "title": "Point-to-polyline distance helper",
       "priority": 3,
-      "passes": false,
+      "passes": true,
       "description": "Add pointToPolylineMiles(p: LatLon, polyline: LatLon[]): number to site/lib/geo.ts. Returns the minimum great-circle distance from p to any segment of the polyline (in miles). For each consecutive pair (a, b) in the polyline, project p onto segment ab using equirectangular approximation (meters-per-degree at the segment midpoint), clamp t to [0, 1], compute the closest point, then take haversine distance. Empty polyline returns Infinity. Single-point polyline returns haversine to that point. Function must be O(n) where n = polyline length and pure (no I/O)."
     },
     {

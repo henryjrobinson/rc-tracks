@@ -37,3 +37,14 @@ Started: ralph initialization
   - Don't trust `routes[0].geometry?.coordinates` to be defined — typed as optional in the response type. Guard before mapping.
   - Conversion constant: 1 mile = 1609.344 m exactly; using a literal avoids importing/exporting another constant.
 ---
+## 2026-05-08T00:00:00Z - TRIP-3
+- Added `pointToPolylineMiles(p, polyline)` plus a private `closestPointOnSegment` helper to lib/geo.ts.
+- Empty polyline → Infinity; single-point polyline → haversine to that point; else iterate consecutive segments.
+- Per-segment projection uses an equirectangular approximation: scale longitudes by cos(midLat) so the segment becomes a flat 2D line, project p onto it, clamp t∈[0,1], then haversine the closest lat/lon back.
+- Files modified: site/lib/geo.ts.
+- **Learnings:**
+  - For the corridor test (TRIP-4+), each candidate track only needs one representative LatLon, so callers can pass `[track.location]`-style polylines OR the full OSRM route — the helper is symmetric in roles. The PRD wording suggests we'll pass `pointToPolylineMiles(trackLatLon, route.polyline)`.
+  - Equirectangular is plenty accurate for trip-corridor distances (<100 mi). No need for spherical law of cosines per segment — the haversine on the closest projected point is the great-circle measurement that matters.
+  - We scale by `cos(midLat)` not `cos(meanLat)` — works because OSRM polylines are dense enough that each segment spans tiny degrees. Avoid converting to meters explicitly; the unit cancels in the t-formula.
+  - Keep the helper pure (no fetch, no globals) so TRIP-4 can call it inside a `useMemo`.
+---
