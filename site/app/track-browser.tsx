@@ -5,6 +5,8 @@ import dynamic from 'next/dynamic';
 import type { Track } from '@/lib/tracks';
 import { geocode, getCurrentPosition, haversineMiles, type LatLon } from '@/lib/geo';
 
+import { TripPlanner } from './trip-planner';
+
 const MapView = dynamic(() => import('./map-view').then((m) => m.MapView), { ssr: false });
 
 type Props = { tracks: Track[] };
@@ -23,7 +25,7 @@ const COUNTRY_NAMES: Record<string, string> = {
 
 const RADIUS_OPTIONS = [10, 25, 50, 100, 250, 500];
 
-type View = 'list' | 'map';
+type View = 'list' | 'map' | 'trip';
 
 type WithDistance = Track & { distanceMi?: number };
 
@@ -242,6 +244,15 @@ export function TrackBrowser({ tracks }: Props) {
           >
             Map
           </button>
+          <button
+            type="button"
+            role="tab"
+            aria-selected={view === 'trip'}
+            onClick={() => setView('trip')}
+            className={view === 'trip' ? 'active' : ''}
+          >
+            Trip
+          </button>
         </div>
       </div>
 
@@ -255,7 +266,7 @@ export function TrackBrowser({ tracks }: Props) {
         </span>
       </div>
 
-      {view === 'list' ? (
+      {view === 'list' && (
         filtered.length === 0 ? (
           <p className="empty">No tracks match your filters.</p>
         ) : (
@@ -265,9 +276,11 @@ export function TrackBrowser({ tracks }: Props) {
             ))}
           </div>
         )
-      ) : (
+      )}
+      {view === 'map' && (
         <MapView tracks={filtered} origin={origin} radiusMiles={origin ? radius : undefined} />
       )}
+      {view === 'trip' && <TripPlanner />}
     </>
   );
 }
