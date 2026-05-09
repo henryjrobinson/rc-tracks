@@ -95,9 +95,6 @@ export function TripPlanner({ tracks, onPlanned }: Props) {
         corridorMi: corridor,
         matches,
       });
-      if (matches.length === 0) {
-        setError(`No tracks within ${corridor} mi of your route. Try a wider corridor.`);
-      }
     } catch (err) {
       if ((err as Error).name === 'AbortError') return;
       setResult(null);
@@ -169,11 +166,32 @@ export function TripPlanner({ tracks, onPlanned }: Props) {
 
       {error && <p className="trip-error">{error}</p>}
 
-      {result && result.matches.length > 0 && (
-        <p className="trip-summary">
-          {result.matches.length} track{result.matches.length === 1 ? '' : 's'} within{' '}
-          {result.corridorMi} mi of your {Math.round(result.route.distanceMi)} mi route.
-        </p>
+      {result && (
+        <div className="trip-results">
+          <div className="trip-results-header">
+            <span className="trip-results-stats">
+              <strong>{Math.round(result.route.distanceMi)} mi</strong>
+              <span className="trip-results-divider">·</span>
+              <span>{formatDuration(result.route.durationMin)}</span>
+            </span>
+            <span className="trip-results-count">
+              {result.matches.length} track{result.matches.length === 1 ? '' : 's'} within{' '}
+              {result.corridorMi} mi
+            </span>
+          </div>
+
+          {result.matches.length === 0 ? (
+            <p className="trip-results-empty">
+              No tracks within {result.corridorMi} mi of your route. Try a wider corridor.
+            </p>
+          ) : (
+            <div className="list trip-results-list">
+              {result.matches.map((m) => (
+                <TripResultCard key={m.slug} match={m} />
+              ))}
+            </div>
+          )}
+        </div>
       )}
 
       {!result && !error && !loading && (
@@ -183,4 +201,56 @@ export function TripPlanner({ tracks, onPlanned }: Props) {
       )}
     </section>
   );
+}
+
+function TripResultCard({ match }: { match: TripMatch }) {
+  const loc = [match.city, match.state, match.countryCode].filter(Boolean).join(', ');
+  const showTags = (match.surface && match.surface !== 'unknown') || match.indoor;
+  return (
+    <article className="card">
+      <div className="card-head">
+        <a className="card-name" href={match.url} target="_blank" rel="noreferrer">
+          {match.name}
+        </a>
+        <span className="card-loc">
+          {loc}
+          <span className="trip-detour"> · {match.detourMi.toFixed(1)} mi off route</span>
+        </span>
+      </div>
+
+      {showTags && (
+        <div className="tags">
+          {match.surface && match.surface !== 'unknown' && (
+            <span className={`tag tag-${match.surface}`}>{match.surface}</span>
+          )}
+          {match.indoor && <span className="tag">indoor</span>}
+        </div>
+      )}
+
+      <div className="card-meta">
+        {match.website && (
+          <a href={match.website} target="_blank" rel="noreferrer">
+            Website
+          </a>
+        )}
+        {match.lat != null && match.lon != null && (
+          <a
+            href={`https://www.google.com/maps/search/?api=1&query=${match.lat},${match.lon}`}
+            target="_blank"
+            rel="noreferrer"
+          >
+            Map
+          </a>
+        )}
+      </div>
+    </article>
+  );
+}
+
+function formatDuration(minutes: number): string {
+  const total = Math.max(0, Math.round(minutes));
+  if (total < 60) return `${total} min`;
+  const h = Math.floor(total / 60);
+  const m = total % 60;
+  return m === 0 ? `${h} hr` : `${h} hr ${m} min`;
 }
