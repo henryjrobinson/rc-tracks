@@ -56,7 +56,7 @@
       "id": "TRIP-8",
       "title": "Polish, accessibility, and mobile",
       "priority": 8,
-      "passes": false,
+      "passes": true,
       "description": "Final pass: (1) Both inputs accept Enter to submit. (2) 'Use my location' button on the start input that calls getCurrentPosition(). (3) Keyboard focus styles match the rest of the site. (4) On viewports below 720px, the trip controls stack into a single column, the map keeps min-height 400px, and the results list scrolls. (5) Loading state shows route-distance shimmer or skeleton instead of layout shift. (6) Add an aria-live region for the result count. Verify with `npm run build` and `npx tsc --noEmit` clean. After this story, ALL stories have passes:true and the agent should output <promise>COMPLETE</promise>."
     }
   ]

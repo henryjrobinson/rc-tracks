@@ -106,3 +106,21 @@ Started: ralph initialization
   - `formatDuration` is intentionally local (not exported from lib/geo.ts) because it's a UI concern. If TRIP-7 needs the same formatting on the map summary line, lift it to `lib/format.ts` rather than re-importing from a component file.
 ---
 
+
+## 2026-05-08T00:00:00Z - TRIP-8
+- Added Enter-to-submit on both Start and Destination inputs (onKeyDown → handlePlan).
+- Added a "📍 Use my location" button under the Start input. New state: `startCoords: LatLon | null` + `locating: boolean`. Calls getCurrentPosition(), sets the displayed start text to a sentinel "Your current location" string. handlePlan skips geocoding for start when `startCoords && start === MY_LOCATION_LABEL` and feeds the coords directly into getRoute. Typing in the Start input invalidates startCoords (updateStart helper).
+- Added a screen-reader-only `.trip-live` aria-live="polite" region that announces "Planning trip…" while loading and "{N} tracks within {C} miles of your route." when results land.
+- Added a shimmer skeleton (`.skeleton`, `.skeleton-stats`, `.skeleton-count`, `.skeleton-card`) shown in place of the results card while `loading`. Replaces the previous "Planning…" text-only state — the skeleton is sized to roughly match the results-header + 3 cards, eliminating the layout shift when the first result arrives.
+- Added `:focus-visible` styles for buttons (.btn-primary/.btn-secondary/.btn-link, view-toggle, trip-use-location, trip-pill-clear, trip-show-on-map) using the same `0 0 0 3px var(--accent-fade)` ring as the existing input focus styles.
+- Mobile (<720px) tweaks: `.map-wrap` height clamps to `clamp(400px, 60vh, 560px)` (was 420–720) so it stays ≥400px without dominating phone screens; `.trip-results-list` gets `max-height: 60vh; overflow-y: auto` so long match lists scroll inside the panel rather than pushing the rest of the page off-screen. Trip controls already stack 1-col below 720px from TRIP-1 — no change needed.
+- Added `prefers-reduced-motion` guard to disable the shimmer animation.
+- Made the error banner `role="alert"` so it's announced when geocoding/routing fails.
+- Files modified: site/app/trip-planner.tsx, site/app/globals.css.
+- **Learnings:**
+  - For coords-without-geocoding, the cleanest pattern is a `MY_LOCATION_LABEL` sentinel string + a coords side-channel state, with `updateStart` clearing the side-channel whenever the user types something new. Don't try to encode coords in the input value (`"37.4,-122.1"`) — Nominatim doesn't reliably reverse-geocode through `/search`, and the round-trip would just add latency.
+  - Shimmer keyframes go from -200% → 200% (4× the width of the gradient) so the band appears to slide all the way across; smaller ranges leave the gradient visibly stuck mid-element. The `background-size: 200% 100%` doubles the gradient width so 50% lands centered when the animation is at its midpoint.
+  - aria-live regions must be in the DOM at first render to be announced reliably across SR engines — a `{loading && <span aria-live>}` toggle often misses the first announcement. Keeping the span always present and toggling its text content avoids that gotcha. The `.trip-live` class uses the standard sr-only clip pattern so it's invisible but discoverable.
+  - For the focus-visible ring, reusing `--accent-fade` keeps it consistent with input focus rings; targeting `:focus-visible` (not `:focus`) avoids showing the ring on mouse clicks.
+  - `prefers-reduced-motion` is required by WCAG 2.1 SC 2.3.3 (Animation from Interactions) — once you add a shimmer/marquee/keyframe, also add the media query to disable it. Cheap to add, and the difference is meaningful for vestibular-disorder users.
+---
