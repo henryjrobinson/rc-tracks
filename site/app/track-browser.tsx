@@ -231,6 +231,21 @@ export function TrackBrowser({ tracks }: Props) {
             Within {radius} mi of <strong>{shortenLabel(originLabel)}</strong>
           </span>
         )}
+        {tripResult && (
+          <span className="trip-pill">
+            Trip: <strong>{shortLabel(tripResult.startLabel)}</strong>
+            <span className="trip-pill-arrow"> → </span>
+            <strong>{shortLabel(tripResult.endLabel)}</strong>
+            <button
+              type="button"
+              onClick={() => setTripResult(null)}
+              className="trip-pill-clear"
+              aria-label="Clear planned trip"
+            >
+              Clear
+            </button>
+          </span>
+        )}
         {locStatus && <span className="loc-status">{locStatus}</span>}
         <span className="grow" />
         <div className="view-toggle" role="tablist" aria-label="View mode">
@@ -294,7 +309,14 @@ export function TrackBrowser({ tracks }: Props) {
           highlightedSlugs={tripHighlightedSlugs}
         />
       )}
-      {view === 'trip' && <TripPlanner tracks={tracks} onPlanned={setTripResult} />}
+      {view === 'trip' && (
+        <TripPlanner
+          tracks={tracks}
+          result={tripResult}
+          onResultChange={setTripResult}
+          onShowOnMap={() => setView('map')}
+        />
+      )}
     </>
   );
 }
@@ -351,4 +373,9 @@ function shortenLabel(s: string): string {
   const parts = s.split(',').map((p) => p.trim());
   if (parts.length <= 3) return s;
   return [parts[0], parts[1], parts[parts.length - 1]].join(', ');
+}
+
+function shortLabel(s: string): string {
+  const first = s.split(',')[0]?.trim() ?? s;
+  return first.length > 28 ? `${first.slice(0, 27)}…` : first;
 }

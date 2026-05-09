@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import type { Track } from '@/lib/tracks';
 import { geocode, getRoute, nearestOnPolylineMiles, type Route } from '@/lib/geo';
 
@@ -18,22 +18,19 @@ export type TripResult = {
 
 type Props = {
   tracks: Track[];
-  onPlanned?: (result: TripResult | null) => void;
+  result: TripResult | null;
+  onResultChange: (result: TripResult | null) => void;
+  onShowOnMap?: () => void;
 };
 
-export function TripPlanner({ tracks, onPlanned }: Props) {
+export function TripPlanner({ tracks, result, onResultChange, onShowOnMap }: Props) {
   const [start, setStart] = useState('');
   const [destination, setDestination] = useState('');
   const [corridor, setCorridor] = useState(25);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [result, setResult] = useState<TripResult | null>(null);
 
   const abortRef = useRef<AbortController | null>(null);
-
-  useEffect(() => {
-    onPlanned?.(result);
-  }, [result, onPlanned]);
 
   async function handlePlan() {
     const startQ = start.trim();
@@ -56,12 +53,12 @@ export function TripPlanner({ tracks, onPlanned }: Props) {
       ]);
       if (ctrl.signal.aborted) return;
       if (!from) {
-        setResult(null);
+        onResultChange(null);
         setError(`Couldn't find a location matching "${startQ}".`);
         return;
       }
       if (!to) {
-        setResult(null);
+        onResultChange(null);
         setError(`Couldn't find a location matching "${destQ}".`);
         return;
       }
@@ -73,7 +70,7 @@ export function TripPlanner({ tracks, onPlanned }: Props) {
       );
       if (ctrl.signal.aborted) return;
       if (!route) {
-        setResult(null);
+        onResultChange(null);
         setError('No driving route found between those locations.');
         return;
       }
@@ -88,7 +85,7 @@ export function TripPlanner({ tracks, onPlanned }: Props) {
       }
       matches.sort((a, b) => a.alongMi - b.alongMi);
 
-      setResult({
+      onResultChange({
         route,
         startLabel: from.displayName,
         endLabel: to.displayName,
@@ -97,7 +94,7 @@ export function TripPlanner({ tracks, onPlanned }: Props) {
       });
     } catch (err) {
       if ((err as Error).name === 'AbortError') return;
-      setResult(null);
+      onResultChange(null);
       setError((err as Error).message || 'Trip planning failed. Please try again.');
     } finally {
       if (abortRef.current === ctrl) {
@@ -174,9 +171,20 @@ export function TripPlanner({ tracks, onPlanned }: Props) {
               <span className="trip-results-divider">·</span>
               <span>{formatDuration(result.route.durationMin)}</span>
             </span>
-            <span className="trip-results-count">
-              {result.matches.length} track{result.matches.length === 1 ? '' : 's'} within{' '}
-              {result.corridorMi} mi
+            <span className="trip-results-actions">
+              <span className="trip-results-count">
+                {result.matches.length} track{result.matches.length === 1 ? '' : 's'} within{' '}
+                {result.corridorMi} mi
+              </span>
+              {onShowOnMap && result.matches.length > 0 && (
+                <button
+                  type="button"
+                  className="btn-secondary trip-show-on-map"
+                  onClick={onShowOnMap}
+                >
+                  Show on map
+                </button>
+              )}
             </span>
           </div>
 
