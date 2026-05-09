@@ -92,6 +92,39 @@ export async function getRoute(start: LatLon, end: LatLon, signal?: AbortSignal)
   };
 }
 
+/**
+ * Minimum great-circle distance (miles) from a point to a polyline.
+ * Projects onto each segment using an equirectangular approximation at the
+ * segment midpoint, clamps to the segment, then measures with haversine.
+ */
+export function pointToPolylineMiles(p: LatLon, polyline: LatLon[]): number {
+  if (polyline.length === 0) return Infinity;
+  if (polyline.length === 1) return haversineMiles(p, polyline[0]);
+
+  let min = Infinity;
+  for (let i = 0; i < polyline.length - 1; i++) {
+    const d = haversineMiles(p, closestPointOnSegment(p, polyline[i], polyline[i + 1]));
+    if (d < min) min = d;
+  }
+  return min;
+}
+
+function closestPointOnSegment(p: LatLon, a: LatLon, b: LatLon): LatLon {
+  const cosMidLat = Math.cos(((a.lat + b.lat) / 2) * (Math.PI / 180));
+  const ax = a.lon * cosMidLat;
+  const ay = a.lat;
+  const bx = b.lon * cosMidLat;
+  const by = b.lat;
+  const px = p.lon * cosMidLat;
+  const py = p.lat;
+  const dx = bx - ax;
+  const dy = by - ay;
+  const lenSq = dx * dx + dy * dy;
+  if (lenSq === 0) return a;
+  const t = Math.max(0, Math.min(1, ((px - ax) * dx + (py - ay) * dy) / lenSq));
+  return { lat: a.lat + t * (b.lat - a.lat), lon: a.lon + t * (b.lon - a.lon) };
+}
+
 export function getCurrentPosition(): Promise<LatLon> {
   return new Promise((resolve, reject) => {
     if (typeof navigator === 'undefined' || !navigator.geolocation) {
