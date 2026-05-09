@@ -2,9 +2,17 @@
 
 import { useRef, useState } from 'react';
 import type { Track } from '@/lib/tracks';
-import { geocode, getRoute, nearestOnPolylineMiles, type Route } from '@/lib/geo';
+import {
+  geocode,
+  getCurrentPosition,
+  getRoute,
+  nearestOnPolylineMiles,
+  type LatLon,
+  type Route,
+} from '@/lib/geo';
 
 const CORRIDOR_OPTIONS = [5, 10, 25, 50, 100];
+const MY_LOCATION_LABEL = 'Your current location';
 
 export type TripMatch = Track & { detourMi: number; alongMi: number };
 
@@ -29,8 +37,29 @@ export function TripPlanner({ tracks, result, onResultChange, onShowOnMap }: Pro
   const [corridor, setCorridor] = useState(25);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [startCoords, setStartCoords] = useState<LatLon | null>(null);
+  const [locating, setLocating] = useState(false);
 
   const abortRef = useRef<AbortController | null>(null);
+
+  function updateStart(value: string) {
+    setStart(value);
+    if (startCoords && value !== MY_LOCATION_LABEL) setStartCoords(null);
+  }
+
+  async function handleUseMyLocation() {
+    setError(null);
+    setLocating(true);
+    try {
+      const pos = await getCurrentPosition();
+      setStartCoords(pos);
+      setStart(MY_LOCATION_LABEL);
+    } catch (err) {
+      setError((err as Error).message || 'Could not get your location.');
+    } finally {
+      setLocating(false);
+    }
+  }
 
   async function handlePlan() {
     const startQ = start.trim();
@@ -46,9 +75,13 @@ export function TripPlanner({ tracks, result, onResultChange, onShowOnMap }: Pro
     setLoading(true);
     setError(null);
 
+    const useCoords = startCoords && start === MY_LOCATION_LABEL ? startCoords : null;
+
     try {
       const [from, to] = await Promise.all([
-        geocode(startQ, ctrl.signal),
+        useCoords
+          ? Promise.resolve({ ...useCoords, displayName: MY_LOCATION_LABEL })
+          : geocode(startQ, ctrl.signal),
         geocode(destQ, ctrl.signal),
       ]);
       if (ctrl.signal.aborted) return;
@@ -119,11 +152,25 @@ export function TripPlanner({ tracks, result, onResultChange, onShowOnMap }: Pro
           <input
             type="text"
             value={start}
-            onChange={(e) => setStart(e.target.value)}
+            onChange={(e) => updateStart(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                e.preventDefault();
+                handlePlan();
+              }
+            }}
             placeholder="City, ZIP, or address"
             aria-label="Trip start location"
             disabled={loading}
           />
+          <button
+            type="button"
+            className="trip-use-location"
+            onClick={handleUseMyLocation}
+            disabled={loading || locating}
+          >
+            {locating ? 'Getting location…' : '📍 Use my location'}
+          </button>
         </label>
         <label className="trip-field">
           <span className="trip-label">Destination</span>
@@ -131,6 +178,12 @@ export function TripPlanner({ tracks, result, onResultChange, onShowOnMap }: Pro
             type="text"
             value={destination}
             onChange={(e) => setDestination(e.target.value)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter') {
+                e.preventDefault();
+                handlePlan();
+              }
+            }}
             placeholder="City, ZIP, or address"
             aria-label="Trip destination"
             disabled={loading}
@@ -161,9 +214,35 @@ export function TripPlanner({ tracks, result, onResultChange, onShowOnMap }: Pro
         </button>
       </div>
 
-      {error && <p className="trip-error">{error}</p>}
+      {error && (
+        <p className="trip-error" role="alert">
+          {error}
+        </p>
+      )}
 
-      {result && (
+      <span className="trip-live" aria-live="polite" aria-atomic="true">
+        {loading
+          ? 'Planning trip…'
+          : result
+            ? `${result.matches.length} track${result.matches.length === 1 ? '' : 's'} within ${result.corridorMi} miles of your route.`
+            : ''}
+      </span>
+
+      {loading && (
+        <div className="trip-results trip-skeleton" aria-hidden="true">
+          <div className="trip-results-header">
+            <span className="skeleton skeleton-stats" />
+            <span className="skeleton skeleton-count" />
+          </div>
+          <div className="trip-results-list">
+            <div className="skeleton skeleton-card" />
+            <div className="skeleton skeleton-card" />
+            <div className="skeleton skeleton-card" />
+          </div>
+        </div>
+      )}
+
+      {!loading && result && (
         <div className="trip-results">
           <div className="trip-results-header">
             <span className="trip-results-stats">
