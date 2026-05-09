@@ -109,6 +109,34 @@ export function pointToPolylineMiles(p: LatLon, polyline: LatLon[]): number {
   return min;
 }
 
+/**
+ * Nearest point on a polyline to p: returns the perpendicular detour (miles)
+ * and how far along the polyline (miles, from index 0) the closest point sits.
+ */
+export function nearestOnPolylineMiles(
+  p: LatLon,
+  polyline: LatLon[],
+): { detourMi: number; alongMi: number } {
+  if (polyline.length === 0) return { detourMi: Infinity, alongMi: 0 };
+  if (polyline.length === 1) return { detourMi: haversineMiles(p, polyline[0]), alongMi: 0 };
+
+  let minDetour = Infinity;
+  let bestAlong = 0;
+  let cumulative = 0;
+  for (let i = 0; i < polyline.length - 1; i++) {
+    const a = polyline[i];
+    const b = polyline[i + 1];
+    const closest = closestPointOnSegment(p, a, b);
+    const detour = haversineMiles(p, closest);
+    if (detour < minDetour) {
+      minDetour = detour;
+      bestAlong = cumulative + haversineMiles(a, closest);
+    }
+    cumulative += haversineMiles(a, b);
+  }
+  return { detourMi: minDetour, alongMi: bestAlong };
+}
+
 function closestPointOnSegment(p: LatLon, a: LatLon, b: LatLon): LatLon {
   const cosMidLat = Math.cos(((a.lat + b.lat) / 2) * (Math.PI / 180));
   const ax = a.lon * cosMidLat;

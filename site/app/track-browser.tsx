@@ -280,7 +280,7 @@ export function TrackBrowser({ tracks }: Props) {
       {view === 'map' && (
         <MapView tracks={filtered} origin={origin} radiusMiles={origin ? radius : undefined} />
       )}
-      {view === 'trip' && <TripPlanner />}
+      {view === 'trip' && <TripPlanner tracks={tracks} />}
     </>
   );
 }

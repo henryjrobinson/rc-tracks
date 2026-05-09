@@ -425,6 +425,29 @@ a {
   font-size: 0.9rem;
 }
 
+.trip-error {
+  margin: 1rem 0 0 0;
+  padding: 0.625rem 0.875rem;
+  background: rgba(255, 106, 0, 0.08);
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+
+.trip-summary {
+  margin: 1rem 0 0 0;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.trip-form input:disabled,
+.trip-form select:disabled,
+.trip-submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
 footer {
   margin-top: 3rem;
   padding-top: 1.5rem;
