@@ -1,0 +1,63 @@
+{
+  "name": "Trip Planner for rc-tracks",
+  "branchName": "main",
+  "goal": "Add a Trip view mode where the user enters a start + destination, sees the driving route on the map, and gets a list of RC tracks within a configurable corridor along that route.",
+  "stories": [
+    {
+      "id": "TRIP-1",
+      "title": "Add Trip view-mode toggle and stub UI",
+      "priority": 1,
+      "passes": false,
+      "description": "Extend the view toggle in app/track-browser.tsx to include a third option: 'Trip'. When Trip is active, render a new component <TripPlanner /> in place of the list/map. The component lives at app/trip-planner.tsx and for this story is a stub that just shows two text inputs (start, destination), a corridor radius selector (5/10/25/50/100 mi, default 25), and a 'Plan trip' button. Wire local state for the inputs only — clicking the button does nothing yet (or logs to console). Add CSS classes to globals.css for the new layout. Keep the existing List + Map views functional. No type errors. Mobile-friendly."
+    },
+    {
+      "id": "TRIP-2",
+      "title": "OSRM routing wrapper in lib/geo.ts",
+      "priority": 2,
+      "passes": false,
+      "description": "Add async function getRoute(start: LatLon, end: LatLon, signal?: AbortSignal): Promise<{ polyline: LatLon[]; distanceMi: number; durationMin: number } | null> to site/lib/geo.ts. Implementation calls https://router.project-osrm.org/route/v1/driving/{start.lon},{start.lat};{end.lon},{end.lat}?overview=full&geometries=geojson&steps=false. Parse routes[0].geometry.coordinates → polyline as { lat, lon } points. Return distanceMi from routes[0].distance / 1609.344 and durationMin from routes[0].duration / 60. Return null if no route. Throw on network errors. Add unit-style smoke test inline (just a TS function that compiles, no test runner needed). Document the function with one-line JSDoc."
+    },
+    {
+      "id": "TRIP-3",
+      "title": "Point-to-polyline distance helper",
+      "priority": 3,
+      "passes": false,
+      "description": "Add pointToPolylineMiles(p: LatLon, polyline: LatLon[]): number to site/lib/geo.ts. Returns the minimum great-circle distance from p to any segment of the polyline (in miles). For each consecutive pair (a, b) in the polyline, project p onto segment ab using equirectangular approximation (meters-per-degree at the segment midpoint), clamp t to [0, 1], compute the closest point, then take haversine distance. Empty polyline returns Infinity. Single-point polyline returns haversine to that point. Function must be O(n) where n = polyline length and pure (no I/O)."
+    },
+    {
+      "id": "TRIP-4",
+      "title": "Wire Plan-trip action in TripPlanner",
+      "priority": 4,
+      "passes": false,
+      "description": "In app/trip-planner.tsx (created in TRIP-1, now extended): when 'Plan trip' is clicked, (a) geocode both inputs via geocode() from lib/geo.ts, (b) call getRoute() with the two LatLons, (c) compute the list of tracks where pointToPolylineMiles(track, polyline) <= corridorRadius (only consider tracks with lat/lon set), (d) sort by distance-along-route from start, (e) save results to component state. Show a friendly error message if any step fails (geocoding, no route, no tracks). Show a 'Planning…' loading state while in flight. Use AbortController so a second click cancels the first."
+    },
+    {
+      "id": "TRIP-5",
+      "title": "Render route on map and highlight trip tracks",
+      "priority": 5,
+      "passes": false,
+      "description": "Extend app/map-view.tsx to accept new optional props: route?: LatLon[] (the polyline) and highlightedSlugs?: Set<string> (tracks to draw with a brighter marker). When route is provided, draw it as a Leaflet Polyline with accent color, and call map.fitBounds() on the polyline bounds with padding. When highlightedSlugs is provided, render those markers with a different L.icon (or a CSS class via L.divIcon) so they stand out from the rest. Pipe these props through from TripPlanner via the existing parent (TrackBrowser) — extend MapView's signature in app/track-browser.tsx as needed. The non-trip List + Map views must still work."
+    },
+    {
+      "id": "TRIP-6",
+      "title": "Trip results list with detour metrics",
+      "priority": 6,
+      "passes": false,
+      "description": "In TripPlanner, render the trip-results below the input panel: total route distance + duration at the top, then a list of matching tracks sorted by distance-from-start-along-route. Each entry shows: track name (link), city/state/country, surface tag if known, detour distance (the pointToPolylineMiles value rounded to 0.1 mi), and a 'Map' link that opens the track on Google Maps using lat/lon. Reuse styles from the existing card markup — keep it consistent. If 0 results, show a friendly empty state suggesting a wider corridor."
+    },
+    {
+      "id": "TRIP-7",
+      "title": "Show trip mode on map view",
+      "priority": 7,
+      "passes": false,
+      "description": "Add a 'Show on map' button in TripPlanner results that, when clicked, switches the active view to 'map' (lifting view state up if needed) and pre-populates MapView with the route polyline + highlighted track slugs. The user can then pan/zoom while still seeing the planned route. Sync the trip-result state with the MapView render so toggling between Trip and Map keeps the route drawn until the user clears it."
+    },
+    {
+      "id": "TRIP-8",
+      "title": "Polish, accessibility, and mobile",
+      "priority": 8,
+      "passes": false,
+      "description": "Final pass: (1) Both inputs accept Enter to submit. (2) 'Use my location' button on the start input that calls getCurrentPosition(). (3) Keyboard focus styles match the rest of the site. (4) On viewports below 720px, the trip controls stack into a single column, the map keeps min-height 400px, and the results list scrolls. (5) Loading state shows route-distance shimmer or skeleton instead of layout shift. (6) Add an aria-live region for the result count. Verify with `npm run build` and `npx tsc --noEmit` clean. After this story, ALL stories have passes:true and the agent should output <promise>COMPLETE</promise>."
+    }
+  ]
+}

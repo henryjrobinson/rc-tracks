@@ -1,0 +1,17 @@
+# Ralph Progress Log — rc-tracks Trip Planner
+
+## Codebase Patterns
+- All filter state lives in `app/track-browser.tsx`; child components are presentational.
+- The view-toggle pattern is in track-browser.tsx — extend it for new views.
+- `app/map-view.tsx` is dynamically imported with `ssr: false` to avoid Leaflet/window crashes.
+- Geo helpers (geocoding, haversine, geolocation, network calls) belong in `lib/geo.ts`.
+- localStorage caches use a versioned key (e.g. `rc-tracks:geocode-cache:v1`) and JSON.parse with try/catch.
+- The Track type is in `site/lib/tracks.ts`. The data file is `site/data/tracks.geocoded.json`.
+- All styles in `site/app/globals.css`. Mobile-first; `@media (min-width: 720px)` for desktop.
+- Touch targets ≥44px (use `min-height: 44px` for inputs/buttons).
+- Map markers use `L.icon({ iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png', ... })` to avoid bundler issues.
+- Build verifies with `cd site && npx tsc --noEmit && npm run build`.
+
+Started: ralph initialization
+
+---
