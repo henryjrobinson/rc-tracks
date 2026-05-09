@@ -64,6 +64,34 @@ export async function geocode(query: string, signal?: AbortSignal): Promise<Geoc
   return result;
 }
 
+export type Route = { polyline: LatLon[]; distanceMi: number; durationMin: number };
+
+type OsrmResponse = {
+  code?: string;
+  routes?: Array<{
+    geometry?: { coordinates?: Array<[number, number]> };
+    distance?: number;
+    duration?: number;
+  }>;
+};
+
+/** Fetch a driving route from OSRM (public demo server). Returns null if no route exists. */
+export async function getRoute(start: LatLon, end: LatLon, signal?: AbortSignal): Promise<Route | null> {
+  const url = `https://router.project-osrm.org/route/v1/driving/${start.lon},${start.lat};${end.lon},${end.lat}?overview=full&geometries=geojson&steps=false`;
+  const res = await fetch(url, { signal, headers: { Accept: 'application/json' } });
+  if (!res.ok) throw new Error(`Routing failed: HTTP ${res.status}`);
+  const data = (await res.json()) as OsrmResponse;
+  const route = data.routes?.[0];
+  const coords = route?.geometry?.coordinates;
+  if (!route || !coords || coords.length === 0) return null;
+  const polyline: LatLon[] = coords.map(([lon, lat]) => ({ lat, lon }));
+  return {
+    polyline,
+    distanceMi: (route.distance ?? 0) / 1609.344,
+    durationMin: (route.duration ?? 0) / 60,
+  };
+}
+
 export function getCurrentPosition(): Promise<LatLon> {
   return new Promise((resolve, reject) => {
     if (typeof navigator === 'undefined' || !navigator.geolocation) {
