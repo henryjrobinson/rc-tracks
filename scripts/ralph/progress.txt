@@ -15,3 +15,15 @@
 Started: ralph initialization
 
 ---
+
+## 2026-05-09T01:15:49Z - TRIP-1
+- Added a third "Trip" tab to the view toggle in track-browser.tsx and rendered a new <TripPlanner /> stub when active.
+- TripPlanner has start/destination text inputs, corridor selector (5/10/25/50/100 mi, default 25), and a Plan-trip button that currently only logs.
+- Added .trip-panel / .trip-form / .trip-field / .trip-submit / .trip-empty CSS in globals.css; mobile-first single column, 2-col + selector + button at ≥720px.
+- Files modified: site/app/track-browser.tsx, site/app/trip-planner.tsx (new), site/app/globals.css.
+- **Learnings:**
+  - The view-toggle uses a ternary for list vs map; switching to per-view `&&` blocks scales cleanly to a third (and future fourth) view without nested ternaries.
+  - `View` union type is the single source of truth — extend it before adding tab buttons or render branches.
+  - When TripPlanner needs to read filtered tracks or call back into TrackBrowser (TRIP-4+), pass them as props from track-browser.tsx; don't duplicate filter state inside TripPlanner.
+  - Keep TripPlanner in its own file (already imported) so future stories can extend its state without bloating track-browser.tsx.
+---

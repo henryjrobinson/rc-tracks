@@ -7,7 +7,7 @@
       "id": "TRIP-1",
       "title": "Add Trip view-mode toggle and stub UI",
       "priority": 1,
-      "passes": false,
+      "passes": true,
       "description": "Extend the view toggle in app/track-browser.tsx to include a third option: 'Trip'. When Trip is active, render a new component <TripPlanner /> in place of the list/map. The component lives at app/trip-planner.tsx and for this story is a stub that just shows two text inputs (start, destination), a corridor radius selector (5/10/25/50/100 mi, default 25), and a 'Plan trip' button. Wire local state for the inputs only — clicking the button does nothing yet (or logs to console). Add CSS classes to globals.css for the new layout. Keep the existing List + Map views functional. No type errors. Mobile-friendly."
     },
     {
