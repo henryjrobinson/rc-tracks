@@ -78,3 +78,17 @@ Started: ralph initialization
   - `<Polyline positions>` from react-leaflet wants `[lat, lon][]`, not `LatLon` objects — we convert once in MapView so callers can keep passing the polyline straight from `Route`.
 ---
 
+## 2026-05-09T01:27:11Z - TRIP-6
+- Replaced the single-line `.trip-summary` with a full results section. Header shows `{distanceMi} mi · {formatDuration(durationMin)}` with the matching count + corridor on the right; below that, an `.list` of `.card` entries reusing the existing track-card markup. Each entry shows track name (link to track.url), city/state/countryCode, surface tag (when known), an `indoor` tag, and a `card-meta` row with Website + Google-Maps Map link. Detour mileage is rendered as `{m.detourMi.toFixed(1)} mi off route` next to the location, in the accent color via `.trip-detour`.
+- Removed the `setError(...)` for the zero-match case — the empty state ("No tracks within X mi… try a wider corridor.") now renders inside the results section so users still see the route stats and matched count instead of an error banner.
+- Added a small private `formatDuration(minutes)` helper: `< 60 → "X min"`, else `"H hr"` or `"H hr M min"`.
+- Added CSS: `.trip-results`, `.trip-results-header`, `.trip-results-stats`, `.trip-results-divider`, `.trip-results-count`, `.trip-results-list`, `.trip-results-empty`, `.trip-detour`. Used existing `.list` + `.card` for the result entries so the visual matches the regular browse view.
+- Files modified: site/app/trip-planner.tsx, site/app/globals.css.
+- **Learnings:**
+  - The TRIP-4 author left a deliberate fork-in-the-road on zero-match handling (banner vs. empty state inside results). TRIP-6 picks the empty-state path; if TRIP-7+ ever needs the banner back for a different reason, the existing `.trip-error` class is still there.
+  - Re-implementing the card markup inside trip-planner.tsx (rather than exporting `TrackCard` from track-browser.tsx) keeps each view's card free to diverge — TripResultCard hides phone/email and swaps `.distance` for `.trip-detour` without touching the regular browse card.
+  - `match.detourMi.toFixed(1)` returns a trailing-zero string (e.g. `0.0 mi off route`). Acceptable for the corridor scale; if TRIP-8 later wants `<0.05 → "on route"` copy, it'll need a small ternary.
+  - Counts use the same singular/plural ternary pattern (`tracks within ...`) as the older summary so screen readers (and a future aria-live in TRIP-8) get a consistent string shape.
+  - `formatDuration` is intentionally local (not exported from lib/geo.ts) because it's a UI concern. If TRIP-7 needs the same formatting on the map summary line, lift it to `lib/format.ts` rather than re-importing from a component file.
+---
+

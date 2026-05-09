@@ -42,7 +42,7 @@
       "id": "TRIP-6",
       "title": "Trip results list with detour metrics",
       "priority": 6,
-      "passes": false,
+      "passes": true,
       "description": "In TripPlanner, render the trip-results below the input panel: total route distance + duration at the top, then a list of matching tracks sorted by distance-from-start-along-route. Each entry shows: track name (link), city/state/country, surface tag if known, detour distance (the pointToPolylineMiles value rounded to 0.1 mi), and a 'Map' link that opens the track on Google Maps using lat/lon. Reuse styles from the existing card markup — keep it consistent. If 0 results, show a friendly empty state suggesting a wider corridor."
     },
     {
