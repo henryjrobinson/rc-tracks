@@ -1,14 +1,14 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import type { Track } from '@/lib/tracks';
 import { geocode, getRoute, nearestOnPolylineMiles, type Route } from '@/lib/geo';
 
 const CORRIDOR_OPTIONS = [5, 10, 25, 50, 100];
 
-type TripMatch = Track & { detourMi: number; alongMi: number };
+export type TripMatch = Track & { detourMi: number; alongMi: number };
 
-type TripResult = {
+export type TripResult = {
   route: Route;
   startLabel: string;
   endLabel: string;
@@ -18,9 +18,10 @@ type TripResult = {
 
 type Props = {
   tracks: Track[];
+  onPlanned?: (result: TripResult | null) => void;
 };
 
-export function TripPlanner({ tracks }: Props) {
+export function TripPlanner({ tracks, onPlanned }: Props) {
   const [start, setStart] = useState('');
   const [destination, setDestination] = useState('');
   const [corridor, setCorridor] = useState(25);
@@ -29,6 +30,10 @@ export function TripPlanner({ tracks }: Props) {
   const [result, setResult] = useState<TripResult | null>(null);
 
   const abortRef = useRef<AbortController | null>(null);
+
+  useEffect(() => {
+    onPlanned?.(result);
+  }, [result, onPlanned]);
 
   async function handlePlan() {
     const startQ = start.trim();

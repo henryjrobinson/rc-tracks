@@ -257,6 +257,26 @@ a {
 
 .leaflet-container .leaflet-control-attribution a { color: var(--text-dim); }
 
+.trip-marker {
+  background: transparent;
+  border: none;
+}
+
+.trip-marker-pin {
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 3px solid #1a0f00;
+  box-shadow: 0 0 0 2px var(--accent), 0 2px 6px rgba(0, 0, 0, 0.45);
+}
+
+.map-summary-highlight {
+  color: var(--accent);
+  font-weight: 600;
+}
+
 .summary {
   color: var(--text-dim);
   font-size: 0.9rem;

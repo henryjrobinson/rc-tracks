@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic';
 import type { Track } from '@/lib/tracks';
 import { geocode, getCurrentPosition, haversineMiles, type LatLon } from '@/lib/geo';
 
-import { TripPlanner } from './trip-planner';
+import { TripPlanner, type TripResult } from './trip-planner';
 
 const MapView = dynamic(() => import('./map-view').then((m) => m.MapView), { ssr: false });
 
@@ -44,6 +44,14 @@ export function TrackBrowser({ tracks }: Props) {
   const [radius, setRadius] = useState(100);
   const [locStatus, setLocStatus] = useState<string>('');
   const abortRef = useRef<AbortController | null>(null);
+
+  const [tripResult, setTripResult] = useState<TripResult | null>(null);
+
+  const tripHighlightedSlugs = useMemo(
+    () => (tripResult ? new Set(tripResult.matches.map((m) => m.slug)) : null),
+    [tripResult],
+  );
+  const tripPolyline = tripResult?.route.polyline ?? null;
 
   const countries = useMemo(() => {
     const counts = new Map<string, number>();
@@ -278,9 +286,15 @@ export function TrackBrowser({ tracks }: Props) {
         )
       )}
       {view === 'map' && (
-        <MapView tracks={filtered} origin={origin} radiusMiles={origin ? radius : undefined} />
+        <MapView
+          tracks={filtered}
+          origin={origin}
+          radiusMiles={origin ? radius : undefined}
+          route={tripPolyline}
+          highlightedSlugs={tripHighlightedSlugs}
+        />
       )}
-      {view === 'trip' && <TripPlanner tracks={tracks} />}
+      {view === 'trip' && <TripPlanner tracks={tracks} onPlanned={setTripResult} />}
     </>
   );
 }
