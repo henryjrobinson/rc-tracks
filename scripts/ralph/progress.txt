@@ -63,3 +63,18 @@ Started: ralph initialization
   - Geocode/route errors propagate as `Error.message`. Nominatim and OSRM both have rate limits; the existing localStorage geocode cache helps the start/dest pair but route requests are not cached. If we hit limits in TRIP-7+, consider caching `getRoute` by `${start.lat},${start.lon}-${end.lat},${end.lon}` for the session.
   - `'use client'` directive must stay first; importing types-only (`type Route`) avoids breaking the SSR boundary.
 ---
+
+## 2026-05-09T01:24:18Z - TRIP-5
+- Extended MapView with optional `route?: LatLon[] | null` and `highlightedSlugs?: Set<string> | null` props. Route renders as a Leaflet `Polyline` (accent color, weight 4) and a new `<FitToRoute>` child fits the polyline bounds with 40px padding. Highlighted markers use a new `HIGHLIGHT_ICON` (L.divIcon → `.trip-marker` / `.trip-marker-pin` CSS) and get `zIndexOffset: 1000` so they sit above clusters and the standard markers.
+- Made the focus behavior mutually exclusive: when a route is provided FitToRoute wins; otherwise FocusOnOrigin still flies to the origin pill. The radius circle still draws regardless, in case the user has both an origin filter and a planned trip.
+- Lifted the trip-result state up to TrackBrowser via an `onPlanned` callback exported from TripPlanner. TripPlanner publishes its current `result` (or `null` on retries / failures) through a `useEffect`, and TrackBrowser memoizes a `tripHighlightedSlugs: Set<string>` plus the polyline reference, then passes both to MapView. Switching to the Map tab after planning now shows the route + orange dots automatically.
+- Added a "N on trip route" suffix to the existing `.map-summary` text via `.map-summary-highlight` so users can tell the highlight is intentional.
+- Files modified: site/app/map-view.tsx, site/app/track-browser.tsx, site/app/trip-planner.tsx, site/app/globals.css.
+- **Learnings:**
+  - `L.divIcon({ className: 'trip-marker' })` REPLACES the default `leaflet-div-icon` class entirely (no `leaflet-div-icon` background-white style to fight). If a future story needs to keep the default styling, use `className: 'leaflet-div-icon trip-marker'` instead.
+  - `L.markerClusterGroup` needs to be torn down + rebuilt on `highlightedSlugs` change because we set the icon at marker-creation time. Adding `highlightedSlugs` to the MarkerCluster effect deps does this — cheap because tracks lists are <2k entries.
+  - For the parent→child→parent state lift, `useEffect(() => onPlanned?.(result), [result, onPlanned])` works because React guarantees `setState` callbacks are stable. If a non-setter is ever passed as `onPlanned`, wrap in `useCallback` at the call site or this effect will refire endlessly.
+  - The `setTripResult(null)` reset is implicit: TripPlanner now also passes `null` whenever it calls `setResult(null)` on retry, which keeps the map in sync. TRIP-7 ("Show on map" button + clear) should consider exposing a "clear trip" action somewhere visible in the map view too.
+  - `<Polyline positions>` from react-leaflet wants `[lat, lon][]`, not `LatLon` objects — we convert once in MapView so callers can keep passing the polyline straight from `Route`.
+---
+

@@ -35,7 +35,7 @@
       "id": "TRIP-5",
       "title": "Render route on map and highlight trip tracks",
       "priority": 5,
-      "passes": false,
+      "passes": true,
       "description": "Extend app/map-view.tsx to accept new optional props: route?: LatLon[] (the polyline) and highlightedSlugs?: Set<string> (tracks to draw with a brighter marker). When route is provided, draw it as a Leaflet Polyline with accent color, and call map.fitBounds() on the polyline bounds with padding. When highlightedSlugs is provided, render those markers with a different L.icon (or a CSS class via L.divIcon) so they stand out from the rest. Pipe these props through from TripPlanner via the existing parent (TrackBrowser) — extend MapView's signature in app/track-browser.tsx as needed. The non-trip List + Map views must still work."
     },
     {
