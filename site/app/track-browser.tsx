@@ -38,11 +38,11 @@ export function TrackBrowser({ tracks }: Props) {
   const [indoor, setIndoor] = useState('');
   const [hasWebsite, setHasWebsite] = useState(false);
 
-  const [locQuery, setLocQuery] = useState('');
   const [origin, setOrigin] = useState<LatLon | null>(null);
   const [originLabel, setOriginLabel] = useState('');
   const [radius, setRadius] = useState(100);
   const [locStatus, setLocStatus] = useState<string>('');
+  const [locating, setLocating] = useState(false);
   const abortRef = useRef<AbortController | null>(null);
 
   const [tripResult, setTripResult] = useState<TripResult | null>(null);
@@ -106,59 +106,92 @@ export function TrackBrowser({ tracks }: Props) {
     return list;
   }, [tracks, q, country, usState, surface, indoor, hasWebsite, origin, radius]);
 
-  async function handleLookup() {
-    const text = locQuery.trim();
-    if (!text) return;
+  async function handleLocate() {
+    const text = q.trim();
     abortRef.current?.abort();
     const ctrl = new AbortController();
     abortRef.current = ctrl;
-    setLocStatus('Looking up…');
+    setLocating(true);
+    setLocStatus(text ? `Looking up "${truncate(text, 30)}"…` : 'Requesting your location…');
     try {
-      const result = await geocode(text, ctrl.signal);
-      if (!result) {
-        setLocStatus('No location found.');
-        setOrigin(null);
-        return;
+      if (text) {
+        const result = await geocode(text, ctrl.signal);
+        if (ctrl.signal.aborted) return;
+        if (!result) {
+          setLocStatus(`No location found for "${truncate(text, 30)}".`);
+          return;
+        }
+        setOrigin({ lat: result.lat, lon: result.lon });
+        setOriginLabel(result.displayName);
+        setQ('');
+        setLocStatus('');
+      } else {
+        const pos = await getCurrentPosition();
+        if (ctrl.signal.aborted) return;
+        setOrigin(pos);
+        setOriginLabel('Your current location');
+        setLocStatus('');
       }
-      setOrigin({ lat: result.lat, lon: result.lon });
-      setOriginLabel(result.displayName);
-      setLocStatus('');
     } catch (err) {
       if ((err as Error).name === 'AbortError') return;
-      setLocStatus(`Lookup failed: ${(err as Error).message}`);
-    }
-  }
-
-  async function handleNearMe() {
-    setLocStatus('Requesting location…');
-    try {
-      const pos = await getCurrentPosition();
-      setOrigin(pos);
-      setOriginLabel('Your current location');
-      setLocQuery('');
-      setLocStatus('');
-    } catch (err) {
-      setLocStatus((err as Error).message);
+      setLocStatus((err as Error).message || 'Lookup failed');
+    } finally {
+      if (abortRef.current === ctrl) setLocating(false);
     }
   }
 
   function clearLocation() {
     setOrigin(null);
     setOriginLabel('');
-    setLocQuery('');
     setLocStatus('');
   }
 
+  const locateTitle = q.trim()
+    ? `Find tracks near "${truncate(q.trim(), 30)}"`
+    : 'Use my current location';
+
   return (
     <>
-      <div className="controls">
+      <div className="search-bar">
         <input
           type="search"
-          placeholder="Search by name, city, state…"
+          placeholder="Search by name, city, ZIP, or address…"
           value={q}
           onChange={(e) => setQ(e.target.value)}
-          aria-label="Search tracks"
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              e.preventDefault();
+              handleLocate();
+            }
+          }}
+          aria-label="Search tracks or location"
+          disabled={locating}
         />
+        <button
+          type="button"
+          onClick={handleLocate}
+          className="btn-locate"
+          title={locateTitle}
+          aria-label={locateTitle}
+          disabled={locating}
+        >
+          <span className="btn-locate-icon" aria-hidden="true">📍</span>
+          <span className="btn-locate-label">{q.trim() ? 'Find' : 'Near me'}</span>
+        </button>
+        <select
+          value={radius}
+          onChange={(e) => setRadius(Number(e.target.value))}
+          aria-label="Search radius (miles)"
+        >
+          {RADIUS_OPTIONS.map((r) => (
+            <option key={r} value={r}>
+              within {r} mi
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className="filter-bar">
         <select value={country} onChange={(e) => setCountry(e.target.value)} aria-label="Filter by country">
           <option value="">All countries</option>
           {countries.map(([cc, n]) => (
@@ -191,44 +224,23 @@ export function TrackBrowser({ tracks }: Props) {
         </select>
       </div>
 
-      <div className="distance-row">
-        <input
-          type="text"
-          placeholder="City, ZIP, or address (e.g. San Jose, 95113, Boulder CO)"
-          value={locQuery}
-          onChange={(e) => setLocQuery(e.target.value)}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter') {
-              e.preventDefault();
-              handleLookup();
-            }
-          }}
-          aria-label="Distance lookup location"
-        />
-        <button type="button" onClick={handleLookup} className="btn-primary">
-          Find
-        </button>
-        <button type="button" onClick={handleNearMe} className="btn-secondary" title="Use my current location">
-          📍 Near me
-        </button>
-        <select value={radius} onChange={(e) => setRadius(Number(e.target.value))} aria-label="Search radius (miles)">
-          {RADIUS_OPTIONS.map((r) => (
-            <option key={r} value={r}>
-              within {r} mi
-            </option>
-          ))}
-        </select>
-        {origin && (
-          <button type="button" onClick={clearLocation} className="btn-link">
-            Clear location
-          </button>
-        )}
-      </div>
+      <div className="status-bar">
+        <label className="check">
+          <input type="checkbox" checked={hasWebsite} onChange={(e) => setHasWebsite(e.target.checked)} />
+          Has website
+        </label>
 
-      <div className="status-row">
         {origin && originLabel && (
           <span className="origin-pill">
             Within {radius} mi of <strong>{shortenLabel(originLabel)}</strong>
+            <button
+              type="button"
+              onClick={clearLocation}
+              className="trip-pill-clear"
+              aria-label="Clear location filter"
+            >
+              ×
+            </button>
           </span>
         )}
         {tripResult && (
@@ -242,12 +254,17 @@ export function TrackBrowser({ tracks }: Props) {
               className="trip-pill-clear"
               aria-label="Clear planned trip"
             >
-              Clear
+              ×
             </button>
           </span>
         )}
         {locStatus && <span className="loc-status">{locStatus}</span>}
+
         <span className="grow" />
+
+        <span className="summary">
+          {filtered.length.toLocaleString()} of {tracks.length.toLocaleString()}
+        </span>
         <div className="view-toggle" role="tablist" aria-label="View mode">
           <button
             type="button"
@@ -277,16 +294,6 @@ export function TrackBrowser({ tracks }: Props) {
             Trip
           </button>
         </div>
-      </div>
-
-      <div className="quality-row">
-        <label className="check">
-          <input type="checkbox" checked={hasWebsite} onChange={(e) => setHasWebsite(e.target.checked)} />
-          Has website
-        </label>
-        <span className="summary">
-          Showing {filtered.length.toLocaleString()} of {tracks.length.toLocaleString()} tracks
-        </span>
       </div>
 
       {view === 'list' && (
@@ -378,4 +385,8 @@ function shortenLabel(s: string): string {
 function shortLabel(s: string): string {
   const first = s.split(',')[0]?.trim() ?? s;
   return first.length > 28 ? `${first.slice(0, 27)}…` : first;
+}
+
+function truncate(s: string, max: number): string {
+  return s.length > max ? `${s.slice(0, max - 1)}…` : s;
 }
