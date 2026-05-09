@@ -28,7 +28,7 @@
       "id": "TRIP-4",
       "title": "Wire Plan-trip action in TripPlanner",
       "priority": 4,
-      "passes": false,
+      "passes": true,
       "description": "In app/trip-planner.tsx (created in TRIP-1, now extended): when 'Plan trip' is clicked, (a) geocode both inputs via geocode() from lib/geo.ts, (b) call getRoute() with the two LatLons, (c) compute the list of tracks where pointToPolylineMiles(track, polyline) <= corridorRadius (only consider tracks with lat/lon set), (d) sort by distance-along-route from start, (e) save results to component state. Show a friendly error message if any step fails (geocoding, no route, no tracks). Show a 'Planning…' loading state while in flight. Use AbortController so a second click cancels the first."
     },
     {

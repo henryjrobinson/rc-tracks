@@ -48,3 +48,18 @@ Started: ralph initialization
   - We scale by `cos(midLat)` not `cos(meanLat)` — works because OSRM polylines are dense enough that each segment spans tiny degrees. Avoid converting to meters explicitly; the unit cancels in the t-formula.
   - Keep the helper pure (no fetch, no globals) so TRIP-4 can call it inside a `useMemo`.
 ---
+
+## 2026-05-08T00:00:00Z - TRIP-4
+- Added `nearestOnPolylineMiles(p, polyline)` to lib/geo.ts: returns both the perpendicular detour and the cumulative along-route distance to the closest point. Reuses the private `closestPointOnSegment` from TRIP-3.
+- Passed `tracks` from TrackBrowser to TripPlanner (`<TripPlanner tracks={tracks} />`) so the planner can filter without re-loading data.
+- Replaced the stub click handler in trip-planner.tsx with a real pipeline: validate inputs → AbortController.abort() previous → `Promise.all([geocode(start), geocode(dest)])` → `getRoute()` → filter tracks (lat/lon present, detour ≤ corridor) → sort by `alongMi`. Stored a `TripResult` in component state.
+- Added loading state (`Planning…` button label, disabled inputs), friendly error copy for each failure mode (geocode miss, no route, zero matches, network error), and `setError(null)` on each retry.
+- Added `.trip-error`, `.trip-summary`, and disabled-state styles to globals.css.
+- Files modified: site/lib/geo.ts, site/app/track-browser.tsx, site/app/trip-planner.tsx, site/app/globals.css.
+- **Learnings:**
+  - The pattern for AbortController + finally: only clear `setLoading(false)` when `abortRef.current === ctrl` so a superseded older promise doesn't flip the spinner off mid-flight of a newer request. Same pattern will apply to TRIP-7+ if it triggers from elsewhere.
+  - `nearestOnPolylineMiles` accumulates segment lengths via `haversineMiles(a, b)` — fine for OSRM polylines (a few hundred points). If TRIP-6 needs both detour and along, prefer this single helper over calling `pointToPolylineMiles` then re-walking the polyline.
+  - I returned `setResult(null)` *and* an error string for the zero-match case so TRIP-6 can decide whether to render the empty-results card or the error banner. Currently the error banner shows; TRIP-6 may want to flip this so a result with `matches:[]` renders the empty state instead.
+  - Geocode/route errors propagate as `Error.message`. Nominatim and OSRM both have rate limits; the existing localStorage geocode cache helps the start/dest pair but route requests are not cached. If we hit limits in TRIP-7+, consider caching `getRoute` by `${start.lat},${start.lon}-${end.lat},${end.lon}` for the session.
+  - `'use client'` directive must stay first; importing types-only (`type Route`) avoids breaking the SSR boundary.
+---
