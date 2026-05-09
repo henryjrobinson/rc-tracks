@@ -49,7 +49,7 @@
       "id": "TRIP-7",
       "title": "Show trip mode on map view",
       "priority": 7,
-      "passes": false,
+      "passes": true,
       "description": "Add a 'Show on map' button in TripPlanner results that, when clicked, switches the active view to 'map' (lifting view state up if needed) and pre-populates MapView with the route polyline + highlighted track slugs. The user can then pan/zoom while still seeing the planned route. Sync the trip-result state with the MapView render so toggling between Trip and Map keeps the route drawn until the user clears it."
     },
     {

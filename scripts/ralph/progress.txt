@@ -78,6 +78,20 @@ Started: ralph initialization
   - `<Polyline positions>` from react-leaflet wants `[lat, lon][]`, not `LatLon` objects — we convert once in MapView so callers can keep passing the polyline straight from `Route`.
 ---
 
+## 2026-05-09T01:32:53Z - TRIP-7
+- Lifted `result` state out of TripPlanner into TrackBrowser (the parent already owned `tripResult`); TripPlanner is now a controlled component receiving `result` + `onResultChange` and a new optional `onShowOnMap` callback. Removed the previous `onPlanned` + `useEffect` indirection along with the unused `useEffect` import.
+- Added a "Show on map" button in the trip-results header (only shown when there are matches). Clicking it calls `onShowOnMap`, which in TrackBrowser flips `view` to `'map'` — Map view already renders the route + highlighted markers since TRIP-5.
+- Added a status-row "trip-pill" (`Trip: <start> → <end>` + Clear) that shows whenever `tripResult` is set, regardless of view. The Clear button calls `setTripResult(null)`, which clears the polyline + highlights from MapView and the results panel from TripPlanner. Added a small `shortLabel(s)` helper in track-browser.tsx that grabs the first comma-segment and truncates to 28 chars.
+- New CSS: `.trip-pill`, `.trip-pill-arrow`, `.trip-pill-clear`, `.trip-results-actions`, `.trip-show-on-map`. Reused `.btn-secondary` styling for the Show-on-map button so it visually matches the rest of the toolbar.
+- Files modified: site/app/trip-planner.tsx, site/app/track-browser.tsx, site/app/globals.css.
+- **Learnings:**
+  - When TripPlanner unmounts on view-switch, its local input state (start/destination/corridor) still resets — but because `result` now lives upstream, the user can come back to Trip view and still see the planned trip's results card. If TRIP-8 wants full input persistence (e.g., Enter-to-submit re-runs without retyping), lift those three useState hooks up too. For now the pill provides the visible breadcrumb and the Clear action.
+  - Controlled-component pattern was lighter than I expected here because all `setResult(...)` calls in `handlePlan` were already at well-defined success/failure branches — it's just a one-line rename to `onResultChange(...)`. The abort-controller and loading state stay local since they're per-mount.
+  - The "Clear trip" pill intentionally lives in `.status-row` (alongside `.origin-pill`) instead of inside MapView because the map's summary line is owned by `MapView` itself and threading another callback in there would over-couple the components. Keeping the affordance at the page level also means it's reachable from any view.
+  - `.trip-pill-clear` deliberately uses a smaller `min-height: 28px` since it's nested inside a 0.85rem pill — the global 44px touch target doesn't need to apply here because the entire pill is non-interactive surface around the link-style button. If TRIP-8 polishes touch targets, consider bumping back to 36px and increasing pill padding to compensate.
+  - The feature commit + chore(ralph) commit pattern continues to work cleanly; tsbuildinfo gets pulled in by `git add -A` (harmless cache file).
+---
+
 ## 2026-05-09T01:27:11Z - TRIP-6
 - Replaced the single-line `.trip-summary` with a full results section. Header shows `{distanceMi} mi · {formatDuration(durationMin)}` with the matching count + corridor on the right; below that, an `.list` of `.card` entries reusing the existing track-card markup. Each entry shows track name (link to track.url), city/state/countryCode, surface tag (when known), an `indoor` tag, and a `card-meta` row with Website + Google-Maps Map link. Detour mileage is rendered as `{m.detourMi.toFixed(1)} mi off route` next to the location, in the accent color via `.trip-detour`.
 - Removed the `setError(...)` for the zero-match case — the empty state ("No tracks within X mi… try a wider corridor.") now renders inside the results section so users still see the route stats and matched count instead of an error banner.
