@@ -14,7 +14,7 @@
       "id": "TRIP-2",
       "title": "OSRM routing wrapper in lib/geo.ts",
       "priority": 2,
-      "passes": false,
+      "passes": true,
       "description": "Add async function getRoute(start: LatLon, end: LatLon, signal?: AbortSignal): Promise<{ polyline: LatLon[]; distanceMi: number; durationMin: number } | null> to site/lib/geo.ts. Implementation calls https://router.project-osrm.org/route/v1/driving/{start.lon},{start.lat};{end.lon},{end.lat}?overview=full&geometries=geojson&steps=false. Parse routes[0].geometry.coordinates → polyline as { lat, lon } points. Return distanceMi from routes[0].distance / 1609.344 and durationMin from routes[0].duration / 60. Return null if no route. Throw on network errors. Add unit-style smoke test inline (just a TS function that compiles, no test runner needed). Document the function with one-line JSDoc."
     },
     {

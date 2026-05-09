@@ -27,3 +27,13 @@ Started: ralph initialization
   - When TripPlanner needs to read filtered tracks or call back into TrackBrowser (TRIP-4+), pass them as props from track-browser.tsx; don't duplicate filter state inside TripPlanner.
   - Keep TripPlanner in its own file (already imported) so future stories can extend its state without bloating track-browser.tsx.
 ---
+
+## 2026-05-08T00:00:00Z - TRIP-2
+- Added `Route` type and async `getRoute(start, end, signal?)` to lib/geo.ts. Calls OSRM public demo (`router.project-osrm.org`) with `overview=full&geometries=geojson&steps=false`. Maps GeoJSON `[lon, lat]` pairs to `{ lat, lon }`, converts meters→miles and seconds→minutes. Returns null when no route is found; throws on HTTP errors so callers can show a friendly message.
+- Files modified: site/lib/geo.ts.
+- **Learnings:**
+  - GeoJSON coordinates are `[lon, lat]` — remember to swap when constructing `LatLon`. The existing codebase consistently uses `{ lat, lon }`, so any new geo helper should normalize at the boundary.
+  - OSRM's public demo has no auth and rate limits per IP. It's fine for a hobby site but TRIP-4 should AbortController-cancel in-flight requests on resubmit (already in story acceptance criteria).
+  - Don't trust `routes[0].geometry?.coordinates` to be defined — typed as optional in the response type. Guard before mapping.
+  - Conversion constant: 1 mile = 1609.344 m exactly; using a literal avoids importing/exporting another constant.
+---
