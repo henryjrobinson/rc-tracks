@@ -6103,5 +6103,15 @@
     "lon": -82.4454583,
     "queriedAt": "2026-05-10T01:13:13.550Z",
     "query": "6529 us 41, ruskin, FL, 33570, United States"
+  },
+  "10, 13. 4th khoroo, 2th khoroolol, Bayangol district, UIaanbaatar, 16052, Mongolia": {
+    "queriedAt": "2026-05-10T08:26:09.669Z",
+    "query": "10, 13. 4th khoroo, 2th khoroolol, Bayangol district, UIaanbaatar, 16052, Mongolia",
+    "error": "no result"
+  },
+  "Gilbert Park, Couva, 00000, Trinidad and Tobago": {
+    "queriedAt": "2026-05-10T08:26:11.707Z",
+    "query": "Gilbert Park, Couva, 00000, Trinidad and Tobago",
+    "error": "no result"
   }
 }
