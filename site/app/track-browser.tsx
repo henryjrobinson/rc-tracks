@@ -24,9 +24,22 @@ const COUNTRY_NAMES: Record<string, string> = {
 };
 
 const RADIUS_OPTIONS = [10, 25, 50, 100, 250, 500];
+const SURFACE_OPTIONS = [
+  { id: 'dirt', label: 'Dirt' },
+  { id: 'carpet', label: 'Carpet' },
+  { id: 'asphalt', label: 'Asphalt' },
+  { id: 'turf', label: 'Turf' },
+] as const;
+
+const ACTIVITY_OPTIONS: Array<{ value: string; label: string; days: number | null }> = [
+  { value: '', label: 'Any time', days: null },
+  { value: 'week', label: 'Active this week', days: 7 },
+  { value: 'month', label: 'Active this month', days: 30 },
+  { value: 'year', label: 'Active this year', days: 365 },
+  { value: 'recent', label: 'Active in 5 years', days: 365 * 5 },
+];
 
 type View = 'list' | 'map' | 'trip';
-
 type WithDistance = Track & { distanceMi?: number };
 
 export function TrackBrowser({ tracks }: Props) {
@@ -34,8 +47,9 @@ export function TrackBrowser({ tracks }: Props) {
   const [q, setQ] = useState('');
   const [country, setCountry] = useState('');
   const [usState, setUsState] = useState('');
-  const [surface, setSurface] = useState('');
+  const [surfaces, setSurfaces] = useState<Set<string>>(new Set());
   const [indoor, setIndoor] = useState('');
+  const [activity, setActivity] = useState('');
   const [hasWebsite, setHasWebsite] = useState(false);
 
   const [origin, setOrigin] = useState<LatLon | null>(null);
@@ -76,16 +90,26 @@ export function TrackBrowser({ tracks }: Props) {
     if (country !== 'US' && usState) setUsState('');
   }, [country, usState]);
 
+  const activityCutoff = useMemo(() => {
+    const opt = ACTIVITY_OPTIONS.find((o) => o.value === activity);
+    if (!opt?.days) return null;
+    return Date.now() - opt.days * 86_400_000;
+  }, [activity]);
+
   const filtered = useMemo<WithDistance[]>(() => {
     const needle = q.trim().toLowerCase();
     const list: WithDistance[] = [];
     for (const t of tracks) {
       if (country && t.countryCode !== country) continue;
       if (usState && t.state !== usState) continue;
-      if (surface && t.surface !== surface) continue;
+      if (surfaces.size > 0 && !surfaces.has(t.surface ?? 'unknown')) continue;
       if (indoor === 'indoor' && !t.indoor) continue;
       if (indoor === 'outdoor' && t.indoor) continue;
       if (hasWebsite && !t.website) continue;
+      if (activityCutoff != null) {
+        const at = t.lastActiveAt ? Date.parse(t.lastActiveAt) : null;
+        if (!at || at < activityCutoff) continue;
+      }
       if (needle) {
         const hay = [t.name, t.city, t.state, t.country, t.slug, t.description]
           .filter(Boolean)
@@ -104,7 +128,16 @@ export function TrackBrowser({ tracks }: Props) {
     }
     if (origin) list.sort((a, b) => (a.distanceMi ?? Infinity) - (b.distanceMi ?? Infinity));
     return list;
-  }, [tracks, q, country, usState, surface, indoor, hasWebsite, origin, radius]);
+  }, [tracks, q, country, usState, surfaces, indoor, hasWebsite, activityCutoff, origin, radius]);
+
+  function toggleSurface(id: string) {
+    setSurfaces((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }
 
   async function handleLocate() {
     const text = q.trim();
@@ -210,18 +243,39 @@ export function TrackBrowser({ tracks }: Props) {
             ))}
           </select>
         )}
-        <select value={surface} onChange={(e) => setSurface(e.target.value)} aria-label="Filter by surface">
-          <option value="">Any surface</option>
-          <option value="dirt">Dirt</option>
-          <option value="carpet">Carpet</option>
-          <option value="asphalt">Asphalt</option>
-          <option value="turf">Turf</option>
-        </select>
         <select value={indoor} onChange={(e) => setIndoor(e.target.value)} aria-label="Indoor or outdoor">
           <option value="">Indoor &amp; outdoor</option>
           <option value="indoor">Indoor only</option>
           <option value="outdoor">Outdoor only</option>
         </select>
+        <select value={activity} onChange={(e) => setActivity(e.target.value)} aria-label="Activity recency">
+          {ACTIVITY_OPTIONS.map((opt) => (
+            <option key={opt.value} value={opt.value}>{opt.label}</option>
+          ))}
+        </select>
+      </div>
+
+      <div className="surface-row" role="group" aria-label="Filter by surface">
+        <span className="surface-label">Surface:</span>
+        {SURFACE_OPTIONS.map((s) => {
+          const active = surfaces.has(s.id);
+          return (
+            <button
+              key={s.id}
+              type="button"
+              className={`chip chip-${s.id} ${active ? 'chip-active' : ''}`}
+              aria-pressed={active}
+              onClick={() => toggleSurface(s.id)}
+            >
+              {s.label}
+            </button>
+          );
+        })}
+        {surfaces.size > 0 && (
+          <button type="button" className="chip-clear" onClick={() => setSurfaces(new Set())}>
+            Clear
+          </button>
+        )}
       </div>
 
       <div className="status-bar">
@@ -330,6 +384,7 @@ export function TrackBrowser({ tracks }: Props) {
 
 function TrackCard({ track }: { track: WithDistance }) {
   const loc = [track.city, track.state, track.countryCode].filter(Boolean).join(', ');
+  const activity = formatActivity(track);
   return (
     <article className="card">
       <div className="card-head">
@@ -344,20 +399,25 @@ function TrackCard({ track }: { track: WithDistance }) {
         </span>
       </div>
 
-      {(track.surface && track.surface !== 'unknown') || track.indoor ? (
-        <div className="tags">
-          {track.surface && track.surface !== 'unknown' && (
-            <span className={`tag tag-${track.surface}`}>{track.surface}</span>
-          )}
-          {track.indoor && <span className="tag">indoor</span>}
-        </div>
-      ) : null}
+      <div className="tags">
+        {activity && (
+          <span className={`tag tag-activity activity-${activity.tone}`}>{activity.text}</span>
+        )}
+        {track.surface && track.surface !== 'unknown' && (
+          <span className={`tag tag-${track.surface}`}>{track.surface}</span>
+        )}
+        {track.indoor && <span className="tag">indoor</span>}
+        {track.scales?.map((s) => (
+          <span key={s} className="tag tag-scale">{s}</span>
+        ))}
+      </div>
 
       <div className="card-meta">
         {track.website && (
-          <a href={track.website} target="_blank" rel="noreferrer">
-            Website
-          </a>
+          <a href={track.website} target="_blank" rel="noreferrer">Website</a>
+        )}
+        {track.facebook && (
+          <a href={track.facebook} target="_blank" rel="noreferrer">Facebook</a>
         )}
         {track.lat != null && track.lon != null && (
           <a
@@ -373,6 +433,22 @@ function TrackCard({ track }: { track: WithDistance }) {
       </div>
     </article>
   );
+}
+
+type Activity = { text: string; tone: 'live' | 'recent' | 'old' };
+
+function formatActivity(track: Track): Activity | null {
+  if (track.liveStatus === 'live' || track.liveStatus === 'race') {
+    return { text: track.liveStatus === 'race' ? 'Race live now' : 'Practice live', tone: 'live' };
+  }
+  if (!track.lastActiveAt) return null;
+  const ms = Date.now() - Date.parse(track.lastActiveAt);
+  if (Number.isNaN(ms)) return null;
+  const days = ms / 86_400_000;
+  if (days < 7) return { text: `Active ${Math.max(1, Math.round(days))}d ago`, tone: 'recent' };
+  if (days < 30) return { text: `Active ${Math.round(days / 7)}w ago`, tone: 'recent' };
+  if (days < 365) return { text: `Active ${Math.round(days / 30)}mo ago`, tone: 'old' };
+  return { text: `Active ${Math.round(days / 365)}y ago`, tone: 'old' };
 }
 
 function shortenLabel(s: string): string {

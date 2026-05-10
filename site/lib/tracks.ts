@@ -1,6 +1,22 @@
 import { readFile } from 'node:fs/promises';
 import { resolve } from 'node:path';
 
+export type LiveStatus = 'live' | 'race' | 'idle' | 'unknown';
+
+export type LifetimeStats = {
+  laps?: number;
+  practiceSessions?: number;
+  races?: number;
+  entries?: number;
+  events?: number;
+};
+
+export type MonthlyStats = {
+  resultsThisMonth?: number;
+  sessionsThisMonth?: number;
+  videosThisMonth?: number;
+};
+
 export type Track = {
   slug: string;
   url: string;
@@ -14,9 +30,20 @@ export type Track = {
   phone?: string;
   email?: string;
   website?: string;
+  facebook?: string;
   description?: string;
   surface?: 'dirt' | 'carpet' | 'asphalt' | 'turf' | 'unknown';
+  surfaceSource?: 'liverc' | 'website' | 'brave';
   indoor?: boolean;
+  scales?: string[];
+  classes?: string[];
+  dimensions?: string;
+  liveStatus?: LiveStatus;
+  lastActiveText?: string;
+  lastActiveAt?: string;
+  currentEvent?: string;
+  lifetime?: LifetimeStats;
+  monthly?: MonthlyStats;
   lat?: number;
   lon?: number;
   scrapedAt?: string;

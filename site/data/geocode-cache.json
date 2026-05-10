@@ -6020,5 +6020,88 @@
     "queriedAt": "2026-05-08T05:47:36.994Z",
     "query": "R55 Lekkerhoekie 450-Jr, Pretoria, 01370, South Africa",
     "error": "no result"
+  },
+  "Speedways offroad, Muar, 40000, Malaysia": {
+    "queriedAt": "2026-05-10T01:12:49.346Z",
+    "query": "Speedways offroad, Muar, 40000, Malaysia",
+    "error": "no result"
+  },
+  "2418 West 7th Street, Muncie, IN, 47302, United States": {
+    "lat": 40.1827888,
+    "lon": -85.4140618,
+    "queriedAt": "2026-05-10T01:12:50.628Z",
+    "query": "2418 West 7th Street, Muncie, IN, 47302, United States"
+  },
+  "12 le loi street, ho chi minh, 700000, Vietnam": {
+    "lat": 10.7760649,
+    "lon": 106.7024245,
+    "queriedAt": "2026-05-10T01:12:52.527Z",
+    "query": "12 le loi street, ho chi minh, 700000, Vietnam"
+  },
+  "360 West Main St, Batesville, AR, 72501, United States": {
+    "lat": 35.7685501,
+    "lon": -91.6571571,
+    "queriedAt": "2026-05-10T01:12:54.296Z",
+    "query": "360 West Main St, Batesville, AR, 72501, United States"
+  },
+  "421 N 13th St, Osage City, KS, 66523, United States": {
+    "lat": 38.6376118,
+    "lon": -95.8108742,
+    "queriedAt": "2026-05-10T01:12:56.126Z",
+    "query": "421 N 13th St, Osage City, KS, 66523, United States"
+  },
+  "1072 North Delsea Dr., Clayton, NJ, 08312, United States": {
+    "lat": 39.6725874,
+    "lon": -75.0957879,
+    "queriedAt": "2026-05-10T01:12:57.897Z",
+    "query": "1072 North Delsea Dr., Clayton, NJ, 08312, United States"
+  },
+  "11210 50ave SW, Edmonton, AB, t9g0a9, Canada": {
+    "queriedAt": "2026-05-10T01:12:59.535Z",
+    "query": "11210 50ave SW, Edmonton, AB, t9g0a9, Canada",
+    "error": "no result"
+  },
+  "2299 St Hwy 30A, Johnstown, NY, 12095, United States": {
+    "queriedAt": "2026-05-10T01:13:01.437Z",
+    "query": "2299 St Hwy 30A, Johnstown, NY, 12095, United States",
+    "error": "no result"
+  },
+  "No current location, Madison, WI, 53713, United States": {
+    "queriedAt": "2026-05-10T01:13:02.858Z",
+    "query": "No current location, Madison, WI, 53713, United States",
+    "error": "no result"
+  },
+  "123 anywhere, someplace, MI, 48184, United States": {
+    "queriedAt": "2026-05-10T01:13:04.838Z",
+    "query": "123 anywhere, someplace, MI, 48184, United States",
+    "error": "no result"
+  },
+  "AREA 51.2, SPRING HILL, NC, 27851, United States": {
+    "queriedAt": "2026-05-10T01:13:07.014Z",
+    "query": "AREA 51.2, SPRING HILL, NC, 27851, United States",
+    "error": "no result"
+  },
+  "49-31, Yangseong-ro, Yangseong-myeon, Anseong-si, Gyeonggi-do, 17501, Korea (South)": {
+    "lat": 37.1079618,
+    "lon": 127.2158271,
+    "queriedAt": "2026-05-10T01:13:09.152Z",
+    "query": "49-31, Yangseong-ro, Yangseong-myeon, Anseong-si, Gyeonggi-do, 17501, Korea (South)"
+  },
+  "4215 80 Avenue NE, Calgary, AB, T3J 4B9, Canada": {
+    "lat": 51.1248308,
+    "lon": -113.9721851,
+    "queriedAt": "2026-05-10T01:13:10.505Z",
+    "query": "4215 80 Avenue NE, Calgary, AB, T3J 4B9, Canada"
+  },
+  "1664 River Road County Rt 113, Easton, NY, 12154, United States": {
+    "queriedAt": "2026-05-10T01:13:12.122Z",
+    "query": "1664 River Road County Rt 113, Easton, NY, 12154, United States",
+    "error": "no result"
+  },
+  "6529 us 41, ruskin, FL, 33570, United States": {
+    "lat": 27.7045951,
+    "lon": -82.4454583,
+    "queriedAt": "2026-05-10T01:13:13.550Z",
+    "query": "6529 us 41, ruskin, FL, 33570, United States"
   }
 }

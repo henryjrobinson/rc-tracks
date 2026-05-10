@@ -1,10 +1,12 @@
 import * as cheerio from 'cheerio';
-import type { IndexEntry, Track } from './types.js';
+import type { IndexEntry, LifetimeStats, MonthlyStats, Track } from './types.js';
 
 const TITLE_SUFFIX = / :: Broadcast and Results :: LiveRC$/i;
 const NOSPAM = /noSpam\(\s*'([^']+)'\s*,\s*'([^']+)'\s*\)/i;
 const MAPS_Q = /[?&]q=([^&"']+)/;
 const CONTACT_PREFIX = /^(P|W|E):/i;
+const SCALE_RE = /\b1\s*\/\s*(5|8|10|12|18|24|28|32|36|64)(?:th|nd|st|rd)?\b/gi;
+const DIMENSION_RE = /\b(\d{2,4})\s*[x×]\s*(\d{2,4})\s*(?:m|ft|feet)?\b/i;
 
 export function parseTrack(entry: IndexEntry, html: string, scrapedAt: string): Track {
   const $ = cheerio.load(html);
@@ -36,6 +38,15 @@ export function parseTrack(entry: IndexEntry, html: string, scrapedAt: string): 
   const surface = inferSurface(description ?? '');
   const indoor = /\bindoor\b/i.test(description ?? '');
 
+  const facebook = $('a[href*="facebook.com"]').toArray()
+    .map((a) => $(a).attr('href') ?? '')
+    .find((href) => /^https?:\/\/(www\.)?facebook\.com\/[A-Za-z0-9_.-]+/.test(href));
+
+  const scales = extractScales(description ?? '');
+  const dimensions = extractDimensions(description ?? '');
+  const lifetime = extractLifetimeStats($);
+  const monthly = extractMonthlyStats($);
+
   return {
     ...entry,
     name,
@@ -48,9 +59,15 @@ export function parseTrack(entry: IndexEntry, html: string, scrapedAt: string): 
     phone,
     email,
     website,
+    facebook: facebook && !/sharer|share\.php|dialog/.test(facebook) ? facebook : undefined,
     description: description?.slice(0, 800),
     surface,
+    surfaceSource: surface !== 'unknown' ? 'liverc' : undefined,
     indoor,
+    scales: scales.length ? scales : undefined,
+    dimensions,
+    lifetime: hasAny(lifetime) ? lifetime : undefined,
+    monthly: hasAny(monthly) ? monthly : undefined,
     scrapedAt,
   };
 }
@@ -154,67 +171,94 @@ function inferCountryCode(mapsAddr: string | undefined, country: string | undefi
   if (!country) return undefined;
   const c = country.trim().toLowerCase();
   const map: Record<string, string> = {
-    'united states': 'US',
-    'united states of america': 'US',
-    'usa': 'US',
-    'u.s.a.': 'US',
-    'canada': 'CA',
-    'united kingdom': 'GB',
-    'uk': 'GB',
-    'great britain': 'GB',
-    'england': 'GB',
-    'scotland': 'GB',
-    'wales': 'GB',
-    'northern ireland': 'GB',
-    'australia': 'AU',
-    'new zealand': 'NZ',
-    'germany': 'DE',
-    'france': 'FR',
-    'italy': 'IT',
-    'spain': 'ES',
-    'netherlands': 'NL',
-    'belgium': 'BE',
-    'sweden': 'SE',
-    'norway': 'NO',
-    'denmark': 'DK',
-    'finland': 'FI',
-    'mexico': 'MX',
-    'japan': 'JP',
-    'china': 'CN',
-    'south korea': 'KR',
-    'korea': 'KR',
-    'brazil': 'BR',
-    'argentina': 'AR',
-    'switzerland': 'CH',
-    'austria': 'AT',
-    'ireland': 'IE',
-    'portugal': 'PT',
-    'czech republic': 'CZ',
-    'czechia': 'CZ',
-    'poland': 'PL',
-    'hungary': 'HU',
-    'romania': 'RO',
-    'thailand': 'TH',
-    'singapore': 'SG',
-    'malaysia': 'MY',
-    'indonesia': 'ID',
-    'philippines': 'PH',
-    'vietnam': 'VN',
-    'india': 'IN',
-    'south africa': 'ZA',
-    'israel': 'IL',
-    'turkey': 'TR',
-    'russia': 'RU',
-    'ukraine': 'UA',
+    'united states': 'US', 'united states of america': 'US', 'usa': 'US', 'u.s.a.': 'US',
+    'canada': 'CA', 'united kingdom': 'GB', 'uk': 'GB', 'great britain': 'GB',
+    'england': 'GB', 'scotland': 'GB', 'wales': 'GB', 'northern ireland': 'GB',
+    'australia': 'AU', 'new zealand': 'NZ', 'germany': 'DE', 'france': 'FR',
+    'italy': 'IT', 'spain': 'ES', 'netherlands': 'NL', 'belgium': 'BE',
+    'sweden': 'SE', 'norway': 'NO', 'denmark': 'DK', 'finland': 'FI',
+    'mexico': 'MX', 'japan': 'JP', 'china': 'CN', 'south korea': 'KR', 'korea': 'KR',
+    'brazil': 'BR', 'argentina': 'AR', 'switzerland': 'CH', 'austria': 'AT',
+    'ireland': 'IE', 'portugal': 'PT', 'czech republic': 'CZ', 'czechia': 'CZ',
+    'poland': 'PL', 'hungary': 'HU', 'romania': 'RO', 'thailand': 'TH',
+    'singapore': 'SG', 'malaysia': 'MY', 'indonesia': 'ID', 'philippines': 'PH',
+    'vietnam': 'VN', 'india': 'IN', 'south africa': 'ZA', 'israel': 'IL',
+    'turkey': 'TR', 'russia': 'RU', 'ukraine': 'UA',
   };
   return map[c];
 }
 
-function inferSurface(text: string): Track['surface'] {
+export function inferSurface(text: string): Track['surface'] {
   const t = text.toLowerCase();
-  if (/\bcarpet\b/.test(t)) return 'carpet';
+  // Direct keywords (most reliable)
+  if (/\bcarpet\b/.test(t) || /\bcrc\s*fasttrak\b/i.test(t)) return 'carpet';
   if (/\bdirt\b/.test(t) || /\bclay\b/.test(t)) return 'dirt';
-  if (/\basphalt\b/.test(t) || /\btarmac\b/.test(t)) return 'asphalt';
+  if (/\basphalt\b/.test(t) || /\btarmac\b/.test(t) || /\bblacktop\b/.test(t)) return 'asphalt';
   if (/\bturf\b/.test(t) || /astro\s*turf/.test(t)) return 'turf';
+  // Track-style fallbacks (less reliable but better than unknown)
+  if (/\boff[\s-]?road\b/.test(t) && /\boutdoor\b/.test(t)) return 'dirt';
   return 'unknown';
+}
+
+function extractScales(text: string): string[] {
+  const found = new Set<string>();
+  let m: RegExpExecArray | null;
+  SCALE_RE.lastIndex = 0;
+  while ((m = SCALE_RE.exec(text)) !== null) {
+    found.add(`1/${m[1]}`);
+  }
+  return [...found].sort((a, b) => Number(a.slice(2)) - Number(b.slice(2)));
+}
+
+function extractDimensions(text: string): string | undefined {
+  const m = DIMENSION_RE.exec(text);
+  if (!m) return undefined;
+  const [, a, b] = m;
+  const an = Number(a), bn = Number(b);
+  if (an < 20 || bn < 10 || an > 800 || bn > 500) return undefined;
+  return `${a}x${b}`;
+}
+
+function extractLifetimeStats($: cheerio.CheerioAPI): LifetimeStats {
+  const out: LifetimeStats = {};
+  const panel = $('.panel-heading').filter((_, el) => /Lifetime Track Stats/i.test($(el).text())).first().closest('.panel');
+  if (!panel.length) return out;
+
+  panel.find('table tr').each((_, tr) => {
+    const $tr = $(tr);
+    const label = $tr.find('th').first().text().trim().toLowerCase();
+    const valueText = $tr.find('td').first().text().trim();
+    const n = parseStatNumber(valueText);
+    if (n == null) return;
+    if (label.startsWith('lap')) out.laps = n;
+    else if (label.startsWith('practice')) out.practiceSessions = n;
+    else if (label.startsWith('race')) out.races = n;
+    else if (label.startsWith('entr')) out.entries = n;
+    else if (label.startsWith('event')) out.events = n;
+  });
+  return out;
+}
+
+function extractMonthlyStats($: cheerio.CheerioAPI): MonthlyStats {
+  const out: MonthlyStats = {};
+  $('.panel .stats').each((_, el) => {
+    const label = $(el).text().trim().toLowerCase();
+    const huge = $(el).closest('.panel-heading').find('.huge').first().text().trim();
+    const n = parseStatNumber(huge);
+    if (n == null) return;
+    if (/results\s+this\s+month/.test(label)) out.resultsThisMonth = n;
+    else if (/sessions\s+this\s+month/.test(label)) out.sessionsThisMonth = n;
+    else if (/videos\s+this\s+month/.test(label)) out.videosThisMonth = n;
+  });
+  return out;
+}
+
+function parseStatNumber(s: string): number | undefined {
+  const cleaned = s.replace(/[,\s]/g, '');
+  if (!/^\d+$/.test(cleaned)) return undefined;
+  return Number(cleaned);
+}
+
+function hasAny(obj: Record<string, unknown>): boolean {
+  return Object.values(obj).some((v) => v != null);
 }

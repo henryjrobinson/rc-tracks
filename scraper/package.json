@@ -6,6 +6,8 @@
   "scripts": {
     "crawl": "tsx src/crawl.ts",
     "geocode": "tsx src/geocode.ts",
+    "enrich-website": "tsx src/enrich-website.ts",
+    "enrich-brave": "tsx src/enrich-brave.ts",
     "test-sample": "tsx src/crawl.ts --sample"
   },
   "dependencies": {
