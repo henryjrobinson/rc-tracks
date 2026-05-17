@@ -6113,5 +6113,158 @@
     "queriedAt": "2026-05-10T08:26:11.707Z",
     "query": "Gilbert Park, Couva, 00000, Trinidad and Tobago",
     "error": "no result"
+  },
+  "Mutiara Rini, 81300 Skudai, Johor, Muar, 81300, Malaysia": {
+    "queriedAt": "2026-05-17T08:39:20.907Z",
+    "query": "Mutiara Rini, 81300 Skudai, Johor, Muar, 81300, Malaysia",
+    "error": "no result"
+  },
+  "745 old 553, Gwinn, MI, 49841, United States": {
+    "queriedAt": "2026-05-17T08:39:22.279Z",
+    "query": "745 old 553, Gwinn, MI, 49841, United States",
+    "error": "no result"
+  },
+  "franklin canyon rd, rodeo, CA, 94553, United States": {
+    "queriedAt": "2026-05-17T08:39:23.738Z",
+    "query": "franklin canyon rd, rodeo, CA, 94553, United States",
+    "error": "no result"
+  },
+  "Maher Road, Gordonvale, 04868, Australia": {
+    "lat": -17.0821281,
+    "lon": 145.779886,
+    "queriedAt": "2026-05-17T08:39:25.341Z",
+    "query": "Maher Road, Gordonvale, 04868, Australia"
+  },
+  "200 S 5th Street, Roff, OK, 74865, United States": {
+    "lat": 34.625479,
+    "lon": -96.837283,
+    "queriedAt": "2026-05-17T08:39:26.972Z",
+    "query": "200 S 5th Street, Roff, OK, 74865, United States"
+  },
+  "10795 Victorian Dr, Parker, CO, 80134, United States": {
+    "lat": 39.5202681,
+    "lon": -104.7617163,
+    "queriedAt": "2026-05-17T08:39:28.616Z",
+    "query": "10795 Victorian Dr, Parker, CO, 80134, United States"
+  },
+  "10020 Scott Cir, Omaha, NE, 68122, United States": {
+    "lat": 41.3257249,
+    "lon": -95.9591638,
+    "queriedAt": "2026-05-17T08:39:30.466Z",
+    "query": "10020 Scott Cir, Omaha, NE, 68122, United States"
+  },
+  "Agustinas 1357, Piso 12, Santiago, 8340432, Chile": {
+    "queriedAt": "2026-05-17T08:39:31.737Z",
+    "query": "Agustinas 1357, Piso 12, Santiago, 8340432, Chile",
+    "error": "no result"
+  },
+  "Nanranjal, La Ceiba, 99999, Honduras": {
+    "queriedAt": "2026-05-17T08:39:33.026Z",
+    "query": "Nanranjal, La Ceiba, 99999, Honduras",
+    "error": "no result"
+  },
+  "2616 Charlestown Rd, New Albany, IN, 47150, United States": {
+    "lat": 38.31591,
+    "lon": -85.804513,
+    "queriedAt": "2026-05-17T08:39:34.308Z",
+    "query": "2616 Charlestown Rd, New Albany, IN, 47150, United States"
+  },
+  "huzhou, huzhou, 12345, China": {
+    "lat": 30.8628179,
+    "lon": 120.1373672,
+    "queriedAt": "2026-05-17T08:39:35.576Z",
+    "query": "huzhou, huzhou, 12345, China"
+  },
+  "8810 E 9th St, Stockton, MN, 55987, United States": {
+    "lat": 44.025336,
+    "lon": -91.755302,
+    "queriedAt": "2026-05-17T08:39:36.929Z",
+    "query": "8810 E 9th St, Stockton, MN, 55987, United States"
+  },
+  "4733 Highway 6 SE, Iowa City, IA, 52240, United States": {
+    "lat": 41.6281019,
+    "lon": -91.4822789,
+    "queriedAt": "2026-05-17T08:39:38.666Z",
+    "query": "4733 Highway 6 SE, Iowa City, IA, 52240, United States"
+  },
+  "3 Grand Avenue, Camellia, 21420, Australia": {
+    "lat": -33.819845,
+    "lon": 151.0262029,
+    "queriedAt": "2026-05-17T08:39:40.420Z",
+    "query": "3 Grand Avenue, Camellia, 21420, Australia"
+  },
+  "jianshuikejicheng, shaoxing, 310012, China": {
+    "queriedAt": "2026-05-17T08:39:42.009Z",
+    "query": "jianshuikejicheng, shaoxing, 310012, China",
+    "error": "no result"
+  },
+  "baku, Baku, 1001wef, Azerbaijan": {
+    "lat": 40.3732763,
+    "lon": 49.8139975,
+    "queriedAt": "2026-05-17T08:39:43.316Z",
+    "query": "baku, Baku, 1001wef, Azerbaijan"
+  },
+  "9024 N Herbemont Rd, Monrovia, IN, 46157, United States": {
+    "queriedAt": "2026-05-17T08:39:45.055Z",
+    "query": "9024 N Herbemont Rd, Monrovia, IN, 46157, United States",
+    "error": "no result"
+  },
+  "17 Ngaire St Longburn, Palmerston North, 44120, New Zealand": {
+    "lat": -40.3821241,
+    "lon": 175.5450148,
+    "queriedAt": "2026-05-17T08:39:46.801Z",
+    "query": "17 Ngaire St Longburn, Palmerston North, 44120, New Zealand"
+  },
+  "8989 W 1400 N, Elwood, IN, 46036, United States": {
+    "queriedAt": "2026-05-17T08:39:48.644Z",
+    "query": "8989 W 1400 N, Elwood, IN, 46036, United States",
+    "error": "no result"
+  },
+  "265 Riverdale Lane, Jersey Shore, PA, 17740, United States": {
+    "queriedAt": "2026-05-17T08:39:50.987Z",
+    "query": "265 Riverdale Lane, Jersey Shore, PA, 17740, United States",
+    "error": "no result"
+  },
+  "185 Route 10 North, Marlow, NH, 03456, United States": {
+    "queriedAt": "2026-05-17T08:39:53.020Z",
+    "query": "185 Route 10 North, Marlow, NH, 03456, United States",
+    "error": "no result"
+  },
+  "Rua do Rio Novo, 586, Povoa de Varzim, 4495-125, Portugal": {
+    "queriedAt": "2026-05-17T08:39:54.863Z",
+    "query": "Rua do Rio Novo, 586, Povoa de Varzim, 4495-125, Portugal",
+    "error": "no result"
+  },
+  "8557 E. Verbena Ln., Hereford, AZ, 85615, United States": {
+    "queriedAt": "2026-05-17T08:39:56.334Z",
+    "query": "8557 E. Verbena Ln., Hereford, AZ, 85615, United States",
+    "error": "no result"
+  },
+  "no.7 spg16-14, Bandar Seri Begawan, BC3615, Brunei Darussalam": {
+    "queriedAt": "2026-05-17T08:39:57.898Z",
+    "query": "no.7 spg16-14, Bandar Seri Begawan, BC3615, Brunei Darussalam",
+    "error": "no result"
+  },
+  "1452 SEllsworth Road, Mesa, AZ, 85209, United States": {
+    "queriedAt": "2026-05-17T08:39:59.457Z",
+    "query": "1452 SEllsworth Road, Mesa, AZ, 85209, United States",
+    "error": "no result"
+  },
+  "15 ford street, clyde, NY, 14433, United States": {
+    "lat": 43.0829705,
+    "lon": -76.8696027,
+    "queriedAt": "2026-05-17T08:40:01.056Z",
+    "query": "15 ford street, clyde, NY, 14433, United States"
+  },
+  "45915 Warm Springs Blvd., Fremont, CA, 94539, United States": {
+    "lat": 37.4951351,
+    "lon": -121.9336922,
+    "queriedAt": "2026-05-17T08:40:02.805Z",
+    "query": "45915 Warm Springs Blvd., Fremont, CA, 94539, United States"
+  },
+  "TBD, TBD, MI, 48187, United States": {
+    "queriedAt": "2026-05-17T08:40:04.172Z",
+    "query": "TBD, TBD, MI, 48187, United States",
+    "error": "no result"
   }
 }
