@@ -6266,5 +6266,103 @@
     "queriedAt": "2026-05-17T08:40:04.172Z",
     "query": "TBD, TBD, MI, 48187, United States",
     "error": "no result"
+  },
+  "16250 Rang St Dominique, Mirabel, QC, J7N 1T6, Canada": {
+    "lat": 45.735636,
+    "lon": -73.9892032,
+    "queriedAt": "2026-05-24T08:41:26.269Z",
+    "query": "16250 Rang St Dominique, Mirabel, QC, J7N 1T6, Canada"
+  },
+  "1375 Youngstown wilson rd, Youngstown, NY, 14174, United States": {
+    "lat": 43.2640485,
+    "lon": -78.9864755,
+    "queriedAt": "2026-05-24T08:41:27.735Z",
+    "query": "1375 Youngstown wilson rd, Youngstown, NY, 14174, United States"
+  },
+  "5050NW 40th Street, Chiefland, FL, 32626, United States": {
+    "queriedAt": "2026-05-24T08:41:29.181Z",
+    "query": "5050NW 40th Street, Chiefland, FL, 32626, United States",
+    "error": "no result"
+  },
+  "283 Verdun rd, Oshawa, ON, L1H5T1, Canada": {
+    "lat": 43.8932627,
+    "lon": -78.8471394,
+    "queriedAt": "2026-05-24T08:41:30.709Z",
+    "query": "283 Verdun rd, Oshawa, ON, L1H5T1, Canada"
+  },
+  "3045 N. Belsay Rd., Flint, MI, 48506, United States": {
+    "queriedAt": "2026-05-24T08:41:32.256Z",
+    "query": "3045 N. Belsay Rd., Flint, MI, 48506, United States",
+    "error": "no result"
+  },
+  "Szolohegy, Mohacs, 77000, Hungary": {
+    "lat": 46.0318807,
+    "lon": 18.6683065,
+    "queriedAt": "2026-05-24T08:41:33.697Z",
+    "query": "Szolohegy, Mohacs, 77000, Hungary"
+  },
+  "none, Brisbane, 12345, Australia": {
+    "lat": -27.5228065,
+    "lon": 152.9764682,
+    "queriedAt": "2026-05-24T08:41:35.163Z",
+    "query": "none, Brisbane, 12345, Australia"
+  },
+  "laowu, beijing, 123456, China": {
+    "queriedAt": "2026-05-24T08:41:36.547Z",
+    "query": "laowu, beijing, 123456, China",
+    "error": "no result"
+  },
+  "993 Mapletown Rd, Canajoharie, NY, 13317, United States": {
+    "lat": 42.8315595,
+    "lon": -74.5194551,
+    "queriedAt": "2026-05-24T08:41:37.970Z",
+    "query": "993 Mapletown Rd, Canajoharie, NY, 13317, United States"
+  },
+  "615 Nixon Rd, Collpitts Settlement, NB, E4J2Z4, Canada": {
+    "queriedAt": "2026-05-24T08:41:39.318Z",
+    "query": "615 Nixon Rd, Collpitts Settlement, NB, E4J2Z4, Canada",
+    "error": "no result"
+  },
+  "22750 Spruce Rd. Waynesville MO. 65583, Waynesville, MO, 65583, United States": {
+    "queriedAt": "2026-05-24T08:41:40.870Z",
+    "query": "22750 Spruce Rd. Waynesville MO. 65583, Waynesville, MO, 65583, United States",
+    "error": "no result"
+  },
+  "cocopitzin 25 aztlan rosarito, rosarito, 22045, Mexico": {
+    "queriedAt": "2026-05-24T08:41:42.211Z",
+    "query": "cocopitzin 25 aztlan rosarito, rosarito, 22045, Mexico",
+    "error": "no result"
+  },
+  "7466 surbrook rd, Baldwinsville, NY, 13027, United States": {
+    "lat": 43.1317294,
+    "lon": -76.2873278,
+    "queriedAt": "2026-05-24T08:41:43.719Z",
+    "query": "7466 surbrook rd, Baldwinsville, NY, 13027, United States"
+  },
+  "69 Montgomery Street 3351, Jersey City, NJ, 07302, United States": {
+    "queriedAt": "2026-05-24T08:41:45.275Z",
+    "query": "69 Montgomery Street 3351, Jersey City, NJ, 07302, United States",
+    "error": "no result"
+  },
+  "439 Clark Road, Gansevoort, NY, 12831, United States": {
+    "queriedAt": "2026-05-24T08:41:47.009Z",
+    "query": "439 Clark Road, Gansevoort, NY, 12831, United States",
+    "error": "no result"
+  },
+  "799 Empire rd, Sherkston, ON, L0S1B0, Canada": {
+    "queriedAt": "2026-05-24T08:41:48.576Z",
+    "query": "799 Empire rd, Sherkston, ON, L0S1B0, Canada",
+    "error": "no result"
+  },
+  "222 Mule Deer Way, Grand Junction, CO, 81507, United States": {
+    "queriedAt": "2026-05-24T08:41:50.613Z",
+    "query": "222 Mule Deer Way, Grand Junction, CO, 81507, United States",
+    "error": "no result"
+  },
+  "2109 Ottawa St, Windsor, ON, N8Y 3K7, Canada": {
+    "lat": 42.3127555,
+    "lon": -83.0036494,
+    "queriedAt": "2026-05-24T08:41:52.096Z",
+    "query": "2109 Ottawa St, Windsor, ON, N8Y 3K7, Canada"
   }
 }
