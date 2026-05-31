@@ -6364,5 +6364,115 @@
     "lon": -83.0036494,
     "queriedAt": "2026-05-24T08:41:52.096Z",
     "query": "2109 Ottawa St, Windsor, ON, N8Y 3K7, Canada"
+  },
+  "1804 Main Street, Conway, SC, 29527, United States": {
+    "lat": 33.852531,
+    "lon": -79.057455,
+    "queriedAt": "2026-05-31T08:58:06.511Z",
+    "query": "1804 Main Street, Conway, SC, 29527, United States"
+  },
+  "river road, upper black eddy, PA, 18972, United States": {
+    "lat": 40.5684078,
+    "lon": -75.1064173,
+    "queriedAt": "2026-05-31T08:58:07.904Z",
+    "query": "river road, upper black eddy, PA, 18972, United States"
+  },
+  "route de choulex, CHOULEX, 12444, Switzerland": {
+    "lat": 46.2278547,
+    "lon": 6.2263714,
+    "queriedAt": "2026-05-31T08:58:09.344Z",
+    "query": "route de choulex, CHOULEX, 12444, Switzerland"
+  },
+  "09474 Ashburn Rd, Wapakoneta, OH, 45895, United States": {
+    "queriedAt": "2026-05-31T08:58:10.879Z",
+    "query": "09474 Ashburn Rd, Wapakoneta, OH, 45895, United States",
+    "error": "no result"
+  },
+  "27 Little Britain Rd., Manilla, ON, K0M 2J0, Canada": {
+    "queriedAt": "2026-05-31T08:58:12.715Z",
+    "query": "27 Little Britain Rd., Manilla, ON, K0M 2J0, Canada",
+    "error": "no result"
+  },
+  "8114 N County Rd 640 W, Freetown, IN, 47235, United States": {
+    "queriedAt": "2026-05-31T08:58:14.313Z",
+    "query": "8114 N County Rd 640 W, Freetown, IN, 47235, United States",
+    "error": "no result"
+  },
+  "2289 West St. Rd. 38, New Castle, IN, 47362, United States": {
+    "queriedAt": "2026-05-31T08:58:16.255Z",
+    "query": "2289 West St. Rd. 38, New Castle, IN, 47362, United States",
+    "error": "no result"
+  },
+  "6494 W Sugar Grove Rd, Ludington, MI, 49431, United States": {
+    "queriedAt": "2026-05-31T08:58:17.815Z",
+    "query": "6494 W Sugar Grove Rd, Ludington, MI, 49431, United States",
+    "error": "no result"
+  },
+  "1969 harris road, penfield, NY, 14526, United States": {
+    "lat": 43.1402739,
+    "lon": -77.413425,
+    "queriedAt": "2026-05-31T08:58:19.269Z",
+    "query": "1969 harris road, penfield, NY, 14526, United States"
+  },
+  "123 anywhere, Surrey, BC, v3t2m5, Canada": {
+    "queriedAt": "2026-05-31T08:58:20.697Z",
+    "query": "123 anywhere, Surrey, BC, v3t2m5, Canada",
+    "error": "no result"
+  },
+  "29-340 Prospect Point Rd N, Fort Erie, ON, L0S 1N0, Canada": {
+    "lat": 42.8916993,
+    "lon": -79.0493527,
+    "queriedAt": "2026-05-31T08:58:22.437Z",
+    "query": "29-340 Prospect Point Rd N, Fort Erie, ON, L0S 1N0, Canada"
+  },
+  "1291 Landing way, Shinnstion, WV, 26431, United States": {
+    "queriedAt": "2026-05-31T08:58:23.801Z",
+    "query": "1291 Landing way, Shinnstion, WV, 26431, United States",
+    "error": "no result"
+  },
+  "62 Thomas Rd, South Boardman, MI, 49680, United States": {
+    "queriedAt": "2026-05-31T08:58:25.225Z",
+    "query": "62 Thomas Rd, South Boardman, MI, 49680, United States",
+    "error": "no result"
+  },
+  "2800 Ingraham Street, San Diego, CA, 92109, United States": {
+    "lat": 32.7688937,
+    "lon": -117.2340136,
+    "queriedAt": "2026-05-31T08:58:26.527Z",
+    "query": "2800 Ingraham Street, San Diego, CA, 92109, United States"
+  },
+  "8749 Scenic Rd SE, Corning, OH, 43730, United States": {
+    "queriedAt": "2026-05-31T08:58:28.145Z",
+    "query": "8749 Scenic Rd SE, Corning, OH, 43730, United States",
+    "error": "no result"
+  },
+  "123 Anywhere, Someplace, NY, 11550, United States": {
+    "queriedAt": "2026-05-31T08:58:29.781Z",
+    "query": "123 Anywhere, Someplace, NY, 11550, United States",
+    "error": "no result"
+  },
+  "Molenpark 99, Zomergem, 99300, Belgium": {
+    "lat": 51.1131556,
+    "lon": 3.5563018,
+    "queriedAt": "2026-05-31T08:58:31.290Z",
+    "query": "Molenpark 99, Zomergem, 99300, Belgium"
+  },
+  "Hamilton, Hamilton, 00000, New Zealand": {
+    "lat": -37.8263235,
+    "lon": 175.2249376,
+    "queriedAt": "2026-05-31T08:58:32.760Z",
+    "query": "Hamilton, Hamilton, 00000, New Zealand"
+  },
+  "San Jose, San Jose, CA, 95121, United States": {
+    "lat": 37.3299203,
+    "lon": -121.902496,
+    "queriedAt": "2026-05-31T08:58:34.336Z",
+    "query": "San Jose, San Jose, CA, 95121, United States"
+  },
+  "15928 n forker rd, spokane, WA, 99217, United States": {
+    "lat": 47.8022094,
+    "lon": -117.2104409,
+    "queriedAt": "2026-05-31T08:58:35.828Z",
+    "query": "15928 n forker rd, spokane, WA, 99217, United States"
   }
 }
