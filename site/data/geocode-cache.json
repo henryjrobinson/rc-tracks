@@ -6474,5 +6474,91 @@
     "lon": -117.2104409,
     "queriedAt": "2026-05-31T08:58:35.828Z",
     "query": "15928 n forker rd, spokane, WA, 99217, United States"
+  },
+  "1348 River road, Upper Black Eddy, PA, 18972, United States": {
+    "lat": 40.5566147,
+    "lon": -75.0900214,
+    "queriedAt": "2026-06-07T09:14:36.983Z",
+    "query": "1348 River road, Upper Black Eddy, PA, 18972, United States"
+  },
+  "8085 S Sheridan Ave, Durand, MI, 48429-9305, United States": {
+    "queriedAt": "2026-06-07T09:14:38.376Z",
+    "query": "8085 S Sheridan Ave, Durand, MI, 48429-9305, United States",
+    "error": "no result"
+  },
+  "Eden Playing Fields, 42 Beltoy Road, Carrickfergus, BT38 9BH, United Kingdom": {
+    "queriedAt": "2026-06-07T09:14:40.123Z",
+    "query": "Eden Playing Fields, 42 Beltoy Road, Carrickfergus, BT38 9BH, United Kingdom",
+    "error": "no result"
+  },
+  "22045 Olson St., Clinton Twp., MI, 48035, United States": {
+    "lat": 42.565696,
+    "lon": -82.8948559,
+    "queriedAt": "2026-06-07T09:14:41.768Z",
+    "query": "22045 Olson St., Clinton Twp., MI, 48035, United States"
+  },
+  "2270 Bell Ave Apt 312, Des Moines, IA, 50321, United States": {
+    "queriedAt": "2026-06-07T09:14:43.390Z",
+    "query": "2270 Bell Ave Apt 312, Des Moines, IA, 50321, United States",
+    "error": "no result"
+  },
+  "220 blossom st, Iron River, Michigan, MI, 49935, United States": {
+    "lat": 46.0857581,
+    "lon": -88.6329343,
+    "queriedAt": "2026-06-07T09:14:44.694Z",
+    "query": "220 blossom st, Iron River, Michigan, MI, 49935, United States"
+  },
+  "250Munn Rd, Morton, MS, 39117, United States": {
+    "queriedAt": "2026-06-07T09:14:46.344Z",
+    "query": "250Munn Rd, Morton, MS, 39117, United States",
+    "error": "no result"
+  },
+  "777 Home Street, Hanover, PA, 17331, United States": {
+    "queriedAt": "2026-06-07T09:14:48.386Z",
+    "query": "777 Home Street, Hanover, PA, 17331, United States",
+    "error": "no result"
+  },
+  "850 Hudson Ave, Rochester, NY, 14621, United States": {
+    "lat": 43.1802882,
+    "lon": -77.5986606,
+    "queriedAt": "2026-06-07T09:14:50.120Z",
+    "query": "850 Hudson Ave, Rochester, NY, 14621, United States"
+  },
+  "123 bite me st, paris, CA, 60004, United States": {
+    "queriedAt": "2026-06-07T09:14:51.869Z",
+    "query": "123 bite me st, paris, CA, 60004, United States",
+    "error": "no result"
+  },
+  "4101 N 50th St, Sheboygan, WI, 53083, United States": {
+    "lat": 43.788867,
+    "lon": -87.772508,
+    "queriedAt": "2026-06-07T09:14:53.136Z",
+    "query": "4101 N 50th St, Sheboygan, WI, 53083, United States"
+  },
+  "620 Bridge St, Saint Anthony, ID, 83445-1927, United States": {
+    "lat": 44.9771406,
+    "lon": -93.1741897,
+    "queriedAt": "2026-06-07T09:14:55.087Z",
+    "query": "620 Bridge St, Saint Anthony, ID, 83445-1927, United States"
+  },
+  "1971 route 50, Tuckahoe, NJ, 08270, United States": {
+    "queriedAt": "2026-06-07T09:14:56.941Z",
+    "query": "1971 route 50, Tuckahoe, NJ, 08270, United States",
+    "error": "no result"
+  },
+  "26542 Greer Road, exeter, CA, 93221, United States": {
+    "queriedAt": "2026-06-07T09:14:58.784Z",
+    "query": "26542 Greer Road, exeter, CA, 93221, United States",
+    "error": "no result"
+  },
+  "3150 S. Houseman St., Terre Haute, IN, 47802, United States": {
+    "queriedAt": "2026-06-07T09:15:00.069Z",
+    "query": "3150 S. Houseman St., Terre Haute, IN, 47802, United States",
+    "error": "no result"
+  },
+  "5861 rt711, New Florence, PA, 15944, United States": {
+    "queriedAt": "2026-06-07T09:15:01.264Z",
+    "query": "5861 rt711, New Florence, PA, 15944, United States",
+    "error": "no result"
   }
 }
