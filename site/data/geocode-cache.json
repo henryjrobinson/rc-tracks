@@ -6560,5 +6560,122 @@
     "queriedAt": "2026-06-07T09:15:01.264Z",
     "query": "5861 rt711, New Florence, PA, 15944, United States",
     "error": "no result"
+  },
+  "Tower Road, Anchorage, AK, 99515, United States": {
+    "lat": 61.1170294,
+    "lon": -149.8994294,
+    "queriedAt": "2026-06-14T09:47:01.494Z",
+    "query": "Tower Road, Anchorage, AK, 99515, United States"
+  },
+  "620 bridge st, st. anthony, ID, 83445, United States": {
+    "lat": 43.9777747,
+    "lon": -111.682574,
+    "queriedAt": "2026-06-14T09:47:03.234Z",
+    "query": "620 bridge st, st. anthony, ID, 83445, United States"
+  },
+  "Swanmore Leisure, Swanmore, SO32 2RB, United Kingdom": {
+    "queriedAt": "2026-06-14T09:47:04.972Z",
+    "query": "Swanmore Leisure, Swanmore, SO32 2RB, United Kingdom",
+    "error": "no result"
+  },
+  "129 Commercial St West, MOUNT GAMBIER, 05290, Australia": {
+    "lat": -37.8249116,
+    "lon": 140.769591,
+    "queriedAt": "2026-06-14T09:47:07.113Z",
+    "query": "129 Commercial St West, MOUNT GAMBIER, 05290, Australia"
+  },
+  "6 Darrah Street, Brookville, PA, 15825, United States": {
+    "lat": 41.1564679,
+    "lon": -79.0885515,
+    "queriedAt": "2026-06-14T09:47:08.370Z",
+    "query": "6 Darrah Street, Brookville, PA, 15825, United States"
+  },
+  "183, nijmegen, 6541as, Netherlands": {
+    "lat": 51.8425749,
+    "lon": 5.8389606,
+    "queriedAt": "2026-06-14T09:47:09.797Z",
+    "query": "183, nijmegen, 6541as, Netherlands"
+  },
+  "14166 County Rd 87, Alexandria, MN, 56308, United States": {
+    "queriedAt": "2026-06-14T09:47:11.737Z",
+    "query": "14166 County Rd 87, Alexandria, MN, 56308, United States",
+    "error": "no result"
+  },
+  "2200 East Morgan Avenue, Evansville, IN, 47711, United States": {
+    "lat": 37.9917054,
+    "lon": -87.5236636,
+    "queriedAt": "2026-06-14T09:47:13.286Z",
+    "query": "2200 East Morgan Avenue, Evansville, IN, 47711, United States"
+  },
+  "1220 Shappert Dr, Machesney Park, IL, 61115, United States": {
+    "lat": 42.372445,
+    "lon": -89.0322898,
+    "queriedAt": "2026-06-14T09:47:14.631Z",
+    "query": "1220 Shappert Dr, Machesney Park, IL, 61115, United States"
+  },
+  "68 Diamond Ave, Hanover Township, PA, 18706, United States": {
+    "queriedAt": "2026-06-14T09:47:16.772Z",
+    "query": "68 Diamond Ave, Hanover Township, PA, 18706, United States",
+    "error": "no result"
+  },
+  "2800 Anchor Dr, Farmington, MO, 63640, United States": {
+    "queriedAt": "2026-06-14T09:47:19.316Z",
+    "query": "2800 Anchor Dr, Farmington, MO, 63640, United States",
+    "error": "no result"
+  },
+  "2575 Eastbayshore, Redwood City, CA, 94063, United States": {
+    "queriedAt": "2026-06-14T09:47:20.550Z",
+    "query": "2575 Eastbayshore, Redwood City, CA, 94063, United States",
+    "error": "no result"
+  },
+  "2056 Houdini St, Henderson, NV, 89002, United States": {
+    "queriedAt": "2026-06-14T09:47:22.015Z",
+    "query": "2056 Houdini St, Henderson, NV, 89002, United States",
+    "error": "no result"
+  },
+  "10396 Route 9, Champlain, NY, 12919, United States": {
+    "queriedAt": "2026-06-14T09:47:23.955Z",
+    "query": "10396 Route 9, Champlain, NY, 12919, United States",
+    "error": "no result"
+  },
+  "Fanling, NT HONGKONG, 00000, Hong Kong": {
+    "lat": 22.4919663,
+    "lon": 114.1388298,
+    "queriedAt": "2026-06-14T09:47:25.272Z",
+    "query": "Fanling, NT HONGKONG, 00000, Hong Kong"
+  },
+  "seawards park, pasadena, NL, a0l1k0, Canada": {
+    "queriedAt": "2026-06-14T09:47:27.010Z",
+    "query": "seawards park, pasadena, NL, a0l1k0, Canada",
+    "error": "no result"
+  },
+  "10130 john street rd, murillo, ON, P0T 2G0, Canada": {
+    "queriedAt": "2026-06-14T09:47:28.543Z",
+    "query": "10130 john street rd, murillo, ON, P0T 2G0, Canada",
+    "error": "no result"
+  },
+  "35 Meehan Terrace, Harrington Park, 02567, Australia": {
+    "lat": -34.0310025,
+    "lon": 150.736507,
+    "queriedAt": "2026-06-14T09:47:29.843Z",
+    "query": "35 Meehan Terrace, Harrington Park, 02567, Australia"
+  },
+  "6769 Hollister Ave, Goleta, CA, 93117, United States": {
+    "lat": 34.4287342,
+    "lon": -119.8655647,
+    "queriedAt": "2026-06-14T09:47:31.579Z",
+    "query": "6769 Hollister Ave, Goleta, CA, 93117, United States"
+  },
+  "936 Fleming Street, Wylie, TX, 75098, United States": {
+    "lat": 33.0135343,
+    "lon": -96.5564857,
+    "queriedAt": "2026-06-14T09:47:33.323Z",
+    "query": "936 Fleming Street, Wylie, TX, 75098, United States"
+  },
+  "Calama, calama, 1265562, Chile": {
+    "lat": -22.4441812,
+    "lon": -68.9403971,
+    "queriedAt": "2026-06-14T09:47:34.631Z",
+    "query": "Calama, calama, 1265562, Chile"
   }
 }
