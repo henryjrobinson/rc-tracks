@@ -6677,5 +6677,92 @@
     "lon": -68.9403971,
     "queriedAt": "2026-06-14T09:47:34.631Z",
     "query": "Calama, calama, 1265562, Chile"
+  },
+  "Ark Rd., San Diego, CA, 92126, United States": {
+    "lat": 32.819688,
+    "lon": -117.1746305,
+    "queriedAt": "2026-06-21T10:00:21.009Z",
+    "query": "Ark Rd., San Diego, CA, 92126, United States"
+  },
+  "3731 D Road, Bark River, MI, 49807, United States": {
+    "lat": 45.6822679,
+    "lon": -87.305986,
+    "queriedAt": "2026-06-21T10:00:22.475Z",
+    "query": "3731 D Road, Bark River, MI, 49807, United States"
+  },
+  "W8258 Swanson RD, Iron Mountain, MI, 49801, United States": {
+    "queriedAt": "2026-06-21T10:00:24.006Z",
+    "query": "W8258 Swanson RD, Iron Mountain, MI, 49801, United States",
+    "error": "no result"
+  },
+  "4510 vineyard rd, madison, IN, 47250, United States": {
+    "queriedAt": "2026-06-21T10:00:25.495Z",
+    "query": "4510 vineyard rd, madison, IN, 47250, United States",
+    "error": "no result"
+  },
+  "West Terry, Bonita Springs, FL, 34109, United States": {
+    "lat": 26.3455393,
+    "lon": -81.7797155,
+    "queriedAt": "2026-06-21T10:00:27.136Z",
+    "query": "West Terry, Bonita Springs, FL, 34109, United States"
+  },
+  "3728 Netherby Rd, Stevensville, ON, L0S 1S0, Canada": {
+    "queriedAt": "2026-06-21T10:00:28.696Z",
+    "query": "3728 Netherby Rd, Stevensville, ON, L0S 1S0, Canada",
+    "error": "no result"
+  },
+  "5301 Winder Hwy, Braselton, GA, 30517, United States": {
+    "lat": 34.1260486,
+    "lon": -83.8297649,
+    "queriedAt": "2026-06-21T10:00:30.272Z",
+    "query": "5301 Winder Hwy, Braselton, GA, 30517, United States"
+  },
+  "This Track is Mobile - Location Varies, Greenfield, IN, 46140, United States": {
+    "queriedAt": "2026-06-21T10:00:31.596Z",
+    "query": "This Track is Mobile - Location Varies, Greenfield, IN, 46140, United States",
+    "error": "no result"
+  },
+  "6202 Seratok, Sarawak, 95400, China": {
+    "queriedAt": "2026-06-21T10:00:33.198Z",
+    "query": "6202 Seratok, Sarawak, 95400, China",
+    "error": "no result"
+  },
+  "50 Mungertown Road Unit 15, Madison, CT, 06443, United States": {
+    "queriedAt": "2026-06-21T10:00:34.839Z",
+    "query": "50 Mungertown Road Unit 15, Madison, CT, 06443, United States",
+    "error": "no result"
+  },
+  "2980 Conley Rd, Ashton, ON, K0A 1B0, Canada": {
+    "queriedAt": "2026-06-21T10:00:36.348Z",
+    "query": "2980 Conley Rd, Ashton, ON, K0A 1B0, Canada",
+    "error": "no result"
+  },
+  "113 Brooksite Dr, Smithtown, NY, 11787-4456, United States": {
+    "lat": 40.8430857,
+    "lon": -73.2023105,
+    "queriedAt": "2026-06-21T10:00:37.649Z",
+    "query": "113 Brooksite Dr, Smithtown, NY, 11787-4456, United States"
+  },
+  "Lenmarc Mall 1st Floor, Surabaya, 60225, Indonesia": {
+    "queriedAt": "2026-06-21T10:00:39.238Z",
+    "query": "Lenmarc Mall 1st Floor, Surabaya, 60225, Indonesia",
+    "error": "no result"
+  },
+  "2254 SW 10th Ave, Topeka, KS, 66604, United States": {
+    "lat": 39.0516003,
+    "lon": -95.705576,
+    "queriedAt": "2026-06-21T10:00:40.667Z",
+    "query": "2254 SW 10th Ave, Topeka, KS, 66604, United States"
+  },
+  "899 Morgans rd, Newcastle, ON, L1B1L9, Canada": {
+    "lat": 43.952323,
+    "lon": -78.5426039,
+    "queriedAt": "2026-06-21T10:00:42.110Z",
+    "query": "899 Morgans rd, Newcastle, ON, L1B1L9, Canada"
+  },
+  "FTRC, FTRC, 12237, China": {
+    "queriedAt": "2026-06-21T10:00:43.582Z",
+    "query": "FTRC, FTRC, 12237, China",
+    "error": "no result"
   }
 }
