@@ -6764,5 +6764,74 @@
     "queriedAt": "2026-06-21T10:00:43.582Z",
     "query": "FTRC, FTRC, 12237, China",
     "error": "no result"
+  },
+  "400 Renaissance Dr W, Detroit, MI, 48243, United States": {
+    "lat": 42.3289907,
+    "lon": -83.0397978,
+    "queriedAt": "2026-06-28T09:05:12.393Z",
+    "query": "400 Renaissance Dr W, Detroit, MI, 48243, United States"
+  },
+  "123 Main, Anytown, CA, 92840, United States": {
+    "queriedAt": "2026-06-28T09:05:13.831Z",
+    "query": "123 Main, Anytown, CA, 92840, United States",
+    "error": "no result"
+  },
+  "2006 Dogtown Rd SE, Fort Payne, AL, 35967, United States": {
+    "lat": 34.3999066,
+    "lon": -85.7382572,
+    "queriedAt": "2026-06-28T09:05:15.302Z",
+    "query": "2006 Dogtown Rd SE, Fort Payne, AL, 35967, United States"
+  },
+  "11625 M32, Atlanta, MI, 49709, United States": {
+    "queriedAt": "2026-06-28T09:05:16.924Z",
+    "query": "11625 M32, Atlanta, MI, 49709, United States",
+    "error": "no result"
+  },
+  "4834 Burr St suit b, Bakersfield, CA, 93308, United States": {
+    "queriedAt": "2026-06-28T09:05:18.384Z",
+    "query": "4834 Burr St suit b, Bakersfield, CA, 93308, United States",
+    "error": "no result"
+  },
+  "Lijiang west road, Ningbo, 31500, China": {
+    "lat": 29.908265,
+    "lon": 121.5085331,
+    "queriedAt": "2026-06-28T09:05:19.895Z",
+    "query": "Lijiang west road, Ningbo, 31500, China"
+  },
+  "RC All the Time, Anywhere we can play, CA, 93630, United States": {
+    "queriedAt": "2026-06-28T09:05:21.624Z",
+    "query": "RC All the Time, Anywhere we can play, CA, 93630, United States",
+    "error": "no result"
+  },
+  "1728 Layton Avenue suite e2, Haltom City, TX, 76117, United States": {
+    "queriedAt": "2026-06-28T09:05:23.213Z",
+    "query": "1728 Layton Avenue suite e2, Haltom City, TX, 76117, United States",
+    "error": "no result"
+  },
+  "123 Anywhere Street, Someplace, 11111, New Zealand": {
+    "queriedAt": "2026-06-28T09:05:24.852Z",
+    "query": "123 Anywhere Street, Someplace, 11111, New Zealand",
+    "error": "no result"
+  },
+  "322 Carterhill Drive, West Columbia, SC, 29172, United States": {
+    "queriedAt": "2026-06-28T09:05:26.690Z",
+    "query": "322 Carterhill Drive, West Columbia, SC, 29172, United States",
+    "error": "no result"
+  },
+  "1668 Forest Lane, Owensville, MO, 65066, United States": {
+    "queriedAt": "2026-06-28T09:05:28.285Z",
+    "query": "1668 Forest Lane, Owensville, MO, 65066, United States",
+    "error": "no result"
+  },
+  "Debringcat ave, Sydney, 12345, Australia": {
+    "queriedAt": "2026-06-28T09:05:29.601Z",
+    "query": "Debringcat ave, Sydney, 12345, Australia",
+    "error": "no result"
+  },
+  "101A West Ave, Kannapolis, NC, 28083, United States": {
+    "lat": 35.4980491,
+    "lon": -80.6255502,
+    "queriedAt": "2026-06-28T09:05:31.106Z",
+    "query": "101A West Ave, Kannapolis, NC, 28083, United States"
   }
 }
