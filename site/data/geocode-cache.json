@@ -6833,5 +6833,54 @@
     "lon": -80.6255502,
     "queriedAt": "2026-06-28T09:05:31.106Z",
     "query": "101A West Ave, Kannapolis, NC, 28083, United States"
+  },
+  "31975 Melson RD, Delmar, MD, 21875, United States": {
+    "queriedAt": "2026-07-05T09:06:06.301Z",
+    "query": "31975 Melson RD, Delmar, MD, 21875, United States",
+    "error": "no result"
+  },
+  "Taman Metropolitan Kepong, Kuala Lumpur, 52100, Malaysia": {
+    "lat": 3.2205505,
+    "lon": 101.6434493,
+    "queriedAt": "2026-07-05T09:06:07.792Z",
+    "query": "Taman Metropolitan Kepong, Kuala Lumpur, 52100, Malaysia"
+  },
+  "224 SE Anthony Loop, lake city, FL, 32025, United States": {
+    "lat": 30.0982325,
+    "lon": -82.581562,
+    "queriedAt": "2026-07-05T09:06:09.434Z",
+    "query": "224 SE Anthony Loop, lake city, FL, 32025, United States"
+  },
+  "Ch du Canal O Salaberry-de-Valleyfield QC Canada, Salaberry de Valleyfield, QC, J6T 5C9, Canada": {
+    "queriedAt": "2026-07-05T09:06:11.271Z",
+    "query": "Ch du Canal O Salaberry-de-Valleyfield QC Canada, Salaberry de Valleyfield, QC, J6T 5C9, Canada",
+    "error": "no result"
+  },
+  "28853 Broken Arrow Cir, Menifee, CA, 92584, United States": {
+    "lat": 33.6381797,
+    "lon": -117.1556607,
+    "queriedAt": "2026-07-05T09:06:12.597Z",
+    "query": "28853 Broken Arrow Cir, Menifee, CA, 92584, United States"
+  },
+  "Dewars Rd, Bakers Creek QLD 4740, Mackay, 04740, Australia": {
+    "queriedAt": "2026-07-05T09:06:14.151Z",
+    "query": "Dewars Rd, Bakers Creek QLD 4740, Mackay, 04740, Australia",
+    "error": "no result"
+  },
+  "8085 s sheridan ave, durand, MI, 48429, United States": {
+    "queriedAt": "2026-07-05T09:06:15.988Z",
+    "query": "8085 s sheridan ave, durand, MI, 48429, United States",
+    "error": "no result"
+  },
+  "16230 W 50th AVE, GOLDEN, CO, 80403, United States": {
+    "queriedAt": "2026-07-05T09:06:17.922Z",
+    "query": "16230 W 50th AVE, GOLDEN, CO, 80403, United States",
+    "error": "no result"
+  },
+  "5465 choctaw trl, rockford, IL, 61109, United States": {
+    "lat": 42.2024433,
+    "lon": -89.0579303,
+    "queriedAt": "2026-07-05T09:06:20.266Z",
+    "query": "5465 choctaw trl, rockford, IL, 61109, United States"
   }
 }
