@@ -6882,5 +6882,108 @@
     "lon": -89.0579303,
     "queriedAt": "2026-07-05T09:06:20.266Z",
     "query": "5465 choctaw trl, rockford, IL, 61109, United States"
+  },
+  "4545, rexburg, ID, 83440, United States": {
+    "lat": 43.826079,
+    "lon": -111.7837279,
+    "queriedAt": "2026-07-12T08:30:56.627Z",
+    "query": "4545, rexburg, ID, 83440, United States"
+  },
+  "3801 N University Dr Ste 303A, Sunrise, FL, 33351, United States": {
+    "queriedAt": "2026-07-12T08:30:58.475Z",
+    "query": "3801 N University Dr Ste 303A, Sunrise, FL, 33351, United States",
+    "error": "no result"
+  },
+  "RC raceway, belews creek, NC, 27009, United States": {
+    "queriedAt": "2026-07-12T08:31:00.231Z",
+    "query": "RC raceway, belews creek, NC, 27009, United States",
+    "error": "no result"
+  },
+  "5800 Rockside Woods Blvd N., Independence, OH, 44131, United States": {
+    "lat": 41.402424,
+    "lon": -81.645875,
+    "queriedAt": "2026-07-12T08:31:01.854Z",
+    "query": "5800 Rockside Woods Blvd N., Independence, OH, 44131, United States"
+  },
+  "180 Bradhurst Ave., Hawthorn, NY, 10532, United States": {
+    "queriedAt": "2026-07-12T08:31:03.707Z",
+    "query": "180 Bradhurst Ave., Hawthorn, NY, 10532, United States",
+    "error": "no result"
+  },
+  "88 Sheung Fung St, Tsz Wan Shan, 000000, Hong Kong": {
+    "lat": 22.3485406,
+    "lon": 114.199457,
+    "queriedAt": "2026-07-12T08:31:05.159Z",
+    "query": "88 Sheung Fung St, Tsz Wan Shan, 000000, Hong Kong"
+  },
+  "123 Fake St, FAke, FL, 33166, United States": {
+    "queriedAt": "2026-07-12T08:31:06.919Z",
+    "query": "123 Fake St, FAke, FL, 33166, United States",
+    "error": "no result"
+  },
+  "6490 Conrad Road, Mancelona, MI, 49659, United States": {
+    "lat": 44.9380846,
+    "lon": -85.009689,
+    "queriedAt": "2026-07-12T08:31:08.568Z",
+    "query": "6490 Conrad Road, Mancelona, MI, 49659, United States"
+  },
+  "801 W Michelle Ct, Muncie, IN, 47302, United States": {
+    "queriedAt": "2026-07-12T08:31:10.525Z",
+    "query": "801 W Michelle Ct, Muncie, IN, 47302, United States",
+    "error": "no result"
+  },
+  "28186 9th st, lake linden, MI, 49945, United States": {
+    "lat": 47.1974966,
+    "lon": -88.4023212,
+    "queriedAt": "2026-07-12T08:31:13.683Z",
+    "query": "28186 9th st, lake linden, MI, 49945, United States"
+  },
+  "1453 Summer Village Rd, Saratoga, UT, 84043, United States": {
+    "lat": 40.3884473,
+    "lon": -111.9091442,
+    "queriedAt": "2026-07-12T08:31:15.120Z",
+    "query": "1453 Summer Village Rd, Saratoga, UT, 84043, United States"
+  },
+  "503 North Williams Street, KENNEWICK, WA, 99336, United States": {
+    "lat": 46.2155146,
+    "lon": -119.1833696,
+    "queriedAt": "2026-07-12T08:31:16.348Z",
+    "query": "503 North Williams Street, KENNEWICK, WA, 99336, United States"
+  },
+  "3517 kearney rd, stanley, NY, 14561, United States": {
+    "lat": 42.8596137,
+    "lon": -77.1526446,
+    "queriedAt": "2026-07-12T08:31:17.577Z",
+    "query": "3517 kearney rd, stanley, NY, 14561, United States"
+  },
+  "7175 Bath Dr., Las Vegas, NV, 89131, United States": {
+    "lat": 36.2828515,
+    "lon": -115.3201649,
+    "queriedAt": "2026-07-12T08:31:19.337Z",
+    "query": "7175 Bath Dr., Las Vegas, NV, 89131, United States"
+  },
+  "Ivan Vazov 1, Sopot, 04330, Bulgaria": {
+    "lat": 42.6524743,
+    "lon": 24.7592484,
+    "queriedAt": "2026-07-12T08:31:20.602Z",
+    "query": "Ivan Vazov 1, Sopot, 04330, Bulgaria"
+  },
+  "2530 Weeden Creek Rd, Sheboygan, WI, 53083, United States": {
+    "lat": 43.7029751,
+    "lon": -87.7645037,
+    "queriedAt": "2026-07-12T08:31:22.348Z",
+    "query": "2530 Weeden Creek Rd, Sheboygan, WI, 53083, United States"
+  },
+  "Sabana Blanco 68, Oranjestad, 00000, Aruba": {
+    "lat": 12.5082236,
+    "lon": -70.0087937,
+    "queriedAt": "2026-07-12T08:31:24.097Z",
+    "query": "Sabana Blanco 68, Oranjestad, 00000, Aruba"
+  },
+  "Ranna pst 13, Viljandi, 71020, Estonia": {
+    "lat": 58.3587406,
+    "lon": 25.6022439,
+    "queriedAt": "2026-07-12T08:31:25.724Z",
+    "query": "Ranna pst 13, Viljandi, 71020, Estonia"
   }
 }
