@@ -6985,5 +6985,40 @@
     "lon": 25.6022439,
     "queriedAt": "2026-07-12T08:31:25.724Z",
     "query": "Ranna pst 13, Viljandi, 71020, Estonia"
+  },
+  "399 Yingbin Zhong Avenue,Nanchang City,Jiangxi Province,China, Nanchang, 330000, China": {
+    "queriedAt": "2026-07-19T08:23:53.389Z",
+    "query": "399 Yingbin Zhong Avenue,Nanchang City,Jiangxi Province,China, Nanchang, 330000, China",
+    "error": "no result"
+  },
+  "Lavershot Lodge, Windlesham, GU20 6LE, United Kingdom": {
+    "lat": 51.3810712,
+    "lon": -0.6602724,
+    "queriedAt": "2026-07-19T08:23:54.835Z",
+    "query": "Lavershot Lodge, Windlesham, GU20 6LE, United Kingdom"
+  },
+  "2710 North Mule Deer Way, Meridian, ID, 83646, United States": {
+    "lat": 43.6293565,
+    "lon": -116.3819623,
+    "queriedAt": "2026-07-19T08:23:56.115Z",
+    "query": "2710 North Mule Deer Way, Meridian, ID, 83646, United States"
+  },
+  "804 N main st, Gunnison, CO, 81230, United States": {
+    "lat": 38.5525514,
+    "lon": -106.9256538,
+    "queriedAt": "2026-07-19T08:23:57.663Z",
+    "query": "804 N main st, Gunnison, CO, 81230, United States"
+  },
+  "2429 Manitowoc rd, green bay, WI, 54311, United States": {
+    "lat": 44.4775003,
+    "lon": -87.9626356,
+    "queriedAt": "2026-07-19T08:23:59.107Z",
+    "query": "2429 Manitowoc rd, green bay, WI, 54311, United States"
+  },
+  "1223 Rogue river hwy, Grants pass, OR, 97527, United States": {
+    "lat": 42.422668,
+    "lon": -123.3153379,
+    "queriedAt": "2026-07-19T08:24:00.515Z",
+    "query": "1223 Rogue river hwy, Grants pass, OR, 97527, United States"
   }
 }
