@@ -7020,5 +7020,81 @@
     "lon": -123.3153379,
     "queriedAt": "2026-07-19T08:24:00.515Z",
     "query": "1223 Rogue river hwy, Grants pass, OR, 97527, United States"
+  },
+  "855 East Cottage Hill Pwky Building 1, McKinney, TX, 75071, United States": {
+    "queriedAt": "2026-07-26T08:34:22.359Z",
+    "query": "855 East Cottage Hill Pwky Building 1, McKinney, TX, 75071, United States",
+    "error": "no result"
+  },
+  "BN GHL, BND, 566677, Brunei Darussalam": {
+    "queriedAt": "2026-07-26T08:34:23.744Z",
+    "query": "BN GHL, BND, 566677, Brunei Darussalam",
+    "error": "no result"
+  },
+  "160 County Rd 64, Brighton, ON, K0K 1H0, Canada": {
+    "queriedAt": "2026-07-26T08:34:26.678Z",
+    "query": "160 County Rd 64, Brighton, ON, K0K 1H0, Canada",
+    "error": "no result"
+  },
+  "11205 worden rd, delevan, NY, 14042, United States": {
+    "lat": 42.4882334,
+    "lon": -78.4984189,
+    "queriedAt": "2026-07-26T08:34:28.113Z",
+    "query": "11205 worden rd, delevan, NY, 14042, United States"
+  },
+  "2890 Mamie May Rd, Franklinville, NC, 27248, United States": {
+    "queriedAt": "2026-07-26T08:34:29.719Z",
+    "query": "2890 Mamie May Rd, Franklinville, NC, 27248, United States",
+    "error": "no result"
+  },
+  "6602 ne saint johns rd, vancouver, WA, 98661, United States": {
+    "lat": 45.6699408,
+    "lon": -122.636655,
+    "queriedAt": "2026-07-26T08:34:31.850Z",
+    "query": "6602 ne saint johns rd, vancouver, WA, 98661, United States"
+  },
+  "409 3rd Avenue Southwest, Baudette, MN, 56623, United States": {
+    "lat": 48.7100035,
+    "lon": -94.6046972,
+    "queriedAt": "2026-07-26T08:34:33.423Z",
+    "query": "409 3rd Avenue Southwest, Baudette, MN, 56623, United States"
+  },
+  "87 johnson rd, Pasadena, MD, 21061, United States": {
+    "queriedAt": "2026-07-26T08:34:35.362Z",
+    "query": "87 johnson rd, Pasadena, MD, 21061, United States",
+    "error": "no result"
+  },
+  "calle Juan G Bonelly no. 4, Ens. Julieta, Santo domingo, 10103, Dominican Republic": {
+    "queriedAt": "2026-07-26T08:34:36.935Z",
+    "query": "calle Juan G Bonelly no. 4, Ens. Julieta, Santo domingo, 10103, Dominican Republic",
+    "error": "no result"
+  },
+  "855 East Cottage Hill Pwky, McKinney, TX, 75071, United States": {
+    "queriedAt": "2026-07-26T08:34:38.527Z",
+    "query": "855 East Cottage Hill Pwky, McKinney, TX, 75071, United States",
+    "error": "no result"
+  },
+  "5307, Dundee, NY, 14837, United States": {
+    "lat": 42.507105,
+    "lon": -77.055831,
+    "queriedAt": "2026-07-26T08:34:40.095Z",
+    "query": "5307, Dundee, NY, 14837, United States"
+  },
+  "PO Box 950366, Lake Mary, FL, 32795, United States": {
+    "queriedAt": "2026-07-26T08:34:41.823Z",
+    "query": "PO Box 950366, Lake Mary, FL, 32795, United States",
+    "error": "no result"
+  },
+  "Singapore, Singapore, 000000, Singapore": {
+    "lat": 1.2959845,
+    "lon": 103.7766186,
+    "queriedAt": "2026-07-26T08:34:43.861Z",
+    "query": "Singapore, Singapore, 000000, Singapore"
+  },
+  "WeiFang, Shandong, 12345, China": {
+    "lat": 36.7074551,
+    "lon": 119.1558166,
+    "queriedAt": "2026-07-26T08:34:45.458Z",
+    "query": "WeiFang, Shandong, 12345, China"
   }
 }
