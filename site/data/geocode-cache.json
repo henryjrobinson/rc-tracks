@@ -7096,5 +7096,92 @@
     "lon": 119.1558166,
     "queriedAt": "2026-07-26T08:34:45.458Z",
     "query": "WeiFang, Shandong, 12345, China"
+  },
+  "204 Playa Della Rosita, Unit 10, Washington, UT, 84780, United States": {
+    "queriedAt": "2026-08-02T08:35:52.139Z",
+    "query": "204 Playa Della Rosita, Unit 10, Washington, UT, 84780, United States",
+    "error": "no result"
+  },
+  "302 county road 60, waverly, NY, 14892, United States": {
+    "lat": 42.01517,
+    "lon": -76.586325,
+    "queriedAt": "2026-08-02T08:35:53.988Z",
+    "query": "302 county road 60, waverly, NY, 14892, United States"
+  },
+  "Jalan Padang, Kawasan 1,, Klang, Selangor, 41000, Malaysia": {
+    "queriedAt": "2026-08-02T08:35:55.926Z",
+    "query": "Jalan Padang, Kawasan 1,, Klang, Selangor, 41000, Malaysia",
+    "error": "no result"
+  },
+  "2373 old falls blvd, niagara falls, NY, 14304, United States": {
+    "lat": 43.098533,
+    "lon": -78.918054,
+    "queriedAt": "2026-08-02T08:35:57.685Z",
+    "query": "2373 old falls blvd, niagara falls, NY, 14304, United States"
+  },
+  "36125 Creighton Ave. apt 6303, murrieta, CA, 92563, United States": {
+    "queriedAt": "2026-08-02T08:35:59.014Z",
+    "query": "36125 Creighton Ave. apt 6303, murrieta, CA, 92563, United States",
+    "error": "no result"
+  },
+  "142, Hemlock, NY, 14466-9652, United States": {
+    "lat": 42.7942307,
+    "lon": -77.6063849,
+    "queriedAt": "2026-08-02T08:36:01.068Z",
+    "query": "142, Hemlock, NY, 14466-9652, United States"
+  },
+  "RC Raceway, Belews Creek, NC, 27009, United States": {
+    "queriedAt": "2026-08-02T08:36:02.333Z",
+    "query": "RC Raceway, Belews Creek, NC, 27009, United States",
+    "error": "no result"
+  },
+  "413 Archer Way, Valparaiso, IN, 46383, United States": {
+    "queriedAt": "2026-08-02T08:36:03.929Z",
+    "query": "413 Archer Way, Valparaiso, IN, 46383, United States",
+    "error": "no result"
+  },
+  "366 Marple Rd, Winchester, VA, 22603, United States": {
+    "queriedAt": "2026-08-02T08:36:05.982Z",
+    "query": "366 Marple Rd, Winchester, VA, 22603, United States",
+    "error": "no result"
+  },
+  "2481 Kaladar Ave, Ottawa, ON, K1V8B9, Canada": {
+    "lat": 45.3752575,
+    "lon": -75.6702317,
+    "queriedAt": "2026-08-02T08:36:07.270Z",
+    "query": "2481 Kaladar Ave, Ottawa, ON, K1V8B9, Canada"
+  },
+  "lugangxx, wuhu, 241000, China": {
+    "queriedAt": "2026-08-02T08:36:08.855Z",
+    "query": "lugangxx, wuhu, 241000, China",
+    "error": "no result"
+  },
+  "750 Santa Anita Ave, South El Monte, CA, 91733, United States": {
+    "lat": 34.0372391,
+    "lon": -118.0552596,
+    "queriedAt": "2026-08-02T08:36:10.245Z",
+    "query": "750 Santa Anita Ave, South El Monte, CA, 91733, United States"
+  },
+  "3186 Duvall Rd., Ansonia, OH, 45303, United States": {
+    "queriedAt": "2026-08-02T08:36:11.992Z",
+    "query": "3186 Duvall Rd., Ansonia, OH, 45303, United States",
+    "error": "no result"
+  },
+  "5328 20th st, rockford, IL, 61109, United States": {
+    "lat": 42.2041054,
+    "lon": -89.0573336,
+    "queriedAt": "2026-08-02T08:36:13.338Z",
+    "query": "5328 20th st, rockford, IL, 61109, United States"
+  },
+  "Industrial Area, Hashaked, Ofaqim, 8753722, Israel": {
+    "queriedAt": "2026-08-02T08:36:14.947Z",
+    "query": "Industrial Area, Hashaked, Ofaqim, 8753722, Israel",
+    "error": "no result"
+  },
+  "9 Sarahbeth Ln, Wareham, MA, 02571, United States": {
+    "lat": 41.8003544,
+    "lon": -70.6819576,
+    "queriedAt": "2026-08-02T08:36:16.694Z",
+    "query": "9 Sarahbeth Ln, Wareham, MA, 02571, United States"
   }
 }
