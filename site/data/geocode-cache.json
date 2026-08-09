@@ -7183,5 +7183,64 @@
     "lon": -70.6819576,
     "queriedAt": "2026-08-02T08:36:16.694Z",
     "query": "9 Sarahbeth Ln, Wareham, MA, 02571, United States"
+  },
+  "133 45, Yonkang, 256677, Austria": {
+    "queriedAt": "2026-08-09T07:07:34.567Z",
+    "query": "133 45, Yonkang, 256677, Austria",
+    "error": "no result"
+  },
+  "123 Anywhere st, Someplace, CA, 12345, United States": {
+    "queriedAt": "2026-08-09T07:07:36.515Z",
+    "query": "123 Anywhere st, Someplace, CA, 12345, United States",
+    "error": "no result"
+  },
+  "10270 e Blake ranch road, Kingman, AZ, 86401, United States": {
+    "queriedAt": "2026-08-09T07:07:38.369Z",
+    "query": "10270 e Blake ranch road, Kingman, AZ, 86401, United States",
+    "error": "no result"
+  },
+  "cmac, cmac, 100763, China": {
+    "lat": 44.6865816,
+    "lon": 12.2382376,
+    "queriedAt": "2026-08-09T07:07:40.022Z",
+    "query": "cmac, cmac, 100763, China"
+  },
+  "123 Private st, Private, PA, Private, United States": {
+    "queriedAt": "2026-08-09T07:07:41.479Z",
+    "query": "123 Private st, Private, PA, Private, United States",
+    "error": "no result"
+  },
+  "No.580 Cheng Nan Road, Yong Kang, Zhe Jiang, 321300, China": {
+    "queriedAt": "2026-08-09T07:07:43.630Z",
+    "query": "No.580 Cheng Nan Road, Yong Kang, Zhe Jiang, 321300, China",
+    "error": "no result"
+  },
+  "37 Carleton Blvd, Cobourg, ON, 14305, Canada": {
+    "queriedAt": "2026-08-09T07:07:45.484Z",
+    "query": "37 Carleton Blvd, Cobourg, ON, 14305, Canada",
+    "error": "no result"
+  },
+  "65 Gray Rd, Falmouth, ME, 04105, United States": {
+    "lat": 43.7347493,
+    "lon": -70.296075,
+    "queriedAt": "2026-08-09T07:07:47.339Z",
+    "query": "65 Gray Rd, Falmouth, ME, 04105, United States"
+  },
+  "16722 198th ave, Big Lake, MN, 55309, United States": {
+    "lat": 45.3309664,
+    "lon": -93.6917464,
+    "queriedAt": "2026-08-09T07:07:49.080Z",
+    "query": "16722 198th ave, Big Lake, MN, 55309, United States"
+  },
+  "390 oakvalley pkwy, beaumont, CA, 92223, United States": {
+    "queriedAt": "2026-08-09T07:07:50.825Z",
+    "query": "390 oakvalley pkwy, beaumont, CA, 92223, United States",
+    "error": "no result"
+  },
+  "860 Crane Avenue South, Taunton, MA, 02780, United States": {
+    "lat": 41.9432714,
+    "lon": -71.1446959,
+    "queriedAt": "2026-08-09T07:07:52.774Z",
+    "query": "860 Crane Avenue South, Taunton, MA, 02780, United States"
   }
 }
