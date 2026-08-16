@@ -7242,5 +7242,66 @@
     "lon": -71.1446959,
     "queriedAt": "2026-08-09T07:07:52.774Z",
     "query": "860 Crane Avenue South, Taunton, MA, 02780, United States"
+  },
+  "3031 NW 23rd St., Oklahoma City, OK, 73107, United States": {
+    "lat": 35.4932363,
+    "lon": -97.5685872,
+    "queriedAt": "2026-08-16T06:50:20.045Z",
+    "query": "3031 NW 23rd St., Oklahoma City, OK, 73107, United States"
+  },
+  "9558 County Road 137, Lodi, NY, 14860, United States": {
+    "lat": 42.5566782,
+    "lon": -76.8286473,
+    "queriedAt": "2026-08-16T06:50:21.573Z",
+    "query": "9558 County Road 137, Lodi, NY, 14860, United States"
+  },
+  "Parque da Cidade, Jundia-i, Jundiai, 06020-000, Brazil": {
+    "queriedAt": "2026-08-16T06:50:22.949Z",
+    "query": "Parque da Cidade, Jundia-i, Jundiai, 06020-000, Brazil",
+    "error": "no result"
+  },
+  "1075 Hunter Road, Pilot Mountain, NC, 27041, United States": {
+    "queriedAt": "2026-08-16T06:50:24.802Z",
+    "query": "1075 Hunter Road, Pilot Mountain, NC, 27041, United States",
+    "error": "no result"
+  },
+  "366 Marple road, Winchester, VA, 22603, United States": {
+    "queriedAt": "2026-08-16T06:50:26.559Z",
+    "query": "366 Marple road, Winchester, VA, 22603, United States",
+    "error": "no result"
+  },
+  "Hampton Scout Hut, Evesham, WR112PQ, United Kingdom": {
+    "queriedAt": "2026-08-16T06:50:28.410Z",
+    "query": "Hampton Scout Hut, Evesham, WR112PQ, United Kingdom",
+    "error": "no result"
+  },
+  "1645 Bullfrog Hollow rd, Wells, VT, 05774, United States": {
+    "lat": 43.427776,
+    "lon": -73.2377929,
+    "queriedAt": "2026-08-16T06:50:29.976Z",
+    "query": "1645 Bullfrog Hollow rd, Wells, VT, 05774, United States"
+  },
+  "61 Washington Street North, Auburn, ME, 04210, United States": {
+    "lat": 44.0880243,
+    "lon": -70.2316432,
+    "queriedAt": "2026-08-16T06:50:31.604Z",
+    "query": "61 Washington Street North, Auburn, ME, 04210, United States"
+  },
+  "17300 Saticoy st., Lake Balboa, CA, 91406, United States": {
+    "lat": 34.208329,
+    "lon": -118.510013,
+    "queriedAt": "2026-08-16T06:50:33.177Z",
+    "query": "17300 Saticoy st., Lake Balboa, CA, 91406, United States"
+  },
+  "24200 Chualar Dump Road, Chualar, CA, 93925, United States": {
+    "queriedAt": "2026-08-16T06:50:34.635Z",
+    "query": "24200 Chualar Dump Road, Chualar, CA, 93925, United States",
+    "error": "no result"
+  },
+  "4212 converse ave, cheyenne, WY, 82001, United States": {
+    "lat": 41.150963,
+    "lon": -104.7860282,
+    "queriedAt": "2026-08-16T06:50:36.199Z",
+    "query": "4212 converse ave, cheyenne, WY, 82001, United States"
   }
 }
