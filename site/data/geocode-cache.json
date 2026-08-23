@@ -7303,5 +7303,63 @@
     "lon": -104.7860282,
     "queriedAt": "2026-08-16T06:50:36.199Z",
     "query": "4212 converse ave, cheyenne, WY, 82001, United States"
+  },
+  "140 Main St., Tell City, IN, 47586, United States": {
+    "lat": 37.9424531,
+    "lon": -86.7697488,
+    "queriedAt": "2026-08-23T06:51:32.863Z",
+    "query": "140 Main St., Tell City, IN, 47586, United States"
+  },
+  "goa, goa, UT, 495599, United States": {
+    "queriedAt": "2026-08-23T06:51:34.308Z",
+    "query": "goa, goa, UT, 495599, United States",
+    "error": "no result"
+  },
+  "12 North Road, Hatfield, AB12 2JN, United Kingdom": {
+    "lat": 53.8701788,
+    "lon": -0.1988154,
+    "queriedAt": "2026-08-23T06:51:36.349Z",
+    "query": "12 North Road, Hatfield, AB12 2JN, United Kingdom"
+  },
+  "Victoria Road, St Kilda, Dunedin 9012, Dunedin, 90855, New Zealand": {
+    "queriedAt": "2026-08-23T06:51:37.775Z",
+    "query": "Victoria Road, St Kilda, Dunedin 9012, Dunedin, 90855, New Zealand",
+    "error": "no result"
+  },
+  "W7780 County Road Q, Watertown, WI, 53098, United States": {
+    "queriedAt": "2026-08-23T06:51:39.406Z",
+    "query": "W7780 County Road Q, Watertown, WI, 53098, United States",
+    "error": "no result"
+  },
+  "Morninghill Arena, 26 Hans Pirow Str, Johannesburg, 20261, South Africa": {
+    "queriedAt": "2026-08-23T06:51:40.866Z",
+    "query": "Morninghill Arena, 26 Hans Pirow Str, Johannesburg, 20261, South Africa",
+    "error": "no result"
+  },
+  "3330 Walnut St, Philadelphia, PA, 19104, United States": {
+    "lat": 39.9521867,
+    "lon": -75.1910852,
+    "queriedAt": "2026-08-23T06:51:42.803Z",
+    "query": "3330 Walnut St, Philadelphia, PA, 19104, United States"
+  },
+  "19397 Benhams Rd, Bristol, VA, 24202, United States": {
+    "queriedAt": "2026-08-23T06:51:44.166Z",
+    "query": "19397 Benhams Rd, Bristol, VA, 24202, United States",
+    "error": "no result"
+  },
+  "6123 FM 2641, Shallowater, TX, 79363, United States": {
+    "queriedAt": "2026-08-23T06:51:45.568Z",
+    "query": "6123 FM 2641, Shallowater, TX, 79363, United States",
+    "error": "no result"
+  },
+  "123 456th Street, Someplace, AZ, 85024, United States": {
+    "queriedAt": "2026-08-23T06:51:46.884Z",
+    "query": "123 456th Street, Someplace, AZ, 85024, United States",
+    "error": "no result"
+  },
+  "Klev Solhaga 225, Alunda, 74791, Sweden": {
+    "queriedAt": "2026-08-23T06:51:48.757Z",
+    "query": "Klev Solhaga 225, Alunda, 74791, Sweden",
+    "error": "no result"
   }
 }
