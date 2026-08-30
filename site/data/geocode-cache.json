@@ -7361,5 +7361,97 @@
     "queriedAt": "2026-08-23T06:51:48.757Z",
     "query": "Klev Solhaga 225, Alunda, 74791, Sweden",
     "error": "no result"
+  },
+  "550 Conn Street, Ivel, KY, 41642, United States": {
+    "lat": 37.5786086,
+    "lon": -82.6614349,
+    "queriedAt": "2026-08-30T11:22:52.617Z",
+    "query": "550 Conn Street, Ivel, KY, 41642, United States"
+  },
+  "38 rue du Botrel, Acigne, 35690, France": {
+    "lat": 48.1407959,
+    "lon": -1.5259015,
+    "queriedAt": "2026-08-30T11:22:54.056Z",
+    "query": "38 rue du Botrel, Acigne, 35690, France"
+  },
+  "1718 thistlewood dr apt c, clarksville, TN, 37042, United States": {
+    "queriedAt": "2026-08-30T11:22:55.899Z",
+    "query": "1718 thistlewood dr apt c, clarksville, TN, 37042, United States",
+    "error": "no result"
+  },
+  "5531 Equestrian Road, Shepherd, MT, 59079, United States": {
+    "queriedAt": "2026-08-30T11:22:57.314Z",
+    "query": "5531 Equestrian Road, Shepherd, MT, 59079, United States",
+    "error": "no result"
+  },
+  "4200 E Washington St, East Peoria, IL, 61611, United States": {
+    "lat": 40.686758,
+    "lon": -89.5044652,
+    "queriedAt": "2026-08-30T11:22:59.064Z",
+    "query": "4200 E Washington St, East Peoria, IL, 61611, United States"
+  },
+  "509 county rd 64, Elmira, NY, 14903, United States": {
+    "lat": 42.1429495,
+    "lon": -76.9034256,
+    "queriedAt": "2026-08-30T11:23:01.019Z",
+    "query": "509 county rd 64, Elmira, NY, 14903, United States"
+  },
+  "Bridge Pa, Hastings, 04120, New Zealand": {
+    "queriedAt": "2026-08-30T11:23:02.969Z",
+    "query": "Bridge Pa, Hastings, 04120, New Zealand",
+    "error": "no result"
+  },
+  "Soccer Drive, Slacks Creek, 04217, Australia": {
+    "lat": -27.6492769,
+    "lon": 153.136723,
+    "queriedAt": "2026-08-30T11:23:04.617Z",
+    "query": "Soccer Drive, Slacks Creek, 04217, Australia"
+  },
+  "123 Beausejour, Beasejour, MB, R3C3L3, Canada": {
+    "queriedAt": "2026-08-30T11:23:06.116Z",
+    "query": "123 Beausejour, Beasejour, MB, R3C3L3, Canada",
+    "error": "no result"
+  },
+  "4762 old mill drive, Traverse City, MI, 49684, United States": {
+    "queriedAt": "2026-08-30T11:23:07.967Z",
+    "query": "4762 old mill drive, Traverse City, MI, 49684, United States",
+    "error": "no result"
+  },
+  "1 Sawmill Ln, Springfield, MO, 65801, United States": {
+    "queriedAt": "2026-08-30T11:23:09.716Z",
+    "query": "1 Sawmill Ln, Springfield, MO, 65801, United States",
+    "error": "no result"
+  },
+  "7455 New Rd, Edinboro, PA, 16412, United States": {
+    "queriedAt": "2026-08-30T11:23:11.566Z",
+    "query": "7455 New Rd, Edinboro, PA, 16412, United States",
+    "error": "no result"
+  },
+  "Av de los Italianos, Ciudad Evita, B1663, Argentina": {
+    "lat": -34.7327953,
+    "lon": -58.5168784,
+    "queriedAt": "2026-08-30T11:23:12.881Z",
+    "query": "Av de los Italianos, Ciudad Evita, B1663, Argentina"
+  },
+  "Circuito Encinos 345, fracc. Los Encinos, ensenada, 22819, Mexico": {
+    "queriedAt": "2026-08-30T11:23:14.480Z",
+    "query": "Circuito Encinos 345, fracc. Los Encinos, ensenada, 22819, Mexico",
+    "error": "no result"
+  },
+  "1802 algoa-friendswood rd, alvin, TX, 77511, United States": {
+    "queriedAt": "2026-08-30T11:23:16.005Z",
+    "query": "1802 algoa-friendswood rd, alvin, TX, 77511, United States",
+    "error": "no result"
+  },
+  "9560 N Country Club Road, Piqua, OH, 45356, United States": {
+    "lat": 40.1743692,
+    "lon": -84.2205648,
+    "queriedAt": "2026-08-30T11:23:17.607Z",
+    "query": "9560 N Country Club Road, Piqua, OH, 45356, United States"
+  },
+  "Wolf RD, Orchard Park, NY, 14127, United States": {
+    "queriedAt": "2026-08-30T11:23:19.457Z",
+    "query": "Wolf RD, Orchard Park, NY, 14127, United States",
+    "error": "no result"
   }
 }
