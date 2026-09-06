@@ -7453,5 +7453,101 @@
     "queriedAt": "2026-08-30T11:23:19.457Z",
     "query": "Wolf RD, Orchard Park, NY, 14127, United States",
     "error": "no result"
+  },
+  "Laguna, cdmx, 11890, Mexico": {
+    "lat": 19.5100935,
+    "lon": -99.0900854,
+    "queriedAt": "2026-09-06T10:19:39.478Z",
+    "query": "Laguna, cdmx, 11890, Mexico"
+  },
+  "1580 Hamilton Chambers Road, Lebanon, TN, 37087, United States": {
+    "queriedAt": "2026-09-06T10:19:41.304Z",
+    "query": "1580 Hamilton Chambers Road, Lebanon, TN, 37087, United States",
+    "error": "no result"
+  },
+  "73VP VW, Tanjung Bidara,, Masjid Tanah, Melaka, 78300, Malaysia": {
+    "queriedAt": "2026-09-06T10:19:42.681Z",
+    "query": "73VP VW, Tanjung Bidara,, Masjid Tanah, Melaka, 78300, Malaysia",
+    "error": "no result"
+  },
+  "543455 US Highway 1, Callahan, FL, 32011, United States": {
+    "queriedAt": "2026-09-06T10:19:43.972Z",
+    "query": "543455 US Highway 1, Callahan, FL, 32011, United States",
+    "error": "no result"
+  },
+  "54 Littleworth, Mansfield, NG18 2SH, United Kingdom": {
+    "lat": 53.1383279,
+    "lon": -1.1901729,
+    "queriedAt": "2026-09-06T10:19:45.451Z",
+    "query": "54 Littleworth, Mansfield, NG18 2SH, United Kingdom"
+  },
+  "12261 J Rendon 420, Burleson, TX, 76028, United States": {
+    "queriedAt": "2026-09-06T10:19:47.035Z",
+    "query": "12261 J Rendon 420, Burleson, TX, 76028, United States",
+    "error": "no result"
+  },
+  "121 Paul Avenue, Clovis, CA, 93612, United States": {
+    "lat": 36.8322024,
+    "lon": -119.711428,
+    "queriedAt": "2026-09-06T10:19:48.625Z",
+    "query": "121 Paul Avenue, Clovis, CA, 93612, United States"
+  },
+  "5414 Riviera Dr, Toledo, OH, 43611-1673, United States": {
+    "lat": 41.7162913,
+    "lon": -83.494955,
+    "queriedAt": "2026-09-06T10:19:50.658Z",
+    "query": "5414 Riviera Dr, Toledo, OH, 43611-1673, United States"
+  },
+  "98 Kinveachy Gardens, Charlton, SE7 8EJ, United Kingdom": {
+    "lat": 51.4869239,
+    "lon": 0.0456782,
+    "queriedAt": "2026-09-06T10:19:52.205Z",
+    "query": "98 Kinveachy Gardens, Charlton, SE7 8EJ, United Kingdom"
+  },
+  "4883, Hermantown, MN, 55811, United States": {
+    "lat": 46.7893521,
+    "lon": -92.1939466,
+    "queriedAt": "2026-09-06T10:19:53.629Z",
+    "query": "4883, Hermantown, MN, 55811, United States"
+  },
+  "17302 Saticoy st., Lake Balboa, CA, 91406, United States": {
+    "lat": 34.208329,
+    "lon": -118.5100541,
+    "queriedAt": "2026-09-06T10:19:55.093Z",
+    "query": "17302 Saticoy st., Lake Balboa, CA, 91406, United States"
+  },
+  "1278 Nooseneck Hill Rd, Coventry, RI, 02816, United States": {
+    "lat": 41.6706866,
+    "lon": -71.5990873,
+    "queriedAt": "2026-09-06T10:19:56.538Z",
+    "query": "1278 Nooseneck Hill Rd, Coventry, RI, 02816, United States"
+  },
+  "San Lorenzo 1100, San Martin, B1650, Argentina": {
+    "lat": -34.5766264,
+    "lon": -58.5392054,
+    "queriedAt": "2026-09-06T10:19:58.458Z",
+    "query": "San Lorenzo 1100, San Martin, B1650, Argentina"
+  },
+  "2000 Simcoe St North, Oshawa, ON, L1GoC5, Canada": {
+    "queriedAt": "2026-09-06T10:19:59.853Z",
+    "query": "2000 Simcoe St North, Oshawa, ON, L1GoC5, Canada",
+    "error": "no result"
+  },
+  "8 colonial drive, londonderry, NH, 02916, United States": {
+    "lat": 42.8535821,
+    "lon": -71.4137775,
+    "queriedAt": "2026-09-06T10:20:01.584Z",
+    "query": "8 colonial drive, londonderry, NH, 02916, United States"
+  },
+  "6210 Decator Dr, Wausau, WI, 54401, United States": {
+    "queriedAt": "2026-09-06T10:20:03.154Z",
+    "query": "6210 Decator Dr, Wausau, WI, 54401, United States",
+    "error": "no result"
+  },
+  "2083 s black horse pike, williamstown, NJ, 08094, United States": {
+    "lat": 39.6800783,
+    "lon": -74.9840973,
+    "queriedAt": "2026-09-06T10:20:04.882Z",
+    "query": "2083 s black horse pike, williamstown, NJ, 08094, United States"
   }
 }
