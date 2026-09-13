@@ -7549,5 +7549,98 @@
     "lon": -74.9840973,
     "queriedAt": "2026-09-06T10:20:04.882Z",
     "query": "2083 s black horse pike, williamstown, NJ, 08094, United States"
+  },
+  "1007 55 Ave NE, Calgary, AB, T2E 6Y4, Canada": {
+    "lat": 51.1014944,
+    "lon": -114.0402791,
+    "queriedAt": "2026-09-13T11:16:36.141Z",
+    "query": "1007 55 Ave NE, Calgary, AB, T2E 6Y4, Canada"
+  },
+  "4185 n bank st, kingman, AZ, 86409, United States": {
+    "lat": 35.2447832,
+    "lon": -114.011624,
+    "queriedAt": "2026-09-13T11:16:37.691Z",
+    "query": "4185 n bank st, kingman, AZ, 86409, United States"
+  },
+  "1114 3rd Ave S, Myrtle Beach, SC, 29577, United States": {
+    "lat": 33.693908,
+    "lon": -78.897283,
+    "queriedAt": "2026-09-13T11:16:39.422Z",
+    "query": "1114 3rd Ave S, Myrtle Beach, SC, 29577, United States"
+  },
+  "232 Collier Drive, Sevierville, TN, 37862, United States": {
+    "lat": 35.837218,
+    "lon": -83.5472242,
+    "queriedAt": "2026-09-13T11:16:41.555Z",
+    "query": "232 Collier Drive, Sevierville, TN, 37862, United States"
+  },
+  "7-17 , cheongna-dong , seohae-gu , incheon , republic of korea, incheon, 22742, Korea (South)": {
+    "queriedAt": "2026-09-13T11:16:43.386Z",
+    "query": "7-17 , cheongna-dong , seohae-gu , incheon , republic of korea, incheon, 22742, Korea (South)",
+    "error": "no result"
+  },
+  "5551 hwy 411 north, chatsworth, GA, 30705, United States": {
+    "queriedAt": "2026-09-13T11:16:45.214Z",
+    "query": "5551 hwy 411 north, chatsworth, GA, 30705, United States",
+    "error": "no result"
+  },
+  "6751 casa grande hwy, tucson, AZ, 85743, United States": {
+    "queriedAt": "2026-09-13T11:16:47.354Z",
+    "query": "6751 casa grande hwy, tucson, AZ, 85743, United States",
+    "error": "no result"
+  },
+  "818 Byrd Dr, Abilene, TX, 79601, United States": {
+    "lat": 32.4534986,
+    "lon": -99.7103871,
+    "queriedAt": "2026-09-13T11:16:48.645Z",
+    "query": "818 Byrd Dr, Abilene, TX, 79601, United States"
+  },
+  "218 lisa ste, new york, DE, 19801, United States": {
+    "queriedAt": "2026-09-13T11:16:50.378Z",
+    "query": "218 lisa ste, new york, DE, 19801, United States",
+    "error": "no result"
+  },
+  "123 Sevierville Rd, Seymour, TN, 37865, United States": {
+    "lat": 35.8227925,
+    "lon": -83.8160991,
+    "queriedAt": "2026-09-13T11:16:51.781Z",
+    "query": "123 Sevierville Rd, Seymour, TN, 37865, United States"
+  },
+  "9595 tower rd, BONNE TERRE, MO, 63628, United States": {
+    "queriedAt": "2026-09-13T11:16:53.608Z",
+    "query": "9595 tower rd, BONNE TERRE, MO, 63628, United States",
+    "error": "no result"
+  },
+  "16310 Whittier Blvd Ste A, Whittier, CA, 90603, United States": {
+    "queriedAt": "2026-09-13T11:16:55.330Z",
+    "query": "16310 Whittier Blvd Ste A, Whittier, CA, 90603, United States",
+    "error": "no result"
+  },
+  "643 hickory dr, Wayland, MI, 49348, United States": {
+    "lat": 42.6683252,
+    "lon": -85.6365804,
+    "queriedAt": "2026-09-13T11:16:57.058Z",
+    "query": "643 hickory dr, Wayland, MI, 49348, United States"
+  },
+  "not avalable, londonderry, NH, 02916, United States": {
+    "queriedAt": "2026-09-13T11:16:58.288Z",
+    "query": "not avalable, londonderry, NH, 02916, United States",
+    "error": "no result"
+  },
+  "12345, Huntley, IL, 60142, United States": {
+    "lat": 42.1722503,
+    "lon": -88.42692,
+    "queriedAt": "2026-09-13T11:17:00.325Z",
+    "query": "12345, Huntley, IL, 60142, United States"
+  },
+  "123 tony, new yoke, AL, 19801, United States": {
+    "queriedAt": "2026-09-13T11:17:02.152Z",
+    "query": "123 tony, new yoke, AL, 19801, United States",
+    "error": "no result"
+  },
+  "Railway ground, chennai, 600100, India": {
+    "queriedAt": "2026-09-13T11:17:03.985Z",
+    "query": "Railway ground, chennai, 600100, India",
+    "error": "no result"
   }
 }
