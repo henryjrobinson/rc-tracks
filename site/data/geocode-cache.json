@@ -7642,5 +7642,49 @@
     "queriedAt": "2026-09-13T11:17:03.985Z",
     "query": "Railway ground, chennai, 600100, India",
     "error": "no result"
+  },
+  "3355 N. Bank st, Kingman, AZ, 86409, United States": {
+    "lat": 35.2212004,
+    "lon": -114.0113887,
+    "queriedAt": "2026-09-20T10:48:51.795Z",
+    "query": "3355 N. Bank st, Kingman, AZ, 86409, United States"
+  },
+  "jakarta indonesia, jakarta, 13450, Indonesia": {
+    "lat": -6.3008971,
+    "lon": 106.8914056,
+    "queriedAt": "2026-09-20T10:48:53.383Z",
+    "query": "jakarta indonesia, jakarta, 13450, Indonesia"
+  },
+  "123 on a road, Rhome, TX, 76078, United States": {
+    "queriedAt": "2026-09-20T10:48:55.130Z",
+    "query": "123 on a road, Rhome, TX, 76078, United States",
+    "error": "no result"
+  },
+  "4916 Main St. Unit 6, Lisle, IL, 60532, United States": {
+    "queriedAt": "2026-09-20T10:48:57.182Z",
+    "query": "4916 Main St. Unit 6, Lisle, IL, 60532, United States",
+    "error": "no result"
+  },
+  "Norauto, Buenos Aires, 17545, Argentina": {
+    "lat": -34.4550106,
+    "lon": -58.575959,
+    "queriedAt": "2026-09-20T10:48:58.574Z",
+    "query": "Norauto, Buenos Aires, 17545, Argentina"
+  },
+  "noFixed Address, Melbourne, 30000, Australia": {
+    "queriedAt": "2026-09-20T10:49:00.072Z",
+    "query": "noFixed Address, Melbourne, 30000, Australia",
+    "error": "no result"
+  },
+  "hickory, Arl Hts, IL, 60004, United States": {
+    "queriedAt": "2026-09-20T10:49:02.021Z",
+    "query": "hickory, Arl Hts, IL, 60004, United States",
+    "error": "no result"
+  },
+  "18303, seoul, 18303, Korea (South)": {
+    "lat": 37.5666791,
+    "lon": 126.9782914,
+    "queriedAt": "2026-09-20T10:49:04.063Z",
+    "query": "18303, seoul, 18303, Korea (South)"
   }
 }
