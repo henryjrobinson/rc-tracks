@@ -7686,5 +7686,115 @@
     "lon": 126.9782914,
     "queriedAt": "2026-09-20T10:49:04.063Z",
     "query": "18303, seoul, 18303, Korea (South)"
+  },
+  "14 Saddlebrook Drive, Washington, NJ, 07882, United States": {
+    "lat": 40.7431172,
+    "lon": -74.9543332,
+    "queriedAt": "2026-09-27T11:27:17.981Z",
+    "query": "14 Saddlebrook Drive, Washington, NJ, 07882, United States"
+  },
+  "Jalan Padang, Kawasan 1, Klang, Selangor, 41000, Malaysia": {
+    "queriedAt": "2026-09-27T11:27:19.552Z",
+    "query": "Jalan Padang, Kawasan 1, Klang, Selangor, 41000, Malaysia",
+    "error": "no result"
+  },
+  "8540 W, CRYSTAL RIVER, FL, 34428-7007, United States": {
+    "lat": 28.900729,
+    "lon": -82.576565,
+    "queriedAt": "2026-09-27T11:27:21.285Z",
+    "query": "8540 W, CRYSTAL RIVER, FL, 34428-7007, United States"
+  },
+  "beijing, haidian, CA, 100195, United States": {
+    "queriedAt": "2026-09-27T11:27:23.223Z",
+    "query": "beijing, haidian, CA, 100195, United States",
+    "error": "no result"
+  },
+  "38 Latrobe Post, San Antonio, TX, 78240, United States": {
+    "lat": 29.520105,
+    "lon": -98.5945281,
+    "queriedAt": "2026-09-27T11:27:24.605Z",
+    "query": "38 Latrobe Post, San Antonio, TX, 78240, United States"
+  },
+  "7419 96th Ave, Kenosha, WI, 53142, United States": {
+    "lat": 42.5680086,
+    "lon": -87.9253919,
+    "queriedAt": "2026-09-27T11:27:26.091Z",
+    "query": "7419 96th Ave, Kenosha, WI, 53142, United States"
+  },
+  "372-1, ulsan, 689901, Korea (North)": {
+    "queriedAt": "2026-09-27T11:27:28.430Z",
+    "query": "372-1, ulsan, 689901, Korea (North)",
+    "error": "no result"
+  },
+  "unknown, kansas city, MO, 64118, United States": {
+    "queriedAt": "2026-09-27T11:27:29.750Z",
+    "query": "unknown, kansas city, MO, 64118, United States",
+    "error": "no result"
+  },
+  "Mill Ave. and All American Way, Tempe, AZ, 85283, United States": {
+    "queriedAt": "2026-09-27T11:27:31.489Z",
+    "query": "Mill Ave. and All American Way, Tempe, AZ, 85283, United States",
+    "error": "no result"
+  },
+  "Speedway Road, Latrobe, 07307, Australia": {
+    "lat": -41.2381295,
+    "lon": 146.4401146,
+    "queriedAt": "2026-09-27T11:27:32.975Z",
+    "query": "Speedway Road, Latrobe, 07307, Australia"
+  },
+  "2288 Hwy 2, Milford, NS, B0N1Y0, Canada": {
+    "lat": 45.0523208,
+    "lon": -63.433758,
+    "queriedAt": "2026-09-27T11:27:34.502Z",
+    "query": "2288 Hwy 2, Milford, NS, B0N1Y0, Canada"
+  },
+  "Rua, Lisbon, 1070-000, Portugal": {
+    "lat": 38.7087752,
+    "lon": -9.1382147,
+    "queriedAt": "2026-09-27T11:27:36.077Z",
+    "query": "Rua, Lisbon, 1070-000, Portugal"
+  },
+  "3133 Union Grove Rd, Lexington, NC, 27295, United States": {
+    "queriedAt": "2026-09-27T11:27:37.908Z",
+    "query": "3133 Union Grove Rd, Lexington, NC, 27295, United States",
+    "error": "no result"
+  },
+  "310 wooddale ave, new castle, DE, 19720, United States": {
+    "queriedAt": "2026-09-27T11:27:39.460Z",
+    "query": "310 wooddale ave, new castle, DE, 19720, United States",
+    "error": "no result"
+  },
+  "10119 s monru, loan jack, MO, 64070, United States": {
+    "queriedAt": "2026-09-27T11:27:40.835Z",
+    "query": "10119 s monru, loan jack, MO, 64070, United States",
+    "error": "no result"
+  },
+  "1641 Logans Lane, West Union, OH, 45693, United States": {
+    "lat": 38.7972166,
+    "lon": -83.5431246,
+    "queriedAt": "2026-09-27T11:27:42.365Z",
+    "query": "1641 Logans Lane, West Union, OH, 45693, United States"
+  },
+  "1813 big lake rd, cloquet, MN, 55720, United States": {
+    "lat": 46.7146919,
+    "lon": -92.5355358,
+    "queriedAt": "2026-09-27T11:27:43.807Z",
+    "query": "1813 big lake rd, cloquet, MN, 55720, United States"
+  },
+  "14400 pikewood rd, Alexander, AR, 72002, United States": {
+    "queriedAt": "2026-09-27T11:27:45.349Z",
+    "query": "14400 pikewood rd, Alexander, AR, 72002, United States",
+    "error": "no result"
+  },
+  "101 Outer Banks Dr, HAVELOCK, NC, 28532, United States": {
+    "lat": 34.880852,
+    "lon": -76.870607,
+    "queriedAt": "2026-09-27T11:27:46.964Z",
+    "query": "101 Outer Banks Dr, HAVELOCK, NC, 28532, United States"
+  },
+  "Kensington Netball Courts, Whangarei, 00112, New Zealand": {
+    "queriedAt": "2026-09-27T11:27:48.246Z",
+    "query": "Kensington Netball Courts, Whangarei, 00112, New Zealand",
+    "error": "no result"
   }
 }
