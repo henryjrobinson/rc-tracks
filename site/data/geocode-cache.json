@@ -7796,5 +7796,87 @@
     "queriedAt": "2026-09-27T11:27:48.246Z",
     "query": "Kensington Netball Courts, Whangarei, 00112, New Zealand",
     "error": "no result"
+  },
+  "Colonia Caroya, Cordoba, B1662, Argentina": {
+    "lat": -31.0220578,
+    "lon": -64.0617445,
+    "queriedAt": "2026-10-04T12:01:43.776Z",
+    "query": "Colonia Caroya, Cordoba, B1662, Argentina"
+  },
+  "Franklin Ave, 927, Fremont, OH, 43420, United States": {
+    "lat": 41.3556025,
+    "lon": -83.124548,
+    "queriedAt": "2026-10-04T12:01:45.053Z",
+    "query": "Franklin Ave, 927, Fremont, OH, 43420, United States"
+  },
+  "10396 US-9, Champlain, NY, 12919, United States": {
+    "lat": 44.9362305,
+    "lon": -73.4385358,
+    "queriedAt": "2026-10-04T12:01:46.375Z",
+    "query": "10396 US-9, Champlain, NY, 12919, United States"
+  },
+  "brattas 321, sundsvall, 86495, Sweden": {
+    "lat": 62.3934695,
+    "lon": 16.4724466,
+    "queriedAt": "2026-10-04T12:01:48.110Z",
+    "query": "brattas 321, sundsvall, 86495, Sweden"
+  },
+  "39345 Osawatomie rd, Fontana, KS, 66026, United States": {
+    "queriedAt": "2026-10-04T12:01:49.850Z",
+    "query": "39345 Osawatomie rd, Fontana, KS, 66026, United States",
+    "error": "no result"
+  },
+  "555 Yeah right, Nope, ON, l1l1l1, Canada": {
+    "queriedAt": "2026-10-04T12:01:51.596Z",
+    "query": "555 Yeah right, Nope, ON, l1l1l1, Canada",
+    "error": "no result"
+  },
+  "675 HWY 43, Harrison, AR, 72601, United States": {
+    "queriedAt": "2026-10-04T12:01:53.648Z",
+    "query": "675 HWY 43, Harrison, AR, 72601, United States",
+    "error": "no result"
+  },
+  "7000 Marina Blvd, Brisbane, CA, 94005, United States": {
+    "lat": 37.6757111,
+    "lon": -122.3863032,
+    "queriedAt": "2026-10-04T12:01:55.388Z",
+    "query": "7000 Marina Blvd, Brisbane, CA, 94005, United States"
+  },
+  "teststrecke, loerrach, 79539, Germany": {
+    "queriedAt": "2026-10-04T12:01:56.989Z",
+    "query": "teststrecke, loerrach, 79539, Germany",
+    "error": "no result"
+  },
+  "4581 s 800 east, greentown, IN, 46936, United States": {
+    "queriedAt": "2026-10-04T12:01:58.830Z",
+    "query": "4581 s 800 east, greentown, IN, 46936, United States",
+    "error": "no result"
+  },
+  "3821 Hilsinger Rd, phoenix, OR, 97535, United States": {
+    "lat": 42.2678056,
+    "lon": -122.8236082,
+    "queriedAt": "2026-10-04T12:02:00.152Z",
+    "query": "3821 Hilsinger Rd, phoenix, OR, 97535, United States"
+  },
+  "12602 Longview Park Ln, Peyton, CO, 80831, United States": {
+    "queriedAt": "2026-10-04T12:02:01.622Z",
+    "query": "12602 Longview Park Ln, Peyton, CO, 80831, United States",
+    "error": "no result"
+  },
+  "2924 Calandra Lark, New Braunfels, TX, 78130, United States": {
+    "lat": 29.6495175,
+    "lon": -98.1237955,
+    "queriedAt": "2026-10-04T12:02:03.349Z",
+    "query": "2924 Calandra Lark, New Braunfels, TX, 78130, United States"
+  },
+  "4186 Hwy 41a N, Chapel Hill, TN, 37034, United States": {
+    "queriedAt": "2026-10-04T12:02:05.190Z",
+    "query": "4186 Hwy 41a N, Chapel Hill, TN, 37034, United States",
+    "error": "no result"
+  },
+  "25460 Novi Rd, Novi, MI 48375, Novi, MI, 48187, United States": {
+    "queriedAt": "2026-10-04T12:02:07.121Z",
+    "query": "25460 Novi Rd, Novi, MI 48375, Novi, MI, 48187, United States",
+    "error": "no result"
   }
 }
