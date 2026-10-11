@@ -7878,5 +7878,61 @@
     "queriedAt": "2026-10-04T12:02:07.121Z",
     "query": "25460 Novi Rd, Novi, MI 48375, Novi, MI, 48187, United States",
     "error": "no result"
+  },
+  "Charm Residences, Cainta, 001900, Philippines": {
+    "lat": 14.6135585,
+    "lon": 121.1036562,
+    "queriedAt": "2026-10-11T12:18:27.114Z",
+    "query": "Charm Residences, Cainta, 001900, Philippines"
+  },
+  "Moulton, Northampton, NN3 7QL, United Kingdom": {
+    "lat": 52.2910549,
+    "lon": -0.8580895,
+    "queriedAt": "2026-10-11T12:18:28.471Z",
+    "query": "Moulton, Northampton, NN3 7QL, United Kingdom"
+  },
+  "1001 Melencio Street, Barangay San Roque Norte, Cabanatuan, 03100, Philippines": {
+    "queriedAt": "2026-10-11T12:18:30.066Z",
+    "query": "1001 Melencio Street, Barangay San Roque Norte, Cabanatuan, 03100, Philippines",
+    "error": "no result"
+  },
+  "Home Track, North Plains, OR, 97133, United States": {
+    "queriedAt": "2026-10-11T12:18:31.797Z",
+    "query": "Home Track, North Plains, OR, 97133, United States",
+    "error": "no result"
+  },
+  "Insurgentes sur 605, Napoles, 03810, Mexico": {
+    "lat": 19.3910468,
+    "lon": -99.1732855,
+    "queriedAt": "2026-10-11T12:18:33.630Z",
+    "query": "Insurgentes sur 605, Napoles, 03810, Mexico"
+  },
+  "68 Martin Loop SW, Cartersville, GA, 30120, United States": {
+    "queriedAt": "2026-10-11T12:18:35.463Z",
+    "query": "68 Martin Loop SW, Cartersville, GA, 30120, United States",
+    "error": "no result"
+  },
+  "Carretera ENS-SAN FELIPE, Ensenada, 22819, Mexico": {
+    "queriedAt": "2026-10-11T12:18:36.718Z",
+    "query": "Carretera ENS-SAN FELIPE, Ensenada, 22819, Mexico",
+    "error": "no result"
+  },
+  "6238 Hulen Bend Blvd., Fort Worth, TX, 76132, United States": {
+    "lat": 32.6614922,
+    "lon": -97.4037117,
+    "queriedAt": "2026-10-11T12:18:38.033Z",
+    "query": "6238 Hulen Bend Blvd., Fort Worth, TX, 76132, United States"
+  },
+  "1013 Galvin Rd S, Bellevue, NE, 68005, United States": {
+    "lat": 41.1512946,
+    "lon": -95.9177941,
+    "queriedAt": "2026-10-11T12:18:39.766Z",
+    "query": "1013 Galvin Rd S, Bellevue, NE, 68005, United States"
+  },
+  "Eastgate, Nottinghamshire, S80 1QS, United Kingdom": {
+    "lat": 53.3083751,
+    "lon": -1.1165393,
+    "queriedAt": "2026-10-11T12:18:41.226Z",
+    "query": "Eastgate, Nottinghamshire, S80 1QS, United Kingdom"
   }
 }
