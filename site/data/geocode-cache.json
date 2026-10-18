@@ -7934,5 +7934,66 @@
     "lon": -1.1165393,
     "queriedAt": "2026-10-11T12:18:41.226Z",
     "query": "Eastgate, Nottinghamshire, S80 1QS, United Kingdom"
+  },
+  "707 srigley St, Newmarket, ON, L3Y 1X4, Canada": {
+    "lat": 44.0569484,
+    "lon": -79.44721,
+    "queriedAt": "2026-10-18T10:33:34.377Z",
+    "query": "707 srigley St, Newmarket, ON, L3Y 1X4, Canada"
+  },
+  "1181 S Sumter blvd, Northport, FL, 34287, United States": {
+    "queriedAt": "2026-10-18T10:33:35.874Z",
+    "query": "1181 S Sumter blvd, Northport, FL, 34287, United States",
+    "error": "no result"
+  },
+  "850 Rouge River Hwy, Grants Pass, OR, 97527, United States": {
+    "queriedAt": "2026-10-18T10:33:37.410Z",
+    "query": "850 Rouge River Hwy, Grants Pass, OR, 97527, United States",
+    "error": "no result"
+  },
+  "652 Woods Circle, Lehi, UT, 84043, United States": {
+    "lat": 40.3954081,
+    "lon": -111.8635629,
+    "queriedAt": "2026-10-18T10:33:39.161Z",
+    "query": "652 Woods Circle, Lehi, UT, 84043, United States"
+  },
+  "Merida, Yucatan, 97285, Mexico": {
+    "lat": 20.9670759,
+    "lon": -89.6237402,
+    "queriedAt": "2026-10-18T10:33:41.113Z",
+    "query": "Merida, Yucatan, 97285, Mexico"
+  },
+  "Coral na Bato, San Rafael, Bulacan, 11140, Philippines": {
+    "lat": 14.9942454,
+    "lon": 120.9791654,
+    "queriedAt": "2026-10-18T10:33:42.852Z",
+    "query": "Coral na Bato, San Rafael, Bulacan, 11140, Philippines"
+  },
+  "1445C Lenhardt Rd, Easley, SC, 29640, United States": {
+    "lat": 34.845471,
+    "lon": -82.5959518,
+    "queriedAt": "2026-10-18T10:33:44.243Z",
+    "query": "1445C Lenhardt Rd, Easley, SC, 29640, United States"
+  },
+  "7316 W. State Route 66, Unit J, Newburgh, IN, 47630, United States": {
+    "queriedAt": "2026-10-18T10:33:46.090Z",
+    "query": "7316 W. State Route 66, Unit J, Newburgh, IN, 47630, United States",
+    "error": "no result"
+  },
+  "1351 Grandview St North, Oshawa, ON, l1k0g1, Canada": {
+    "lat": 43.9415285,
+    "lon": -78.8368006,
+    "queriedAt": "2026-10-18T10:33:47.845Z",
+    "query": "1351 Grandview St North, Oshawa, ON, l1k0g1, Canada"
+  },
+  "4532 Summer Gate Court, Gainesville, GA, 30506, United States": {
+    "queriedAt": "2026-10-18T10:33:49.785Z",
+    "query": "4532 Summer Gate Court, Gainesville, GA, 30506, United States",
+    "error": "no result"
+  },
+  "888 Brea Canyon Rd Ste 223, Diamond Bar, CA, 91789, United States": {
+    "queriedAt": "2026-10-18T10:33:51.635Z",
+    "query": "888 Brea Canyon Rd Ste 223, Diamond Bar, CA, 91789, United States",
+    "error": "no result"
   }
 }
