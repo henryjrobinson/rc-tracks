@@ -7995,5 +7995,93 @@
     "queriedAt": "2026-10-18T10:33:51.635Z",
     "query": "888 Brea Canyon Rd Ste 223, Diamond Bar, CA, 91789, United States",
     "error": "no result"
+  },
+  "5050 Nw 137th Lane, Chiefland, FL, 32626, United States": {
+    "queriedAt": "2026-10-25T10:49:09.101Z",
+    "query": "5050 Nw 137th Lane, Chiefland, FL, 32626, United States",
+    "error": "no result"
+  },
+  "53 Cobb St, New Milford, PA, 18834, United States": {
+    "lat": 41.87119,
+    "lon": -75.7287347,
+    "queriedAt": "2026-10-25T10:49:10.523Z",
+    "query": "53 Cobb St, New Milford, PA, 18834, United States"
+  },
+  "1362 tyandaga park drive, burlington, ON, l7p1n3, Canada": {
+    "lat": 43.3485432,
+    "lon": -79.8372987,
+    "queriedAt": "2026-10-25T10:49:11.796Z",
+    "query": "1362 tyandaga park drive, burlington, ON, l7p1n3, Canada"
+  },
+  "4714 spine point way,, DOUGLASVILLE, GA, 30135, United States": {
+    "queriedAt": "2026-10-25T10:49:13.166Z",
+    "query": "4714 spine point way,, DOUGLASVILLE, GA, 30135, United States",
+    "error": "no result"
+  },
+  "35252 23 Mile Rd, New Baltimore, MI, 48047, United States": {
+    "lat": 42.6759833,
+    "lon": -82.7517176,
+    "queriedAt": "2026-10-25T10:49:14.756Z",
+    "query": "35252 23 Mile Rd, New Baltimore, MI, 48047, United States"
+  },
+  "19288 W. Hanford Armona Road, Lemoore, CA, 93245, United States": {
+    "lat": 36.3133806,
+    "lon": -119.7843075,
+    "queriedAt": "2026-10-25T10:49:16.266Z",
+    "query": "19288 W. Hanford Armona Road, Lemoore, CA, 93245, United States"
+  },
+  "Kambal Rd. cor. Abuab Road., San Mateo, Rizal, 001850, Philippines": {
+    "queriedAt": "2026-10-25T10:49:17.559Z",
+    "query": "Kambal Rd. cor. Abuab Road., San Mateo, Rizal, 001850, Philippines",
+    "error": "no result"
+  },
+  "1937 Doctor Robinson Road, Spring Hill, TN, 37174, United States": {
+    "queriedAt": "2026-10-25T10:49:19.307Z",
+    "query": "1937 Doctor Robinson Road, Spring Hill, TN, 37174, United States",
+    "error": "no result"
+  },
+  "18350 winfield road, Fraziers bottom, WV, 25082, United States": {
+    "lat": 38.5637977,
+    "lon": -81.9809334,
+    "queriedAt": "2026-10-25T10:49:20.580Z",
+    "query": "18350 winfield road, Fraziers bottom, WV, 25082, United States"
+  },
+  "4019 Sebastopol Rd, Santa rosa, CA, 95407, United States": {
+    "lat": 38.425346,
+    "lon": -122.7665221,
+    "queriedAt": "2026-10-25T10:49:22.061Z",
+    "query": "4019 Sebastopol Rd, Santa rosa, CA, 95407, United States"
+  },
+  "145 Mill Crossing ln, Springtown, TX, 76082, United States": {
+    "queriedAt": "2026-10-25T10:49:23.900Z",
+    "query": "145 Mill Crossing ln, Springtown, TX, 76082, United States",
+    "error": "no result"
+  },
+  "107 Grayton Lane, Enterprise, AL, 36330, United States": {
+    "lat": 31.3469528,
+    "lon": -85.830138,
+    "queriedAt": "2026-10-25T10:49:25.128Z",
+    "query": "107 Grayton Lane, Enterprise, AL, 36330, United States"
+  },
+  "18 Lewes Rd, Ditchling, BN6 8TT, United Kingdom": {
+    "lat": 50.9205322,
+    "lon": -0.1139275,
+    "queriedAt": "2026-10-25T10:49:26.661Z",
+    "query": "18 Lewes Rd, Ditchling, BN6 8TT, United Kingdom"
+  },
+  "51470 us 97, lapine, OR, 97739, United States": {
+    "queriedAt": "2026-10-25T10:49:29.084Z",
+    "query": "51470 us 97, lapine, OR, 97739, United States",
+    "error": "no result"
+  },
+  "Radio Controlled Racing LLC - Sharjah Media City - Shams, Dubai, PO51500, United Arab Emirates": {
+    "queriedAt": "2026-10-25T10:49:30.426Z",
+    "query": "Radio Controlled Racing LLC - Sharjah Media City - Shams, Dubai, PO51500, United Arab Emirates",
+    "error": "no result"
+  },
+  "111 Raceway Drive, Austin, TX, 78744, United States": {
+    "queriedAt": "2026-10-25T10:49:31.912Z",
+    "query": "111 Raceway Drive, Austin, TX, 78744, United States",
+    "error": "no result"
   }
 }
