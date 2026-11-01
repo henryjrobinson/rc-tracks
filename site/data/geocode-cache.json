@@ -8083,5 +8083,80 @@
     "queriedAt": "2026-10-25T10:49:31.912Z",
     "query": "111 Raceway Drive, Austin, TX, 78744, United States",
     "error": "no result"
+  },
+  "2605 Sanford Street, Grandville, MI, 49418, United States": {
+    "queriedAt": "2026-11-01T12:49:42.645Z",
+    "query": "2605 Sanford Street, Grandville, MI, 49418, United States",
+    "error": "no result"
+  },
+  "14-9, Jalan Perbadanan, Shah Alam Selangor, 40000, Malaysia": {
+    "queriedAt": "2026-11-01T12:49:44.247Z",
+    "query": "14-9, Jalan Perbadanan, Shah Alam Selangor, 40000, Malaysia",
+    "error": "no result"
+  },
+  "3553 county line rd, kingsley, MI, 49649, United States": {
+    "queriedAt": "2026-11-01T12:49:45.848Z",
+    "query": "3553 county line rd, kingsley, MI, 49649, United States",
+    "error": "no result"
+  },
+  "Plano Rd, Richardson, TX, 75082, United States": {
+    "lat": 32.9790428,
+    "lon": -96.6998046,
+    "queriedAt": "2026-11-01T12:49:47.377Z",
+    "query": "Plano Rd, Richardson, TX, 75082, United States"
+  },
+  "2000 OLD FOUNTAIN RD, LAWRENCEVILLE, GA, 30043, United States": {
+    "queriedAt": "2026-11-01T12:49:49.412Z",
+    "query": "2000 OLD FOUNTAIN RD, LAWRENCEVILLE, GA, 30043, United States",
+    "error": "no result"
+  },
+  "123 Illinois Hwy, New Lenox, IL, 60451, United States": {
+    "lat": 41.4976972,
+    "lon": -87.9639527,
+    "queriedAt": "2026-11-01T12:49:50.971Z",
+    "query": "123 Illinois Hwy, New Lenox, IL, 60451, United States"
+  },
+  "123 Anywhere St, Someplace, CA, 91384, United States": {
+    "queriedAt": "2026-11-01T12:49:52.877Z",
+    "query": "123 Anywhere St, Someplace, CA, 91384, United States",
+    "error": "no result"
+  },
+  "10653 E Apache Trail Ste B100-104, Mesa, AZ, 85120, United States": {
+    "queriedAt": "2026-11-01T12:49:54.656Z",
+    "query": "10653 E Apache Trail Ste B100-104, Mesa, AZ, 85120, United States",
+    "error": "no result"
+  },
+  "Haltialehto 1, Espoo, 02330, Finland": {
+    "lat": 60.1633294,
+    "lon": 24.6645567,
+    "queriedAt": "2026-11-01T12:49:56.005Z",
+    "query": "Haltialehto 1, Espoo, 02330, Finland"
+  },
+  "4550 River Bends Dr, Shelby Charter Twp, MI, 48317, United States": {
+    "lat": 42.6494882,
+    "lon": -83.0670336,
+    "queriedAt": "2026-11-01T12:49:57.362Z",
+    "query": "4550 River Bends Dr, Shelby Charter Twp, MI, 48317, United States"
+  },
+  "123 Oak St., Backyard, IL, 60612, United States": {
+    "queriedAt": "2026-11-01T12:49:59.039Z",
+    "query": "123 Oak St., Backyard, IL, 60612, United States",
+    "error": "no result"
+  },
+  "10151 Croydon Way suite 3, Rancho Cordova, CA, 95670, United States": {
+    "queriedAt": "2026-11-01T12:50:00.794Z",
+    "query": "10151 Croydon Way suite 3, Rancho Cordova, CA, 95670, United States",
+    "error": "no result"
+  },
+  "Swanmore College, Swanmore Leisure, New Road, Swanmore, SO32 2RB, United Kingdom": {
+    "queriedAt": "2026-11-01T12:50:02.448Z",
+    "query": "Swanmore College, Swanmore Leisure, New Road, Swanmore, SO32 2RB, United Kingdom",
+    "error": "no result"
+  },
+  "Feria Ganadera, Santo Domingo, 00000, Dominican Republic": {
+    "lat": 18.438031,
+    "lon": -69.9423322,
+    "queriedAt": "2026-11-01T12:50:03.785Z",
+    "query": "Feria Ganadera, Santo Domingo, 00000, Dominican Republic"
   }
 }
