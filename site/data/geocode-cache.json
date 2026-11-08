@@ -8158,5 +8158,94 @@
     "lon": -69.9423322,
     "queriedAt": "2026-11-01T12:50:03.785Z",
     "query": "Feria Ganadera, Santo Domingo, 00000, Dominican Republic"
+  },
+  "W6567 Prospect Road, Juneau, WI, 53039, United States": {
+    "queriedAt": "2026-11-08T12:58:34.492Z",
+    "query": "W6567 Prospect Road, Juneau, WI, 53039, United States",
+    "error": "no result"
+  },
+  "lois, rochester, NH, 03867, United States": {
+    "lat": 43.3063156,
+    "lon": -70.990805,
+    "queriedAt": "2026-11-08T12:58:35.927Z",
+    "query": "lois, rochester, NH, 03867, United States"
+  },
+  "harrowgate lane, clanfield, PO74SD, United Kingdom": {
+    "queriedAt": "2026-11-08T12:58:37.127Z",
+    "query": "harrowgate lane, clanfield, PO74SD, United Kingdom",
+    "error": "no result"
+  },
+  "6140 Beal Pl NW, Seabeck, WA, 98380-8729, United States": {
+    "queriedAt": "2026-11-08T12:58:38.380Z",
+    "query": "6140 Beal Pl NW, Seabeck, WA, 98380-8729, United States",
+    "error": "no result"
+  },
+  "54 Scott Drive, Bozeman, MT, 59718, United States": {
+    "queriedAt": "2026-11-08T12:58:40.163Z",
+    "query": "54 Scott Drive, Bozeman, MT, 59718, United States",
+    "error": "no result"
+  },
+  "7849 W Emerald St, Boise, ID, 83704, United States": {
+    "lat": 43.6113724,
+    "lon": -116.2795131,
+    "queriedAt": "2026-11-08T12:58:41.617Z",
+    "query": "7849 W Emerald St, Boise, ID, 83704, United States"
+  },
+  "105 castle rd, fitchburg, MA, 01420, United States": {
+    "lat": 42.582701,
+    "lon": -71.827131,
+    "queriedAt": "2026-11-08T12:58:43.248Z",
+    "query": "105 castle rd, fitchburg, MA, 01420, United States"
+  },
+  "27438 us 11, great bend, PA, 18821, United States": {
+    "lat": 41.9738952,
+    "lon": -75.7454051,
+    "queriedAt": "2026-11-08T12:58:45.859Z",
+    "query": "27438 us 11, great bend, PA, 18821, United States"
+  },
+  "318 Logan St, Little River, SC, 29566, United States": {
+    "lat": 33.8865027,
+    "lon": -78.6042887,
+    "queriedAt": "2026-11-08T12:58:47.557Z",
+    "query": "318 Logan St, Little River, SC, 29566, United States"
+  },
+  "Nowhere, Reading, PA, 19608, United States": {
+    "queriedAt": "2026-11-08T12:58:49.263Z",
+    "query": "Nowhere, Reading, PA, 19608, United States",
+    "error": "no result"
+  },
+  "1227 Thomas Knapp PWKY, FORT MILL, SC, 29715, United States": {
+    "queriedAt": "2026-11-08T12:58:50.934Z",
+    "query": "1227 Thomas Knapp PWKY, FORT MILL, SC, 29715, United States",
+    "error": "no result"
+  },
+  "845 Lafayette Rd, Seabrook, NH, 03874, United States": {
+    "lat": 42.8771696,
+    "lon": -70.8705885,
+    "queriedAt": "2026-11-08T12:58:52.753Z",
+    "query": "845 Lafayette Rd, Seabrook, NH, 03874, United States"
+  },
+  "8815 Reynolds Rd, FRANKLINVILLE, NY, 14737, United States": {
+    "lat": 42.3815347,
+    "lon": -78.4663329,
+    "queriedAt": "2026-11-08T12:58:54.414Z",
+    "query": "8815 Reynolds Rd, FRANKLINVILLE, NY, 14737, United States"
+  },
+  "3930 Valley Blvd, Walnut, CA, 91789, United States": {
+    "lat": 34.0341464,
+    "lon": -117.8249278,
+    "queriedAt": "2026-11-08T12:58:56.013Z",
+    "query": "3930 Valley Blvd, Walnut, CA, 91789, United States"
+  },
+  "8 The Bay, Vigo, DA130TD, United Kingdom": {
+    "queriedAt": "2026-11-08T12:58:57.886Z",
+    "query": "8 The Bay, Vigo, DA130TD, United Kingdom",
+    "error": "no result"
+  },
+  "296 Bristol Pike, Croydon, PA, 19021, United States": {
+    "lat": 40.0935678,
+    "lon": -74.9126595,
+    "queriedAt": "2026-11-08T12:58:59.587Z",
+    "query": "296 Bristol Pike, Croydon, PA, 19021, United States"
   }
 }
