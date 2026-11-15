@@ -8247,5 +8247,49 @@
     "lon": -74.9126595,
     "queriedAt": "2026-11-08T12:58:59.587Z",
     "query": "296 Bristol Pike, Croydon, PA, 19021, United States"
+  },
+  "Brisbane, Brisbane, 04055, Australia": {
+    "lat": -27.5855824,
+    "lon": 152.9190304,
+    "queriedAt": "2026-11-15T13:40:38.594Z",
+    "query": "Brisbane, Brisbane, 04055, Australia"
+  },
+  "203 Bay laurel circle, Warner Robins, GA, 31088-2940, United States": {
+    "lat": 32.5720082,
+    "lon": -83.6859815,
+    "queriedAt": "2026-11-15T13:40:40.162Z",
+    "query": "203 Bay laurel circle, Warner Robins, GA, 31088-2940, United States"
+  },
+  "738 E Green Bay St., Shawano, WI, 54166, United States": {
+    "lat": 44.782026,
+    "lon": -88.600374,
+    "queriedAt": "2026-11-15T13:40:41.821Z",
+    "query": "738 E Green Bay St., Shawano, WI, 54166, United States"
+  },
+  "8 Sturt Reserve Road, Murray Bridge, 52533, Australia": {
+    "lat": -35.121503,
+    "lon": 139.2797414,
+    "queriedAt": "2026-11-15T13:40:43.172Z",
+    "query": "8 Sturt Reserve Road, Murray Bridge, 52533, Australia"
+  },
+  "191 Elm St, Seabrook, NH, 03874, United States": {
+    "queriedAt": "2026-11-15T13:40:45.139Z",
+    "query": "191 Elm St, Seabrook, NH, 03874, United States",
+    "error": "no result"
+  },
+  "28 Flat2 St George's Street Gzira, MALTA GZR, 1332, Malta": {
+    "queriedAt": "2026-11-15T13:40:46.505Z",
+    "query": "28 Flat2 St George's Street Gzira, MALTA GZR, 1332, Malta",
+    "error": "no result"
+  },
+  "16978 W Tulip Ct, Post Falls, ID, 83854-3920, United States": {
+    "queriedAt": "2026-11-15T13:40:48.608Z",
+    "query": "16978 W Tulip Ct, Post Falls, ID, 83854-3920, United States",
+    "error": "no result"
+  },
+  "1016 main street west, valdesed, NC, 28690, United States": {
+    "queriedAt": "2026-11-15T13:40:50.168Z",
+    "query": "1016 main street west, valdesed, NC, 28690, United States",
+    "error": "no result"
   }
 }
