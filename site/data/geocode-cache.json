@@ -8291,5 +8291,31 @@
     "queriedAt": "2026-11-15T13:40:50.168Z",
     "query": "1016 main street west, valdesed, NC, 28690, United States",
     "error": "no result"
+  },
+  "sss, sss, 518000, China": {
+    "queriedAt": "2026-11-22T14:16:28.602Z",
+    "query": "sss, sss, 518000, China",
+    "error": "no result"
+  },
+  "1530 Highway 61, Ridgeville, SC, 29472, United States": {
+    "queriedAt": "2026-11-22T14:16:30.041Z",
+    "query": "1530 Highway 61, Ridgeville, SC, 29472, United States",
+    "error": "no result"
+  },
+  "1305 twelve mile rd, new richmond, OH, 45157, United States": {
+    "queriedAt": "2026-11-22T14:16:31.590Z",
+    "query": "1305 twelve mile rd, new richmond, OH, 45157, United States",
+    "error": "no result"
+  },
+  "4-461 WILLIAM STREET, COBOURG, ON, K9A3A4, Canada": {
+    "lat": 43.9631442,
+    "lon": -78.1809883,
+    "queriedAt": "2026-11-22T14:16:33.356Z",
+    "query": "4-461 WILLIAM STREET, COBOURG, ON, K9A3A4, Canada"
+  },
+  "1001 Fischer Blvd Ste 2, Toms River, NJ, 08753-3818, United States": {
+    "queriedAt": "2026-11-22T14:16:35.809Z",
+    "query": "1001 Fischer Blvd Ste 2, Toms River, NJ, 08753-3818, United States",
+    "error": "no result"
   }
 }
